@@ -1,0 +1,113 @@
+Start with the problem, then explain with the solution
+Stop trying to impress, instead try to communicate
+Write Fast, Edit Slow
+
+Use less Wordpress
+Use active voice
+
+    Example
+
+    JavaScript is single-threaded, how do we make it non-blocking? The event loop.
+
+
+UI Design
+
+    Color & contrast
+    White space
+    Scale
+    Visual hierarchy
+    Typography
+
+JavaScript
+
+    Basics
+    Dom & styling
+    Array methods
+    JSON
+    HTTP requests
+
+Frontend developer
+
+    Responsive layouts
+    Build websites with dynamic functionality
+    Connect to 3rd party APIs
+    Github
+    Deployment small web apps
+
+    React, vue.js, svelte, angular
+
+Headless CMS
+
+    Strapi, Sanity, Contentful, Primic, Wordpress
+
+Jamstack (JavaScript, APIs, Markup)
+
+    Static site generators
+    Headless CMS
+    Serverless
+    Netlify
+
+GraphQL
+
+    Query language for API
+    React w/ Apollo
+
+Web sockets
+
+    Socket.io
+        instant messaging
+        real-time analytics
+
+Wordpress
+
+Deployment, Servers, DevOps
+
+    Hosting - Heroku, Digital Ocean
+    Web Servers - NGINX
+    Containers - Docker, Kubernetes
+    Image/Video - Cloudinary, S3
+    CI/CD - Jenkins, Travis CI
+    Github actions
+
+Mobile development
+
+    Flutter w/ Dart
+    React Native
+
+Progressive Web Apps
+
+    Offline content / service workers
+    All screens
+    HTTPs
+    Native feel
+
+Desktop
+
+    Electron
+
+AI / ML
+
+Github pilot
+
+Web Assembly
+
+Algorithms
+
+    Codewars, Project Euler, Coderbyte
+
+Data Structures
+
+    Array, Linked List, Queue, Stack, Tree, Graph, Hash Table
+
+Software design patterns
+
+    Singleton
+    Facade Pattern
+    Bridge/Adapter
+    Strategy
+    Observer
+
+Portfolio
+Personal projects
+Blog
+Twitter
