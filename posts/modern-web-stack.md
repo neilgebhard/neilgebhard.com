@@ -5,13 +5,13 @@ date: "2021-12-19"
 
 This article focuses on choosing a tech stack for web development. This is an important step in building your project. It will have many implications down the line. We'll consider both front-end and back-end tools. It's worth noting that no tech stack is universally seen as the "best".
 
-It depends on your goals. Do you want to get hired? _Learn popular tech stacks_. Do you want tech that lasts? _Check what's trending_. Do you want to go freelance? _Look for developer experience_.
+Also, choosing a stack depends on your goals. Do you want to get hired? _Learn popular tools_. Do you want tech that lasts? _Check what's trending_. Do you want to go freelance? _Look for developer experience_.
 
-You can't learn everything. At some point, you will set goals and make choices yourself. These are the choices I made.
+Ultimately, you can't learn everything. At some point, you will set goals and make choices yourself. These are the choices I made.
 
 ## JavaScript
 
-Use **TypeScript** everywhere. There are too many perks not to. At the very least, you can still write normal JavaScript while the compiler infers types for you. TypeScript is the future of JavaScript.
+**TypeScript** is the future of JavaScript. There are too many perks not to us it. At the very least, you can still write normal JavaScript while the compiler infers types for you.
 
 **Node.js** is a must. It's important for back-end and server-side code. Front-end devs rely on it for setting up their development environments. You need it for package management with npm.
 
@@ -56,3 +56,7 @@ _For big apps, go with AWS, Google Cloud, or Microsoft Azure._
 ## IDE
 
 **VS Code**. This is the only IDE you need to know.
+
+## Conclusion
+
+So that's where I'm sitting at today. This list narrows down the options, but there are still choices to be made depending on the requirements of your project. This list can get out-dated quickly. Technology is constantly changing. Did I miss something? Email me your thoughts!

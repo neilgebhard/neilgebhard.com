@@ -1,8 +1,9 @@
 import Head from "next/head";
-import Layout from "../../components/Layout";
+import Navbar from "../../components/Navbar";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import Date from "../../components/Date";
 import { GetStaticProps, GetStaticPaths } from "next";
+import Footer from "../../components/Footer";
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = getAllPostIds();
@@ -23,11 +24,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 export default function Post({ postData }) {
   return (
-    <Layout home={false}>
+    <>
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <article className="prose-xl">
+      <Navbar home={false} />
+      <article className="prose-xl max-w-xl py-1 my-10 mx-auto">
         <h1 className="text-5xl tracking-tight font-extrabold my-4">
           {postData.title}
         </h1>
@@ -36,6 +38,7 @@ export default function Post({ postData }) {
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
-    </Layout>
+      <Footer />
+    </>
   );
 }

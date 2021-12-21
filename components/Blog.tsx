@@ -1,15 +1,22 @@
 import Link from "next/link";
 import Date from "./Date";
+import { motion } from "framer-motion";
 
 export default function Blog({ allPostsData }) {
   return (
-    <section className="text-xl pt-1">
-      <h2 className="text-2xl my-4">Blog</h2>
-      <ul className="list-none p-0 m-0">
+    <section className="max-w-3xl mx-auto text-xl pt-1">
+      <h2 className="text-3xl my-4">Blog</h2>
+      <motion.ul
+        className="list-none m-0 bg-white p-5 shadow-lg space-y-5 rounded-md"
+        initial={{ scale: 0.95, opacity: 0 }}
+        whileInView={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 0.75 }}
+        viewport={{ once: true }}
+      >
         {allPostsData.map(({ id, date, title }) => (
-          <li className="mb-5" key={id}>
+          <li key={id}>
             <Link href={`/blog/${id}`}>
-              <a>{title}</a>
+              <a className="font-bold">{title}</a>
             </Link>
             <br />
             <small className="text-gray-500">
@@ -17,7 +24,7 @@ export default function Blog({ allPostsData }) {
             </small>
           </li>
         ))}
-      </ul>
+      </motion.ul>
     </section>
   );
 }
