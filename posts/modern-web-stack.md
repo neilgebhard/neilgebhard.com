@@ -1,6 +1,6 @@
 ---
 title: "The Modern Web Stack"
-date: "2021-12-19"
+date: "2021-12-12"
 ---
 
 This article focuses on choosing a tech stack for web development. This is an important step in building your project. It will have many implications down the line. We'll consider both front-end and back-end tools. It's worth noting that no tech stack is universally seen as the "best".

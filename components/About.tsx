@@ -12,11 +12,10 @@ export default function About() {
         viewport={{ once: true }}
       >
         <p>
-          Growing up, I’ve always loved puzzles and math was effortless. To me,
-          programs are just like puzzles waiting to be solved. My ultimate goal
-          is to impact the world in a positive way and make the most of the
-          future, which is why I’m passionate about technology and software
-          development.
+          Growing up, I loved puzzles and math was effortless. To me, programs
+          are just like puzzles waiting to be solved. My ultimate goal is to
+          impact the world in a positive way and make the most of the future,
+          which is why I’m passionate about technology and software development.
         </p>
         <p>
           Now, I’m a front-end engineer with 4+ years of software development

@@ -1,6 +1,6 @@
 ---
 title: "What's the big deal with Next.js?"
-date: "2021-12-12"
+date: "2021-12-19"
 ---
 
 When choosing a framework for your project, a few questions pop into my head. How do we increase performance? How do we reduce complexity? How do we scale?
