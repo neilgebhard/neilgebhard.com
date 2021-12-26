@@ -7,7 +7,7 @@ export default function Blog({ allPostsData }) {
     <section className="max-w-3xl mx-auto text-xl pt-1">
       <h2 className="text-3xl my-4">Blog</h2>
       <motion.ul
-        className="list-none m-0 bg-white p-5 shadow-lg space-y-5 rounded-md"
+        className="list-none m-0 bg-white p-5 shadow-lg space-y-5 lg:rounded-md"
         initial={{ scale: 0.95, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.75 }}

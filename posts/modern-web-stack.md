@@ -11,25 +11,25 @@ Ultimately, you can't learn everything. At some point, you will set goals and ma
 
 ## JavaScript
 
-**TypeScript** is the future of JavaScript. There are too many perks not to us it. At the very least, you can still write normal JavaScript while the compiler infers types for you.
+**TypeScript** is the future of JavaScript. There are too many perks to not use it. At the very least, you can still write normal JavaScript with it and let the compiler infer types for you.
 
-**Node.js** is a must. It's important for back-end and server-side code. Front-end devs rely on it for setting up their development environments. You need it for package management with npm.
+**Node.js** is a must-learn tool. Almost all modern JavaScript utilizes this runtime environment. It's important for back-end and server-side code. Most front-end devs rely on it for setting up their dev environment. Its package management system with npm is indispensible.
 
-For building front-end user interfaces, **React** is the standard. It's the most popular JavaScript framework. It's the most desirable skill by employers for the front-end. It has an extensive ecosystem and wide community support. It's a pleasure to work with. It's a no-brainer. Honorable mention to **Vue.js**.
+For building front-end user interfaces, **React** is the standard. It's the most popular JavaScript framework and has been for awhile. It's the most desirable skill by employers for the front-end. It has an extensive ecosystem and wide community support. It's a pleasure to work with. It's a no-brainer. Honorable mention to **Vue.js**.
 
-After React, **Next.js** is the next evolution. It's great for server-side rendering, but it has a ton of other benefits too. Fullstack functionality, file-based routing, and a gamut of small performance optimizations are a few.
+After React, **Next.js** is the next evolution. It's great for server-side rendering, but it has a ton of other benefits too. Fullstack functionality, file-based routing, and a gamut of small performance optimizations are a few. Check out **Gatsby** for a more streamlined SSR experience.
 
 ## CSS
 
-For CSS frameworks, learn **TailwindCSS**. This is the future of styling. It provides a remarkable dev experience. It's a perfect combination of flexibility and power. It's my personal go-to.
+For CSS frameworks, **TailwindCSS** is at the top of my list. It provides a remarkable dev experience. It's a perfect combination of flexibility and power.
 
-If you want to use a preprocessor, use **SASS**. Many companies use it. It's makes styling more organized and maintainable. It's been around for a while and it's still very relevant.
+If you want something closer to vanilla CSS, use **SASS**. There are almost no downsides to tacking on SASS to your CSS ecosystem. Many companies use it. It makes styling more organized and maintainable. It's been around for a while and it's still super relevant.
 
-**Bootstrap** or **Material UI** are serviceable. They're great for prototyping or iterating. If you don't care about uniqueness, it's a sensible choice. Once you learn one, you sort of learn them all.
+**Bootstrap** or **Material UI** are serviceable. They're great for prototyping and iterating. If you don't care about uniqueness, it's a sensible choice. Once you learn one, you sort of learn all the CSS-component frameworks.
 
-## Server-side Framework
+## Server-side
 
-For back-end, there are so many options. **Express** is practical as it lets you to stay in JavaScript. Do you prefer another language? **Django** (Python), **Laravel** (PHP), **Java Spring**, and **Ruby on Rails** are other noteworthy options. Stick to languages you know.
+For back-end, there are so many options. **Express** is practical as it lets you to stay in JavaScript. Do you prefer another language? **Django** (Python), **Laravel** (PHP), **Java Spring**, and **Ruby on Rails** are other noteworthy options. They're all great, so stick to language you know best.
 
 ## Database
 
@@ -49,9 +49,9 @@ With React, I would use **React Testing Library** for unit and integration tests
 
 ## Deployment
 
-**Netlify**, **Vercel**, or **Heroku** are the choices for small apps. Netlify is for static websites, Vercel is for Next.js, and Heroku is for full-stack.
+**Netlify**, **Vercel**, and **Heroku** are the choices for small apps. Netlify is for static websites, Vercel for Next.js, and Heroku for full-stack.
 
-_For big apps, go with AWS, Google Cloud, or Microsoft Azure._
+_For big apps, go with AWS, Google Cloud Platform, or Microsoft Azure._
 
 ## IDE
 
@@ -59,4 +59,4 @@ _For big apps, go with AWS, Google Cloud, or Microsoft Azure._
 
 ## Conclusion
 
-So that's where I'm sitting at today. This list narrows down the options, but there are still choices to be made depending on the requirements of your project. This list can get out-dated quickly. Technology is constantly changing. Did I miss something? Email me your thoughts!
+So that's where I'm sitting at today. This list narrows down the options, but there are still some choices to be made depending on the requirements of your project. It's important to note that this list is coming from my small perspective. Did I miss something? Email me your thoughts!

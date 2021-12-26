@@ -3,13 +3,13 @@ title: "What's the big deal with Next.js?"
 date: "2021-12-19"
 ---
 
-When choosing a framework for your project, a few questions pop into my head. How do we increase performance? How do we reduce complexity? How do we scale?
+When choosing a framework for a project, a few questions pop into my head. How do we increase performance? How do we reduce complexity? How do we scale?
 
-With this in mind, Next.js does a great job in answering these questions. It does it in several ways, building on vanilla JavaScript.
+With this in mind, Next.js does a great job in answering these questions. It does it in several ways.
 
-**Static generation (SSG) allows your single-page application (SPA) to serve static HTML files.**
+**Static generation (SSG) allows a single-page application to serve static HTML files.**
 
-Content gets pre-loaded into HTML at build time. This means static HTML is delivered to clients on initial load. With this setup, HTML files are cached by CDNs, increasing data transfer speeds.
+The way this works is content gets pre-loaded into HTML at build time. This means static HTML is delivered to the client on initial load. With this setup, HTML files are cached by CDNs, increasing data transfer speeds.
 
 **Server-side rendering (SSR) allows dynamic data to have HTML files built on the server."**
 
@@ -17,13 +17,13 @@ Sometimes, HTML files can't be known at build time. Page content changes over ti
 
 To be fair, SSG and SSR are available in vanilla React too, but it has to be added manually. Why not have these features built into the framework? _That's what reducing complexity is all about._
 
-**SSG and SSR improve search engine optimization (SEO).**
+**SSG and SSR improve search engine optimization.**
 
-By removing client-side fetching, the content of your page is stable on initial load. _Google web crawlers see exactly what your users see._ There's no flickering. You're not left wondering if your page content loads in a timely manner.
+By removing client-side fetching, the content of a page is stable on initial load. _Google web crawlers see exactly what your users see._ There's no flickering. You're not left wondering if your page content loads in a timely manner.
 
 **Next.js has automatic code-splitting.**
 
-Code-splitting delays the load of certain files by dividing your app into small pieces of code. _It improves performance by making the client only download files the user needs._ This also prevents the initial requirement of downloading gigantic files. Also, having many small, individual files enables caching.
+Code-splitting delays the load of certain files by dividing your app into small pieces of code. _It improves performance by making the client only download files the user needs._ This avoids the downloading of gigantic files. Also, having many small, individual files enables caching.
 
 **Next.js makes routing easier.**
 

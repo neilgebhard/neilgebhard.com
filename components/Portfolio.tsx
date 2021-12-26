@@ -102,7 +102,7 @@ const portfolio = [
 ];
 
 export default function Portfolio() {
-  const [isMounted, setMounted] = useState(false); // Need this for the react-tooltip
+  const [isMounted, setMounted] = useState(false); // Need this for the react-tooltip on SVGs
 
   useEffect(() => {
     setMounted(true);
@@ -113,7 +113,7 @@ export default function Portfolio() {
       <h2 className="text-5xl tracking-tight font-extrabold mb-4">Portfolio</h2>
       {portfolio.map((item, i) => (
         <motion.article
-          className="flex gap-x-4 mb-5 bg-white p-5 shadow-lg rounded-md"
+          className="flex gap-x-4 mb-5 bg-white p-5 shadow-lg md:rounded-md"
           initial={{ scale: 0.95, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.75 }}

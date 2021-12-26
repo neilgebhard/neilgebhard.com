@@ -1,6 +1,5 @@
 import { MailIcon } from "@heroicons/react/solid";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 const techStack = [
   {
@@ -17,22 +16,9 @@ const techStack = [
   },
 ];
 
-// const links = [
-//   ["Blog", "/blog", "pencil"],
-//   ["Portfolio", "/portfolio", "book"],
-//   ["Github", "https://github.com/neilgebhard", "wizard_hat"],
-//   ["E-mail", "mailto:neilgebhard@gmail.com", "letter"],
-// ];
-
 export default function Header() {
   return (
-    <motion.section
-      className="text-xl font-mono py-20"
-      initial={{ scale: 0.95, opacity: 0 }}
-      whileInView={{ scale: 1, opacity: 1 }}
-      transition={{ duration: 0.75 }}
-      viewport={{ once: true }}
-    >
+    <section className="text-xl font-mono py-20">
       <h1 className="text-8xl text-center text-animate mt-0 font-sans tracking-tight">
         Hi, I'm{" "}
         <div className="inline-flex flex-col items-center justify-center">
@@ -41,13 +27,13 @@ export default function Header() {
         </div>
       </h1>
       <div className="text-center mb-20">
-        <span className="sm:bg-bleu sm:text-white p-2 rounded-md lg:text-3xl">
+        <span className="sm:bg-bleu sm:text-white p-2 rounded-md text-3xl md:text-3xl lg:text-3xl">
           <strong>Frontend Engineer</strong>{" "}
           <span className="block sm:inline">with fullstack chops</span>
         </span>
       </div>
 
-      <div className="max-w-3xl mx-auto bg-white shadow-lg p-5 rounded-md">
+      <div className="max-w-3xl mx-auto bg-white shadow-lg p-5 md:rounded-md">
         <div className="flex items-center justify-center gap-8 ">
           <div className="hidden lg:block">
             <Image
@@ -83,30 +69,6 @@ export default function Header() {
           </a>
         </div>
       </div>
-      {/* <ul className="grid grid-cols-2 sm:flex items-center justify-center gap-10 list-none pl-0">
-        {links.map(([title, url, svg], i) => (
-          <li
-            key={i}
-            className={
-              i % 2 === 0 ? "justify-self-end sm:justify-self-auto" : ""
-            }
-          >
-            <a
-              className="inline-flex flex-col hover:-translate-y-1 transition-transform"
-              href={url}
-            >
-              <Image
-                className="inline"
-                src={`/svg/${svg}.svg`}
-                height={50}
-                width={50}
-                alt={svg}
-              />
-              <span>{title}</span>
-            </a>
-          </li>
-        ))}
-      </ul> */}
-    </motion.section>
+    </section>
   );
 }
