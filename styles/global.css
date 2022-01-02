@@ -26,6 +26,9 @@
   a:hover {
     @apply underline;
   }
+  img {
+    @apply w-full;
+  }
 }
 
 @tailwind components;

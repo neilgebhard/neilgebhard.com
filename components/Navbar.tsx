@@ -95,7 +95,7 @@ export default function Navbar({ home, refs }) {
           </ul>
         ) : (
           <Link href="/">
-            <a className="font-bold">← Back to home</a>
+            <a className="font-bold text-black">← Back to home</a>
           </Link>
         )}
       </nav>

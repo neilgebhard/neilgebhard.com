@@ -29,7 +29,7 @@ export default function Post({ postData }) {
         <title>{postData.title}</title>
       </Head>
       <Navbar home={false} refs={{}} />
-      <article className="prose-xl max-w-xl py-1 my-10 mx-auto">
+      <article className="max-w-xl py-1 my-10 mx-auto">
         <h1 className="text-5xl tracking-tight font-extrabold my-4">
           {postData.title}
         </h1>
