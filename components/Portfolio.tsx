@@ -66,7 +66,8 @@ const portfolio = [
 ];
 
 export default function Portfolio() {
-  const [isMounted, setMounted] = useState(false); // Need this for the react-tooltip on SVGs
+  // Need this for the react-tooltip on SVGs
+  const [isMounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -77,7 +78,7 @@ export default function Portfolio() {
       <h2 className="text-5xl tracking-tight font-extrabold mb-4">Portfolio</h2>
       {portfolio.map((item, i) => (
         <motion.article
-          className="flex gap-x-4 mb-5 bg-white p-5 shadow-lg md:rounded-md"
+          className="flex gap-x-4 mb-5 bg-white p-5 shadow-lg md:rounded-md border-l-2 border-bleu"
           initial={{ scale: 0.95, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.75 }}
@@ -85,11 +86,10 @@ export default function Portfolio() {
           key={i}
         >
           <a href={item.siteUrl} target="_blank" rel="noreferrer">
-            <div className="rounded aspect-square sm:w-52 sm:h-52">
+            <div className="rounded aspect-square sm:w-52 sm:h-52 shadow-md">
               <Image
                 priority
                 src={item.img}
-                className="rounded"
                 height={300}
                 width={300}
                 alt="Screenshot of portfolio site"
