@@ -15,6 +15,7 @@
     "react": "17.0.2",
     "react-burger-menu": "^3.0.6",
     "react-dom": "17.0.2",
+    "react-icons": "^4.3.1",
     "react-tooltip": "^4.2.21",
     "remark": "^14.0.2",
     "remark-html": "^15.0.1"

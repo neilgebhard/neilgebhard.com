@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="flex flex-col gap-y-10 items-center justify-center py-32">
       <a
-        className="bg-bleu text-white text-xl font-bold px-4 py-2 rounded-lg flex items-center justify-center gap-x-3"
+        className="bg-bleu text-white text-xl font-bold px-4 py-2 rounded-lg flex items-center justify-center gap-x-3 shadow-lg active:shadow-md hover:shadow-xl hover:no-underline"
         href="mailto:neilgebhard@gmail.com"
       >
         <MailIcon className="h-12" /> Let's work together
@@ -18,6 +18,7 @@ export default function Footer() {
               height={40}
               width={40}
               alt="Github"
+              className="shadow-2xl"
             />
           </a>
         </li>

@@ -2,6 +2,17 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import ReactTooltip from "react-tooltip";
 import { motion } from "framer-motion";
+import {
+  SiTailwindcss,
+  SiExpress,
+  SiMongodb,
+  SiReact,
+  SiNodedotjs,
+  SiCypress,
+  SiTypescript,
+  SiCss3,
+  SiJest,
+} from "react-icons/si";
 
 const portfolio = [
   {
@@ -12,14 +23,10 @@ const portfolio = [
     githubUrl: "https://github.com/neilgebhard/movie-app-react",
     img: "/images/movie-app.png",
     icons: [
-      <Image src="/svg/tech/react.svg" height={50} width={50} alt="React" />,
-      <Image
-        src="/svg/tech/css-3.svg"
-        height={50}
-        width={50}
-        alt="CSS Modules"
-      />,
-      <Image src="/svg/tech/jest.svg" height={50} width={50} alt="Jest" />,
+      <SiReact size="2rem" title="React" color="dimgrey" />,
+      <SiTypescript size="2rem" title="TypeScript" color="dimgrey" />,
+      <SiCss3 size="2rem" title="CSS Modules" color="dimgrey" />,
+      <SiJest size="2rem" title="Jest" color="dimgrey" />,
     ],
   },
   {
@@ -30,37 +37,12 @@ const portfolio = [
     githubUrl: "https://github.com/neilgebhard/mern-reddit",
     img: "/images/reddit-clone.png",
     icons: [
-      <Image src="/svg/tech/react.svg" height={50} width={50} alt="React" />,
-      <Image
-        src="/svg/tech/tailwindcss-icon.svg"
-        height={50}
-        width={50}
-        alt="Tailwind CSS"
-      />,
-      <Image
-        src="/svg/tech/express.svg"
-        height={50}
-        width={75}
-        alt="Express"
-      />,
-      <Image
-        src="/svg/tech/mongodb.svg"
-        height={50}
-        width={100}
-        alt="MongoDB"
-      />,
-      <Image
-        src="/svg/tech/nodejs-icon.svg"
-        height={50}
-        width={50}
-        alt="Node.js"
-      />,
-      <Image
-        src="/svg/tech/cypress.svg"
-        height={50}
-        width={50}
-        alt="Cypress"
-      />,
+      <SiReact size="2rem" title="React" color="dimgrey" />,
+      <SiTailwindcss size="2rem" title="Tailwind CSS" color="dimgrey" />,
+      <SiNodedotjs size="2rem" title="Node.js" color="dimgrey" />,
+      <SiExpress size="2rem" title="Express.js" color="dimgrey" />,
+      <SiMongodb size="2rem" title="MongoDB" color="dimgrey" />,
+      <SiCypress size="2rem" title="Cypress" color="dimgrey" />,
     ],
   },
   {
@@ -72,31 +54,13 @@ const portfolio = [
     githubUrl: "https://github.com/neilgebhard/mern-twitter",
     img: "/images/twitter-clone.png",
     icons: [
-      <Image src="/svg/tech/react.svg" height={50} width={50} alt="React" />,
-      <Image
-        src="/svg/tech/tailwindcss-icon.svg"
-        height={50}
-        width={50}
-        alt="Tailwind CSS"
-      />,
-      <Image
-        src="/svg/tech/express.svg"
-        height={50}
-        width={75}
-        alt="Express"
-      />,
-      <Image
-        src="/svg/tech/mongodb.svg"
-        height={50}
-        width={100}
-        alt="MongoDB"
-      />,
-      <Image
-        src="/svg/tech/nodejs-icon.svg"
-        height={50}
-        width={50}
-        alt="Node.js"
-      />,
+      <SiReact size="2rem" title="React" color="dimgrey" />,
+      <SiTypescript size="2rem" title="TypeScript" color="dimgrey" />,
+      <SiTailwindcss size="2rem" title="Tailwind CSS" color="dimgrey" />,
+      <SiNodedotjs size="2rem" title="Node.js" color="dimgrey" />,
+      <SiExpress size="2rem" title="Express.js" color="dimgrey" />,
+      <SiMongodb size="2rem" title="MongoDB" color="dimgrey" />,
+      <SiJest size="2rem" title="Jest" color="dimgrey" />,
     ],
   },
 ];
@@ -135,7 +99,7 @@ export default function Portfolio() {
           <div>
             <h2 className="text-2xl mt-0">{item.title}</h2>
             <a
-              className="bg-jungle text-white text-xl font-bold px-4 py-2 rounded-lg"
+              className="bg-jungle text-white text-xl font-bold px-4 py-2 rounded-lg button"
               href={item.githubUrl}
               target="_blank"
               rel="noreferrer"
@@ -143,7 +107,7 @@ export default function Portfolio() {
               Github
             </a>
             <a
-              className="bg-bleu text-white text-xl font-bold px-4 py-2 rounded-lg ml-3"
+              className="bg-bleu text-white text-xl font-bold px-4 py-2 rounded-lg ml-3 button"
               href={item.siteUrl}
               target="_blank"
               rel="noreferrer"
@@ -155,7 +119,7 @@ export default function Portfolio() {
               item.icons?.map((icon, i) => {
                 return (
                   <span key={i} className="ml-2">
-                    <a data-tip={icon.props.alt}>{icon}</a>
+                    <a data-tip={icon.props.title}>{icon}</a>
                     <ReactTooltip place="top" type="dark" effect="solid" />
                   </span>
                 );

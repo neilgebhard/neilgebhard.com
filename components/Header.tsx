@@ -4,7 +4,7 @@ import Image from "next/image";
 const techStack = [
   {
     position: "Front-end",
-    skills: "React, Next.js, TypeScript, TailwindCSS",
+    skills: "React, TypeScript",
   },
   {
     position: "Back-end",
@@ -12,7 +12,7 @@ const techStack = [
   },
   {
     position: "Testing",
-    skills: "Jest, React Testing Library, Cypress",
+    skills: "React Testing Library, Cypress",
   },
 ];
 
@@ -62,10 +62,10 @@ export default function Header() {
         </p>
         <div className="text-center">
           <a
-            className="bg-bleu text-white text-xl font-bold px-4 py-2 rounded-lg inline-flex items-center justify-center gap-x-3"
+            className="bg-bleu text-white text-xl font-bold px-4 py-2 rounded-lg inline-flex items-center justify-center gap-x-3  shadow-lg active:shadow-md hover:shadow-xl hover:no-underline"
             href="mailto:neilgebhard@gmail.com"
           >
-            <MailIcon className="h-12" /> Hire me!
+            <MailIcon className="h-12" /> Let's talk
           </a>
         </div>
       </div>
