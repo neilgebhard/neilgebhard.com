@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { MailIcon } from "@heroicons/react/solid";
+import { SiGithub, SiLinkedin, SiTwitter } from "react-icons/si";
 
 export default function Footer() {
   return (
@@ -13,33 +13,17 @@ export default function Footer() {
       <ul className="list-none flex items-center justify-center gap-x-4">
         <li>
           <a href="https://github.com/neilgebhard" target="_blank">
-            <Image
-              src="/svg/tech/github-icon.svg"
-              height={40}
-              width={40}
-              alt="Github"
-              className="shadow-2xl"
-            />
+            <SiGithub size="2rem" title="GitHub" color="black" />
           </a>
         </li>
         <li>
           <a href="https://twitter.com/neil_gebhard" target="_blank">
-            <Image
-              src="/svg/tech/twitter.svg"
-              height={40}
-              width={40}
-              alt="Twitter"
-            />
+            <SiTwitter size="2rem" title="Twitter" color="black" />
           </a>
         </li>
         <li>
           <a href="https://www.linkedin.com/in/neilgebhard/" target="_blank">
-            <Image
-              src="/svg/tech/linkedin-icon.svg"
-              height={40}
-              width={40}
-              alt="Linked In"
-            />
+            <SiLinkedin size="2rem" title="LinkedIn" color="black" />
           </a>
         </li>
       </ul>
