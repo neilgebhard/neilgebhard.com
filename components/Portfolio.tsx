@@ -12,7 +12,9 @@ import {
   SiTypescript,
   SiCss3,
   SiJest,
+  SiGithub,
 } from "react-icons/si";
+import { BiLink } from "react-icons/bi";
 
 const portfolio = [
   {
@@ -38,6 +40,7 @@ const portfolio = [
     img: "/images/reddit-clone.png",
     icons: [
       <SiReact size="2rem" title="React" color="dimgrey" />,
+      <SiTypescript size="2rem" title="TypeScript" color="dimgrey" />,
       <SiTailwindcss size="2rem" title="Tailwind CSS" color="dimgrey" />,
       <SiNodedotjs size="2rem" title="Node.js" color="dimgrey" />,
       <SiExpress size="2rem" title="Express.js" color="dimgrey" />,
@@ -75,7 +78,9 @@ export default function Portfolio() {
 
   return (
     <section className="max-w-3xl mx-auto mb-20">
-      <h2 className="text-5xl tracking-tight font-extrabold mb-4">Portfolio</h2>
+      <h2 className="ml-5 md:ml-0 text-3xl font-extrabold mb-4 uppercase tracking-wider">
+        Portfolio
+      </h2>
       {portfolio.map((item, i) => (
         <motion.article
           className="flex gap-x-4 mb-5 bg-white p-5 shadow-lg md:rounded-md border-l-2 border-bleu"
@@ -85,7 +90,12 @@ export default function Portfolio() {
           viewport={{ once: true }}
           key={i}
         >
-          <a href={item.siteUrl} target="_blank" rel="noreferrer">
+          <a
+            className="hidden sm:inline-block"
+            href={item.siteUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
             <div className="rounded aspect-square sm:w-52 sm:h-52 shadow-md">
               <Image
                 priority
@@ -99,20 +109,20 @@ export default function Portfolio() {
           <div>
             <h2 className="text-2xl mt-0">{item.title}</h2>
             <a
-              className="bg-jungle text-white text-xl font-bold px-4 py-2 rounded-lg button"
+              className="bg-jungle text-white text-xl font-bold px-4 py-2 rounded-lg button inline-flex items-center gap-2"
               href={item.githubUrl}
               target="_blank"
               rel="noreferrer"
             >
-              Github
+              <SiGithub size="1.2rem" /> Github
             </a>
             <a
-              className="bg-bleu text-white text-xl font-bold px-4 py-2 rounded-lg ml-3 button"
+              className="bg-bleu text-white text-xl font-bold px-4 py-2 rounded-lg ml-3 button inline-flex items-center gap-1"
               href={item.siteUrl}
               target="_blank"
               rel="noreferrer"
             >
-              Demo
+              <BiLink size="1.4rem" /> Demo
             </a>
             <p className="text-base">{item.description}</p>
             {isMounted &&

@@ -5,7 +5,9 @@ import { motion } from "framer-motion";
 export default function Blog({ allPostsData }) {
   return (
     <section className="max-w-3xl mx-auto text-xl pt-1">
-      <h2 className="text-5xl my-4">Blog</h2>
+      <h2 className="ml-5 md:ml-0 text-3xl my-4 uppercase tracking-wider">
+        Blog
+      </h2>
       <motion.ul
         className="list-none m-0 bg-white p-5 shadow-lg space-y-5 lg:rounded-md"
         initial={{ scale: 0.95, opacity: 0 }}

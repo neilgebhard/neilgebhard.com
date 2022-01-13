@@ -19,21 +19,21 @@ const techStack = [
 export default function Header() {
   return (
     <section className="text-xl font-mono py-20">
-      <h1 className="text-8xl text-center text-animate mt-0 font-sans tracking-tight">
+      <h1 className="hidden">Neil Gebhard</h1>
+      <div className="text-8xl text-center text-animate mt-0 font-sans tracking-tight">
         Hi, I'm{" "}
         <div className="inline-flex flex-col items-center justify-center">
           <span> Neil</span>
           <small className="text-4xl tracking-normal">Gebhard</small>
         </div>
-      </h1>
-      <div className="text-center mb-20">
-        <span className="sm:bg-bleu sm:text-white p-2 rounded-md text-3xl md:text-3xl lg:text-3xl">
-          <strong>Frontend Engineer</strong>{" "}
-          <span className="block sm:inline">with fullstack chops</span>
-        </span>
       </div>
+      {/* <div className="text-center mb-20">
+        <span className="sm:bg-bleu sm:text-white p-2 rounded-md text-3xl md:text-3xl lg:text-3xl">
+          <strong>a Frontend Engineer</strong>{" "}
+        </span>
+      </div> */}
 
-      <div className="max-w-3xl mx-auto bg-white shadow-lg p-5 md:rounded-md">
+      {/* <div className="max-w-3xl mx-auto bg-white shadow-lg p-5 md:rounded-md">
         <div className="flex items-center justify-center gap-8 ">
           <div className="hidden lg:block">
             <Image
@@ -68,7 +68,7 @@ export default function Header() {
             <MailIcon className="h-12" /> Let's talk
           </a>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

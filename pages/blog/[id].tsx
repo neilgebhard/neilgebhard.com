@@ -29,14 +29,16 @@ export default function Post({ postData }) {
         <title>{postData.title}</title>
       </Head>
       <Navbar home={false} refs={{}} />
-      <article className="max-w-xl py-1 my-10 mx-auto">
-        <h1 className="text-5xl tracking-tight font-extrabold my-4">
-          {postData.title}
-        </h1>
-        <div className="text-gray-600">
-          <Date dateString={postData.date} />
+      <article className="max-w-xl py-10 mx-auto">
+        <div className="mx-4">
+          <h1 className="text-5xl tracking-tight font-extrabold my-4">
+            {postData.title}
+          </h1>
+          <div className="text-gray-600">
+            <Date dateString={postData.date} />
+          </div>
+          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
         </div>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
       <Footer />
     </>

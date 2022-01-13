@@ -36,11 +36,11 @@ export default function Home({ allPostsData }) {
         refs={{ portfolio: portfolioRef, about: aboutRef, blog: blogRef }}
       />
       <Header />
-      <div ref={portfolioRef}>
-        <Portfolio />
-      </div>
       <div ref={aboutRef}>
         <About />
+      </div>
+      <div ref={portfolioRef}>
+        <Portfolio />
       </div>
       <div ref={blogRef}>
         <Blog allPostsData={allPostsData} />

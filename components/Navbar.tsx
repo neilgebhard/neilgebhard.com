@@ -9,11 +9,7 @@ export default function Navbar({ home, refs }) {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 600) {
-        setIsMobile(true);
-      } else {
-        setIsMobile(false);
-      }
+      setIsMobile(window.innerWidth < 600 ? true : false);
     };
 
     handleResize();
@@ -42,18 +38,18 @@ export default function Navbar({ home, refs }) {
       <ul className="list-none space-y-2">
         <li>
           <a
-            onClick={() => scrollTo("portfolio")}
-            className="menu-item text-white cursor-pointer font-bold"
-          >
-            Portfolio
-          </a>
-        </li>
-        <li>
-          <a
             onClick={() => scrollTo("about")}
             className="menu-item text-white cursor-pointer font-bold"
           >
             About
+          </a>
+        </li>
+        <li>
+          <a
+            onClick={() => scrollTo("portfolio")}
+            className="menu-item text-white cursor-pointer font-bold"
+          >
+            Portfolio
           </a>
         </li>
         <li>
@@ -80,14 +76,14 @@ export default function Navbar({ home, refs }) {
         </a>
         {home ? (
           <ul className="flex gap-x-4 list-none font-bold">
+            <li className="cursor-pointer" onClick={() => scrollTo("about")}>
+              <a className="text-black">About</a>
+            </li>
             <li
               className="cursor-pointer"
               onClick={() => scrollTo("portfolio")}
             >
               <a className="text-black">Portfolio</a>
-            </li>
-            <li className="cursor-pointer" onClick={() => scrollTo("about")}>
-              <a className="text-black">About</a>
             </li>
             <li className="cursor-pointer" onClick={() => scrollTo("blog")}>
               <a className="text-black">Blog</a>
