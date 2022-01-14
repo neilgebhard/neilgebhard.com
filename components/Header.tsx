@@ -18,7 +18,7 @@ const techStack = [
 
 export default function Header() {
   return (
-    <section className="text-xl font-mono py-20">
+    <section className="text-xl font-mono pt-28 pb-20">
       <h1 className="hidden">Neil Gebhard</h1>
       <div className="text-8xl text-center text-animate mt-0 font-sans tracking-tight">
         Hi, I'm{" "}
