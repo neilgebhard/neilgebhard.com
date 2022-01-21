@@ -13,18 +13,13 @@ export default function About() {
         transition={{ duration: 0.75 }}
         viewport={{ once: true }}
       >
-        <p>
-          I'm a frontend engineer specializing in React based in Saipan, USA.
-        </p>
+        <p>I'm a frontend engineer specializing in React.</p>
         <p>
           I've been writing code for about 8 years (professionally for 4 of
           those).
         </p>
         <p>I have a B.S. in Computer Science.</p>
-        <p>
-          I create pixel-perfect, responsive web applications leveraging
-          back-end services to create a full user experience.
-        </p>
+        <p>I'm currently based in Saipan, USA. 🏝</p>
       </motion.div>
     </section>
   );

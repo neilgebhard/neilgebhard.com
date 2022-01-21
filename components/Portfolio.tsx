@@ -83,7 +83,7 @@ export default function Portfolio() {
       </h2>
       {portfolio.map((item, i) => (
         <motion.article
-          className="flex gap-x-4 mb-5 bg-white p-5 shadow-lg md:rounded-md border-l-2 border-bleu"
+          className="flex gap-x-4 mb-5 bg-white p-5 shadow-lg md:rounded-md border-l-2 border-bleu font-mono"
           initial={{ scale: 0.95, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.75 }}

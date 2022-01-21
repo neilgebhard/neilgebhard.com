@@ -23,7 +23,7 @@ export default function Home({ allPostsData }) {
   const blogRef = useRef(null);
 
   return (
-    <main className="bg-wallpaper">
+    <main>
       <Head>
         <title>Neil Gebhard</title>
         <meta
@@ -35,12 +35,14 @@ export default function Home({ allPostsData }) {
         home
         refs={{ portfolio: portfolioRef, about: aboutRef, blog: blogRef }}
       />
-      <Header />
-      <div ref={aboutRef}>
-        <About />
-      </div>
-      <div ref={portfolioRef}>
-        <Portfolio />
+      <div className="bg-wallpaper">
+        <Header />
+        <div ref={aboutRef}>
+          <About />
+        </div>
+        <div ref={portfolioRef}>
+          <Portfolio />
+        </div>
       </div>
       <div ref={blogRef}>
         <Blog allPostsData={allPostsData} />

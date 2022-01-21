@@ -63,7 +63,7 @@ export default function Navbar({ home, refs }) {
       </ul>
     </Menu>
   ) : (
-    <header className="bg-white border-b shadow-md">
+    <header className="bg-white border-b shadow-md relative">
       <nav className="flex items-center justify-between px-6 max-w-screen-2xl mx-auto">
         <a href="/" className="flex items-center text-black hover:no-underline">
           <Image

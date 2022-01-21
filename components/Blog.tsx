@@ -9,7 +9,7 @@ export default function Blog({ allPostsData }) {
         Blog
       </h2>
       <motion.ul
-        className="list-none m-0 bg-white p-5 shadow-lg space-y-5 lg:rounded-md"
+        className="list-none m-0 bg-white p-5 shadow-lg space-y-5 lg:rounded-md font-mono"
         initial={{ scale: 0.95, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.75 }}
