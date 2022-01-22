@@ -53,6 +53,6 @@ There is some extra work to learn the framework.
 
 If your app has data that is frequently changing such as an analytics dashboard, pre-rendering is less useful.
 
-**In conclusion,**
+**Conclusion**
 
 Next.js is modern React. There aren't many downsides. The documentation is great and it's well-supported. Almost every use-case is met. I would recommend starting new projects using this amazing framework.
