@@ -1,12 +1,6 @@
 import Head from "next/head";
-import Navbar from "../components/Navbar";
-import Header from "../components/Header";
-import Blog from "../components/Blog";
-import Portfolio from "../components/Portfolio";
-import About from "../components/About";
-import Footer from "../components/Footer";
+import Image from "next/image";
 import { getSortedPostsData } from "../lib/posts";
-import { useRef } from "react";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -18,36 +12,24 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allPostsData }) {
-  const portfolioRef = useRef(null);
-  const aboutRef = useRef(null);
-  const blogRef = useRef(null);
-
   return (
-    <main>
+    <>
       <Head>
-        <title>Neil Gebhard</title>
+        <title>Home | Neil Gebhard</title>
         <meta
           name="description"
           content="The personal website for Neil Gebhard"
         ></meta>
       </Head>
-      <Navbar
-        home
-        refs={{ portfolio: portfolioRef, about: aboutRef, blog: blogRef }}
-      />
-      <div className="bg-wallpaper">
-        <Header />
-        <div ref={aboutRef}>
-          <About />
-        </div>
-        <div ref={portfolioRef}>
-          <Portfolio />
-        </div>
-      </div>
-      <div ref={blogRef}>
-        <Blog allPostsData={allPostsData} />
-      </div>
-      <Footer />
-    </main>
+      <section>
+        <h1 className="hidden">Home</h1>
+        <p className="text-7xl font-sans font-bold tracking-tight text-center my-32">
+          Hi, I'm <span className="text-animate">Neil Gebhard</span>.
+        </p>
+        {/* <div className="text-center mb-32 rounded overflow-hidden">
+          <Image src="/images/profile-far.jpg" width={320} height={426} />
+        </div> */}
+      </section>
+    </>
   );
 }

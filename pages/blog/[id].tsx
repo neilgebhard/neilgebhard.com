@@ -26,21 +26,15 @@ export default function Post({ postData }) {
   return (
     <>
       <Head>
-        <title>{postData.title}</title>
+        <title>{postData.title} | Neil Gebhard</title>
       </Head>
-      <Navbar home={false} refs={{}} />
-      <article className="max-w-xl py-10 mx-auto">
-        <div className="mx-4">
-          <h1 className="text-5xl tracking-tight font-extrabold my-4">
-            {postData.title}
-          </h1>
-          <div className="text-gray-600">
-            <Date dateString={postData.date} />
-          </div>
-          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-        </div>
+      <article className="max-w-xl mx-auto">
+        <h1 className="mb-2">{postData.title}</h1>
+        <p className="text-gray-600 mb-12 mt-0">
+          <Date dateString={postData.date} />
+        </p>
+        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
-      <Footer />
     </>
   );
 }

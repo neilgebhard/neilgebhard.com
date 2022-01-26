@@ -15,6 +15,7 @@ import {
   SiGithub,
 } from "react-icons/si";
 import { BiLink } from "react-icons/bi";
+import Head from "next/head";
 
 const portfolio = [
   {
@@ -23,7 +24,7 @@ const portfolio = [
       "A responsive web app for discovering and exploring movies utilizing The Movie Database API.",
     siteUrl: "https://neilsmovieapp.netlify.app/",
     githubUrl: "https://github.com/neilgebhard/movie-app-react",
-    img: "/images/movie-app.png",
+    img: "/images/movie-laptop-frame.png",
     icons: [
       <SiReact size="2rem" title="React" color="dimgrey" />,
       <SiTypescript size="2rem" title="TypeScript" color="dimgrey" />,
@@ -37,7 +38,7 @@ const portfolio = [
       "A full-stack clone of Reddit. The features include user authentication, posts, comments, replies, and upvoting/downvoting.",
     siteUrl: "https://neilsreddit.herokuapp.com/",
     githubUrl: "https://github.com/neilgebhard/mern-reddit",
-    img: "/images/reddit-clone.png",
+    img: "/images/reddit-laptop-frame.png",
     icons: [
       <SiReact size="2rem" title="React" color="dimgrey" />,
       <SiTypescript size="2rem" title="TypeScript" color="dimgrey" />,
@@ -55,7 +56,7 @@ const portfolio = [
       "A full-stack clone of Twitter. The features include user authentication, tweets, follows, and likes.",
     siteUrl: "https://neilstwitter.herokuapp.com/",
     githubUrl: "https://github.com/neilgebhard/mern-twitter",
-    img: "/images/twitter-clone.png",
+    img: "/images/twitter-laptop-frame.png",
     icons: [
       <SiReact size="2rem" title="React" color="dimgrey" />,
       <SiTypescript size="2rem" title="TypeScript" color="dimgrey" />,
@@ -69,7 +70,7 @@ const portfolio = [
 ];
 
 export default function Portfolio() {
-  // Need this for the react-tooltip on SVGs
+  // For react-tooltip over SVGs
   const [isMounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -77,66 +78,63 @@ export default function Portfolio() {
   }, []);
 
   return (
-    <section className="max-w-3xl mx-auto mb-20">
-      <h2 className="ml-5 md:ml-0 text-3xl font-extrabold mb-4 uppercase tracking-wider">
-        Portfolio
-      </h2>
-      {portfolio.map((item, i) => (
-        <motion.article
-          className="flex gap-x-4 mb-5 bg-white p-5 shadow-lg md:rounded-md border-l-2 border-bleu font-mono"
-          initial={{ scale: 0.95, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.75 }}
-          viewport={{ once: true }}
-          key={i}
-        >
-          <a
-            className="hidden sm:inline-block"
-            href={item.siteUrl}
-            target="_blank"
-            rel="noreferrer"
+    <>
+      <Head>
+        <title>Portfolio | Neil Gebhard</title>
+        <meta name="description" content="The portfolio of Neil Gebhard"></meta>
+      </Head>
+      <section>
+        <h1>Portfolio</h1>
+        {portfolio.map((item, i) => (
+          <motion.article
+            className="flex flex-col sm:flex-row items-center gap-x-4 mb-20"
+            initial={{ scale: 0.99, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            key={i}
           >
-            <div className="rounded aspect-square sm:w-52 sm:h-52 shadow-md">
+            <a href={item.siteUrl} target="_blank" rel="noreferrer">
               <Image
                 priority
                 src={item.img}
-                height={300}
-                width={300}
+                width="650"
+                height="383"
                 alt="Screenshot of portfolio site"
-              />
+              ></Image>
+            </a>
+            <div className="sm:w-5/6 md:w-4/6">
+              <h2>{item.title}</h2>
+              <a
+                className="button bg-jungle"
+                href={item.githubUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <SiGithub size="1.4rem" /> Github
+              </a>
+              <a
+                className="button ml-4"
+                href={item.siteUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <BiLink size="1.4rem" /> Demo
+              </a>
+              <p className="mb-4">{item.description}</p>
+              {isMounted &&
+                item.icons?.map((icon, i) => {
+                  return (
+                    <span key={i} className="ml-2">
+                      <a data-tip={icon.props.title}>{icon}</a>
+                      <ReactTooltip place="top" type="dark" effect="solid" />
+                    </span>
+                  );
+                })}
             </div>
-          </a>
-          <div>
-            <h2 className="text-2xl mt-0">{item.title}</h2>
-            <a
-              className="bg-jungle text-white text-xl font-bold px-4 py-2 rounded-lg button inline-flex items-center gap-2"
-              href={item.githubUrl}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <SiGithub size="1.2rem" /> Github
-            </a>
-            <a
-              className="bg-bleu text-white text-xl font-bold px-4 py-2 rounded-lg ml-3 button inline-flex items-center gap-1"
-              href={item.siteUrl}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <BiLink size="1.4rem" /> Demo
-            </a>
-            <p className="text-base">{item.description}</p>
-            {isMounted &&
-              item.icons?.map((icon, i) => {
-                return (
-                  <span key={i} className="ml-2">
-                    <a data-tip={icon.props.title}>{icon}</a>
-                    <ReactTooltip place="top" type="dark" effect="solid" />
-                  </span>
-                );
-              })}
-          </div>
-        </motion.article>
-      ))}
-    </section>
+          </motion.article>
+        ))}
+      </section>
+    </>
   );
 }
