@@ -49,7 +49,7 @@ const skills = [
     icon: <SiGithub size="2rem" />,
   },
   {
-    label: "Tailwind CSS",
+    label: "Tailwind",
     icon: <SiTailwindcss size="2rem" />,
   },
   {
@@ -124,10 +124,10 @@ export default function About() {
         viewport={{ once: true }}
         className="space-y-0"
       >
-        <ul className="flex flex-wrap gap-x-6">
+        <ul className="flex flex-wrap gap-x-6 gap-y-4">
           {skills.map(({ label, icon }) => (
             <li className="flex flex-col items-center flex-1">
-              <div className="text-center">{icon}</div>
+              <div>{icon}</div>
               <div className="text-center">{label}</div>
             </li>
           ))}

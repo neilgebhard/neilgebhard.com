@@ -22,7 +22,7 @@ export default function Home({ allPostsData }) {
         ></meta>
       </Head>
       <section>
-        <h1 className="hidden">Home</h1>
+        <h1 className="hidden">Neil Gebhard</h1>
         <p className="text-5xl sm:text-7xl font-sans font-bold tracking-tight text-center my-32">
           Hi, I'm{" "}
           <span className="hidden sm:inline text-animate">Neil Gebhard</span>

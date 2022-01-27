@@ -35,7 +35,7 @@
 
   h2,
   h3 {
-    @apply mb-4;
+    @apply mb-4 mt-12;
   }
 
   ul {
