@@ -1,6 +1,13 @@
 import Link from "next/link";
 import { slide as Menu } from "react-burger-menu";
 
+const links = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Portfolio", href: "/portfolio" },
+  { label: "Blog", href: "/blog" },
+];
+
 export default function MobileNavbar({ menuIsOpen, handleStateChange }) {
   return (
     <Menu
@@ -10,21 +17,13 @@ export default function MobileNavbar({ menuIsOpen, handleStateChange }) {
       width={200}
     >
       <ul className="list-none space-y-4 text-center text-lg">
-        <li>
-          <Link href="/about">
-            <a className="text-white font-bold">About</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/portfolio">
-            <a className="text-white font-bold">Portfolio</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/blog">
-            <a className="text-white font-bold">Blog</a>
-          </Link>
-        </li>
+        {links.map(({ href, label }) => (
+          <li>
+            <Link href={href}>
+              <a className="text-white font-bold">{label}</a>
+            </Link>
+          </li>
+        ))}
       </ul>
     </Menu>
   );

@@ -3,7 +3,7 @@ import { MdEmail } from "react-icons/md";
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col items-center justify-center py-32 bg-gray-100">
+    <footer className="flex flex-col items-center justify-center py-32 bg-gray-100 space-y-5">
       <ul className="list-none flex items-center justify-center gap-x-4">
         <li>
           <a href="https://github.com/neilgebhard" target="_blank">
@@ -26,8 +26,8 @@ export default function Footer() {
           </a>
         </li>
       </ul>
-      <p className="mb-0">© Neil Gebhard 2022</p>
-      <p className="mb-0">Built with Next.js & Tailwind</p>
+      <p>© Neil Gebhard 2022</p>
+      <p>Built with Next.js & Tailwind</p>
     </footer>
   );
 }
