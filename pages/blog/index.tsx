@@ -34,7 +34,7 @@ export default function Blog({ allPostsData }) {
               <Link href={`/blog/${id}`}>
                 <a className="font-bold text-black">{title}</a>
               </Link>
-              <p className="text-gray-600 mt-0">
+              <p className="text-gray-600 mt-0 mb-2">
                 <Date dateString={date} />
               </p>
             </li>
