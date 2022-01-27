@@ -24,11 +24,11 @@ export default function Home({ allPostsData }) {
       <section>
         <h1 className="hidden">Home</h1>
         <p className="text-5xl sm:text-7xl font-sans font-bold tracking-tight text-center my-32">
-          Hi, I'm <span className="text-animate">Neil Gebhard</span>.
+          Hi, I'm{" "}
+          <span className="hidden sm:inline text-animate">Neil Gebhard</span>
+          <span className="sm:hidden text-animate">Neil</span>
+          <span className="sm:hidden text-animate"> Gebhard</span>.
         </p>
-        {/* <div className="text-center mb-32 rounded overflow-hidden">
-          <Image src="/images/profile-far.jpg" width={320} height={426} />
-        </div> */}
       </section>
     </>
   );

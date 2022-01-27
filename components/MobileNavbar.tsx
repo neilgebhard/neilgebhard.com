@@ -24,6 +24,14 @@ export default function MobileNavbar({ menuIsOpen, handleStateChange }) {
             </Link>
           </li>
         ))}
+        <li>
+          <a
+            className="text-white font-bold"
+            href="https://drive.google.com/file/d/1MkH1xE0nQg61F4_Z-P4DN_Vs_8uXZ58L/view?usp=sharing"
+          >
+            Resume
+          </a>
+        </li>
       </ul>
     </Menu>
   );
