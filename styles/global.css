@@ -1,7 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
 :root {
   --green: #10ac84;
   --red: #ee5253;
@@ -52,18 +48,6 @@
 
   a:hover {
     @apply underline;
-  }
-
-  button {
-    @apply shadow-lg;
-  }
-
-  button:hover {
-    @apply shadow-xl;
-  }
-
-  button:active {
-    @apply shadow-md;
   }
 
   img {

@@ -24,6 +24,7 @@ export default function Header() {
   return isMobile ? (
     <MobileNavbar
       handleStateChange={handleStateChange}
+      setIsMenuOpen={setIsMenuOpen}
       menuIsOpen={menuIsOpen}
     />
   ) : (

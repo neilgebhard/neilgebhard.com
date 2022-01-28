@@ -4,11 +4,13 @@ import React from "react";
 import { BiCog } from "react-icons/bi";
 import {
   SiCss3,
+  SiCypress,
   SiExpress,
   SiGithub,
   SiGraphql,
   SiHtml5,
   SiJavascript,
+  SiJest,
   SiJsonwebtokens,
   SiMongodb,
   SiNextdotjs,
@@ -16,6 +18,7 @@ import {
   SiPostgresql,
   SiReact,
   SiTailwindcss,
+  SiTypescript,
   SiVisualstudiocode,
 } from "react-icons/si";
 
@@ -27,6 +30,10 @@ const skills = [
   {
     label: "JavaScript",
     icon: <SiJavascript size="2rem" />,
+  },
+  {
+    label: "TypeScript",
+    icon: <SiTypescript size="2rem" />,
   },
   {
     label: "HTML",
@@ -73,6 +80,14 @@ const skills = [
     icon: <SiPostgresql size="2rem" />,
   },
   {
+    label: "Cypress",
+    icon: <SiCypress size="2rem" />,
+  },
+  {
+    label: "React Testing Library",
+    icon: <SiJest size="2rem" />,
+  },
+  {
     label: "JSON Web token",
     icon: <SiJsonwebtokens size="2rem" />,
   },
@@ -93,11 +108,11 @@ export default function About() {
         viewport={{ once: true }}
         className="max-w-xl"
       >
-        <p>
-          I'm a <strong>frontend engineer</strong> specializing in React. I've
-          been writing code for about 8 years (professionally for 4 of those). I
-          aim to write code that is simple, straightforward, and elegant. I can
-          leverage cloud services in my web applications to create a full user
+        <p className="text-xl">
+          I'm a frontend engineer specializing in React. I've been writing code
+          for about 8 years (professionally for 4 of those). I aim to write code
+          that is simple, straightforward, and elegant. I know how to leverage
+          cloud services in my web applications to create a full user
           experience. I'm currently living in Saipan, USA.
         </p>
       </motion.section>
@@ -122,11 +137,11 @@ export default function About() {
         whileInView={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="space-y-0"
+        className="space-y-0 max-w-xl"
       >
         <ul className="flex flex-wrap gap-x-6 gap-y-4">
-          {skills.map(({ label, icon }) => (
-            <li className="flex flex-col items-center flex-1">
+          {skills.map(({ label, icon }, index) => (
+            <li key={index} className="flex flex-col items-center flex-1">
               <div>{icon}</div>
               <div className="text-center">{label}</div>
             </li>

@@ -8,7 +8,11 @@ const links = [
   { label: "Blog", href: "/blog" },
 ];
 
-export default function MobileNavbar({ menuIsOpen, handleStateChange }) {
+export default function MobileNavbar({
+  menuIsOpen,
+  setIsMenuOpen,
+  handleStateChange,
+}) {
   return (
     <Menu
       isOpen={menuIsOpen}
@@ -20,7 +24,12 @@ export default function MobileNavbar({ menuIsOpen, handleStateChange }) {
         {links.map(({ href, label }) => (
           <li>
             <Link href={href}>
-              <a className="text-white font-bold">{label}</a>
+              <a
+                className="text-white font-bold"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {label}
+              </a>
             </Link>
           </li>
         ))}

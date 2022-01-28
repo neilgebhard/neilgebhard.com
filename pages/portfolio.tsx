@@ -70,13 +70,6 @@ const portfolio = [
 ];
 
 export default function Portfolio() {
-  // For react-tooltip over SVGs
-  const [isMounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
     <>
       <Head>
@@ -122,15 +115,16 @@ export default function Portfolio() {
                 <BiLink size="1.4rem" /> Demo
               </a>
               <p className="mb-4">{item.description}</p>
-              {isMounted &&
-                item.icons?.map((icon, i) => {
-                  return (
-                    <span key={i} className="ml-2">
-                      <a data-tip={icon.props.title}>{icon}</a>
-                      <ReactTooltip place="top" type="dark" effect="solid" />
-                    </span>
-                  );
-                })}
+              {item.icons?.map((icon, i) => {
+                return (
+                  <span key={i} className="ml-2 inline-block">
+                    <div className="inline-block" data-tip={icon.props.title}>
+                      {icon}
+                    </div>
+                    <ReactTooltip place="top" type="dark" effect="solid" />
+                  </span>
+                );
+              })}
             </div>
           </motion.article>
         ))}

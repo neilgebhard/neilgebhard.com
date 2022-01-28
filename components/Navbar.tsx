@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="flex items-center justify-between pt-4 px-4 max-w-screen-xl mx-auto font-extrabold">
+    <nav className="flex items-center justify-between pt-4 px-4 mx-auto font-extrabold">
       <Link href={`/`}>
         <a href="/" className="hover:no-underline text-2xl">
           Neil Gebhard
@@ -25,7 +25,11 @@ export default function Navbar() {
           </Link>
         </li>
         <li>
-          <a href="https://drive.google.com/file/d/1MkH1xE0nQg61F4_Z-P4DN_Vs_8uXZ58L/view?usp=sharing">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://drive.google.com/file/d/1MkH1xE0nQg61F4_Z-P4DN_Vs_8uXZ58L/view?usp=sharing"
+          >
             Resume
           </a>
         </li>
