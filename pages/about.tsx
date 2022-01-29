@@ -143,7 +143,7 @@ export default function About() {
         viewport={{ once: true }}
         className="space-y-0 max-w-xl"
       >
-        <ul className="flex flex-wrap gap-x-6 gap-y-4">
+        <ul className="flex flex-wrap gap-6 sm:grid sm:grid-cols-6">
           {skills.map(({ label, icon }, index) => (
             <li key={index} className="flex flex-col items-center flex-1">
               <div>{icon}</div>
