@@ -48,6 +48,10 @@ const skills = [
     icon: <SiNodedotjs size="2rem" />,
   },
   {
+    label: "Express",
+    icon: <SiExpress size="2rem" />,
+  },
+  {
     label: "Next.js",
     icon: <SiNextdotjs size="2rem" />,
   },

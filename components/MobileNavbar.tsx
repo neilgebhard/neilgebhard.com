@@ -21,8 +21,8 @@ export default function MobileNavbar({
       width={200}
     >
       <ul className="list-none space-y-4 text-center text-lg">
-        {links.map(({ href, label }) => (
-          <li>
+        {links.map(({ href, label }, index) => (
+          <li key={index}>
             <Link href={href}>
               <a
                 className="text-white font-bold"

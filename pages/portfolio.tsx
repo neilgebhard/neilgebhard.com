@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Image from "next/image";
 import ReactTooltip from "react-tooltip";
 import { motion } from "framer-motion";
