@@ -20,7 +20,7 @@ export default function Blog({ allPostsData }) {
         <title>Blog | Neil Gebhard</title>
         <meta name="description" content="The blog of Neil Gebhard"></meta>
       </Head>
-      <section>
+      <section className="max-w-xl mx-auto">
         <h1>Blog</h1>
         <motion.ul
           className="list-none space-y-5"

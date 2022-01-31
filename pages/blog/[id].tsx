@@ -27,6 +27,7 @@ export default function Post({ postData }) {
     <>
       <Head>
         <title>{postData.title} | Neil Gebhard</title>
+        <meta name="description" content={postData.title}></meta>
       </Head>
       <article className="max-w-xl mx-auto">
         <h1 className="mb-2">{postData.title}</h1>
