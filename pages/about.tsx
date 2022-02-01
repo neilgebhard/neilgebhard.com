@@ -3,12 +3,16 @@ import Head from "next/head";
 import React from "react";
 import { BiCog } from "react-icons/bi";
 import {
+  SiAndroid,
+  SiCplusplus,
   SiCss3,
   SiCypress,
   SiExpress,
   SiGithub,
   SiGraphql,
   SiHtml5,
+  SiIos,
+  SiJava,
   SiJavascript,
   SiJest,
   SiJsonwebtokens,
@@ -16,7 +20,9 @@ import {
   SiNextdotjs,
   SiNodedotjs,
   SiPostgresql,
+  SiPython,
   SiReact,
+  SiSwift,
   SiTailwindcss,
   SiTypescript,
   SiVisualstudiocode,
@@ -97,6 +103,33 @@ const skills = [
   },
 ];
 
+const other = [
+  {
+    label: "Java",
+    icon: <SiJava size="2rem" />,
+  },
+  {
+    label: "Python",
+    icon: <SiPython size="2rem" />,
+  },
+  {
+    label: "C++",
+    icon: <SiCplusplus size="2rem" />,
+  },
+  {
+    label: "Swift",
+    icon: <SiSwift size="2rem" />,
+  },
+  {
+    label: "iOS",
+    icon: <SiIos size="2rem" />,
+  },
+  {
+    label: "Android",
+    icon: <SiAndroid size="2rem" />,
+  },
+];
+
 export default function About() {
   return (
     <>
@@ -135,7 +168,7 @@ export default function About() {
           <div className="text-neutral-600">2011 - 2014</div>
           <div className="text-neutral-600">Cum laude</div>
         </motion.section>
-        <h2>Skills</h2>
+        <h2>Web Skills</h2>
         <motion.section
           initial={{ scale: 0.99, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
@@ -145,6 +178,23 @@ export default function About() {
         >
           <ul className="flex flex-wrap gap-6 sm:grid sm:grid-cols-6">
             {skills.map(({ label, icon }, index) => (
+              <li key={index} className="flex flex-col items-center flex-1">
+                <div>{icon}</div>
+                <div className="text-center">{label}</div>
+              </li>
+            ))}
+          </ul>
+        </motion.section>
+        <h2>Other</h2>
+        <motion.section
+          initial={{ scale: 0.99, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="space-y-0 max-w-xl"
+        >
+          <ul className="flex flex-wrap gap-6 sm:grid sm:grid-cols-6">
+            {other.map(({ label, icon }, index) => (
               <li key={index} className="flex flex-col items-center flex-1">
                 <div>{icon}</div>
                 <div className="text-center">{label}</div>
