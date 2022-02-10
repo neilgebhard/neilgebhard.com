@@ -30,11 +30,13 @@ export default function Post({ postData }) {
         <meta name="description" content={postData.title}></meta>
       </Head>
       <article className="max-w-xl mx-auto">
-        <h1 className="mb-2">{postData.title}</h1>
-        <p className="text-gray-600 mb-12 mt-0">
-          <Date dateString={postData.date} />
-        </p>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <header>
+          <h1 className="mb-2">{postData.title}</h1>
+          <p className="text-gray-600 mb-12 mt-0">
+            <Date dateString={postData.date} />
+          </p>
+        </header>
+        <section dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
     </>
   );
