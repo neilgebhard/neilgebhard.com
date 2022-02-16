@@ -9,19 +9,19 @@ The `useEffect` hook allows something to be done after a React component renders
 
 ![simple useEffect example](/images/use-effect-example-1.png)
 
-Okay, well there’s more to it. What is the point of this hook? It gives developers a way to run side effects. A **side effect** is a fancy name for an interaction with some outside of a the app’s local environment. Some examples of side effects are data fetching, setting up a subscription, manually modifying the DOM, or saving to local storage.
+Okay, well there’s more to it. What is the point of this hook? It gives developers a way to run side effects. A **side effect** is a fancy name for an interaction with something outside of the app’s local environment. Some examples of side effects are data fetching, setting up a subscription, manually modifying the DOM, and saving to local storage.
 
 Another way to put it is that it synchronizes the state inside your app with the state outside your app.
 
-Some confusion may be derived from its name as `useEffect`. What kind of effects does it do? It’s probably more aptly named `useSideEffect`, but naming it this way saves us from writing four letters.
+Some confusion may be derived from its name as `useEffect`. What kind of effects does it do? It’s probably more aptly named `useSideEffect`, but I suppose naming it this way saves us from writing four extra letters.
 
-The point of running code after render is so that it avoids interfering with browser paint. It’s important that there are no performance issues as the user interface is being rendered. User experience is the consideration here – we want the UI to be rendered without interruption. There may also be SEO considerations if the paint is especially long; web crawlers may fail to see what you intend.
+The point of running code after render is so that it avoids interfering with browser paint. It’s important that the user interface renders without performance issues. User experience is the consideration here – we want UI to render without stuttering or freezing. There may also be SEO considerations if the paint is especially long; web crawlers may fail to see what you intend.
 
-If you’re coming from React classes, `useEffect` indirectly replaces `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount`. `useEffect` isn’t a direct translation from these lifecycle methods, but much of the code from there will be moved to it.
+If you’re coming from React classes, `useEffect` indirectly replaces `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount`. `useEffect` isn’t a direct translation from these obsolete lifecycle methods, but much of the code from there will be moved to it.
 
 There’s another React hook that is similar called `useLayoutEffect`. You may have heard of it. What’s the deal with this close relative? In short, they do the same thing, except the timing of when it runs is different. It runs after all DOM mutations but before browser paint (instead of after). In certain cases, it will help avoid flickers.
 
-As a general rule, you almost never want to opt for `useLayoutEffect` over `useEffect`. It can cause bugs relating to re-rendering a component based on state changes. It only applies to certain use cases. Those use cases pertain to mutating the DOM or performing DOM/browser measurements. Some libraries may opt to using `useLayoutEffect`.
+As a general rule, you almost never want to opt for `useLayoutEffect` over `useEffect`. It can cause bugs relating to re-rendering a component based on state changes. It only applies to certain use cases. Those use cases pertain to mutating the DOM or performing DOM/browser measurements. Some libraries may opt to using `useLayoutEffect`. Besides that, just stick to `useEffect`.
 
 So I did mention earlier that `useEffect` will run again is a variable you specify changes. The `useEffect` hook accepts an array of variables as the second argument. Whenever a variable inside this dependency array changes, it will trigger the `useEffect` to run again. If the dependency array is empty, it will run only once. If there’s no dependency array, `useEffect` will run every render (careful about this condition as it may lead to infinite loops).
 
