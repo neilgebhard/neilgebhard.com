@@ -9,7 +9,7 @@ During development, we are often writing code in many different files. This is e
 
 Webpack is a module bundler. It combines all of the files of a project (JavaScript, JSX, CSS, etc.) into one single file for production. In short, the benefits of using Webpack in your project are **modularity and network performance**.
 
-Modularity allows you to break down your codebase into many small files. This makes your application easier to work on and digest. This is especially important for large projects and team environments.
+Modularity allows you to break down your codebase into many small files. This makes your application easier to work on and digest. It also makes blocks of code re-usable. This is especially important for large projects and team environments.
 
 The network performance boost relates to HTTP requests. Each script tag loading a JavaScript file makes an HTTP request. Every HTTP request has a latency penalty attached to it. Allowing the browser to load a single file removes that penalty.
 

@@ -23,7 +23,7 @@ There’s another React hook that is similar called `useLayoutEffect`. You may h
 
 As a general rule, you almost never want to opt for `useLayoutEffect` over `useEffect`. It can cause bugs relating to re-rendering a component based on state changes. It only applies to certain use cases. Those use cases pertain to mutating the DOM or performing DOM/browser measurements. Some libraries may opt to using `useLayoutEffect`. Besides that, just stick to `useEffect`.
 
-So I did mention earlier that `useEffect` will run again is a variable you specify changes. The `useEffect` hook accepts an array of variables as the second argument. Whenever a variable inside this dependency array changes, it will trigger the `useEffect` to run again. If the dependency array is empty, it will run only once. If there’s no dependency array, `useEffect` will run every render (careful about this condition as it may lead to infinite loops).
+So I did mention earlier that `useEffect` will run again if a variable you specify changes. The `useEffect` hook accepts an array of variables as the second argument. Whenever a variable inside this dependency array changes, it will trigger the `useEffect` to run again. If the dependency array is empty, it will run only once. If there’s no dependency array, `useEffect` will run every render (careful about this condition as it may lead to infinite loops).
 
 ![useEffect example with dependency array](/images/use-effect-example-2.png)
 

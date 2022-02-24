@@ -10,17 +10,17 @@ First, let’s see **what makes a component re-render**. A component re-renders 
 1. Its parent re-renders
 2. Its state changes
 3. Its props changes
-4. Its a descendant of a Provider and its value prop changes
+4. It's a descendant of a Provider and its value prop of the Provider changes
 
-Great. Now, there may be times when we want to prevent re-renders or, at least, handle them better. What are the ways we can go about doing that? There are three main mechanisms to take into consideration: `React.memo`, `useMemo`, and `useCallback`.
+Great. Now we know what makes a component re-render. But, there may be times when we want to prevent re-renders or, at least, handle them better. What are the ways we can go about doing that? There are three main React mechanisms to take into consideration: `React.memo`, `useMemo`, and `useCallback`.
 
-An important concept in understanding rendering performance in React is memoization. **Memoization** is a technique for handling expensive calculations executed in function calls. The way memoization works is the result of the function gets “cached” or stored. Then, if the function is called with the same inputs, the cached result is returned. This avoids the expensive calculations when the function's output remains the same.
+An important concept in understanding rendering performance in React is memoization. **Memoization** is a technique for handling expensive calculations executed in function calls. The way memoization works is the result of the function gets “cached” or stored. Then, if the function is called again with the same inputs, the cached result is returned. This avoids having the function to re-execute an expensive calculation when the function's output is already known.
 
 One way to use memoization in React is through `React.memo`. This is a higher order component, a function that takes a component as an argument and returns a component. In short, it wraps the component in logic. What it does is it prevents the component from rendering if its props remain the same. It’s important to note that it still re-renders if its state or context changes. Its sole purpose is performance optimization.
 
 ![Example of useMemo](/images/memo-example-1.png)
 
-`React.memo` is worthwhile to use if the extra work of comparing the old and new props is cheaper than re-rendering the component. It most cases, it’s not needed. Remember that performance optimizations always have a tradeoff, otherwise it would be the default. Use this tool if a component is noticeably having poor performance. Otherwise, it is recommended to omit it.
+`React.memo` is worthwhile to use if the extra work of comparing the old and new props is cheaper than re-rendering the component. In most cases, it’s not needed. Remember that performance optimizations always have a tradeoff, otherwise it would be the default. Use this tool if a component is noticeably having poor performance. Otherwise, it is recommended to omit it.
 
 If a component is passed a function as props, it will always re-render despite wrapping it in `React.memo`. The reason is that the function is re-declared every render. Therefore, the props always change because the old and new functions are being compared. Remember that JavaScript compares functions by reference. In other words, it’s a shallow comparison.
 
