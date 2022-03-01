@@ -1,0 +1,32 @@
+---
+title: "Accessibility: Semantic HTML"
+date: "2022-02-27"
+---
+
+**Semantic HTML is about using the right HTML element for a particular piece of content.** Using the most specific element for the job is key; the more specific, the better. For example, a `<div>` can be used for a section, by it’s much more correct to just use `<section>`.
+
+**Why should we use HTML that’s semantic?** Well, content becomes more comprehensible and serviceable to browsers, screen readers, and other similar technologies by describing and defining its purpose. It gives meaning to content rather than merely define its appearance. As a by-product, it also makes it easier to read and maintain for developers as it self-documents code.
+
+**The most important aspect of semantic HTML is that it helps search engines, screen readers, and other devices read the page.** It does this by helping them find relevant information faster and structure that information in a way that’s useful. It assists those technologies by activating their accessibility features to accommodate different hardware and users with disabilities
+
+Some of the most commonly used HTML tags are `<main>`, `<header>`, `<nav>`, `<aside>`, `<footer>`, `<article>`, `<section>`, `<figure>`, and `<figcaption>`. Each of these tags serve a specific purpose in their usage in a web document.
+
+- **`<header>`**: contains introductory content or navigational aids
+- **`<nav>`**: contains navigational links to other parts of the website
+- **`<main>`**: contains the central topic or main functionality of a web application
+- **`<aside>`**: represents content that’s indirectly related to the document’s main content
+- **`<footer>`**: represents the footer of a section or document
+- **`<article>`**: contains a piece of writing such as a blog post or newspaper article
+- **`<section>`**: represents a generic standalone section of a webpage
+- **`<figure>`**: contains a piece of piece of content which is combined with a caption to form a single unit
+- **`<figcaption>`**: a caption or legend of its parent figure element
+
+In regard to headings, `<h1>` is the most important and every page should have one at the top. `<h1>` headings may be followed by one or more `<h2>` headings, then `<h2>` headings may be followed by one or more `<h3>` headings, and so on. Imagine that the headings form a table of contents or outline for a web page. Each `<section>` of a webpage should have their own heading.
+
+You should avoid using a `<div>` or `<span>` as they don’t convey meaning or purpose. However, there are exceptions. One valid way of using them are as a container for CSS styling. It may also be used as a container for targeting a specific piece of content for something like a library or for testing. Don’t forget to put lists in a `<ul>` or `<ol>` and list items in a `<li>`. Similarly, paragraphs should be in a `<p>`.
+
+There's almost no reason to omit alternative text for `<img>`. It represents the “why” of the image in relation to the content of the page. Keep in mind that it is read aloud by screen readers and is indexed by search engines. Also, if the image fails to load, the text will be displayed.
+
+Lastly, know that HTML elements have roles associated with them. There is something called WAI-ARIA or the Web Accessibility Initiative - Accessible Rich Internet Applications. It's a web standard to make content more accessible to people with disabilities. There are three main features defined in the spec: roles, properties, and states. HTML elements have an additional set of attributes associated with them to provide supplementary information for improving semantics and accessibility. Check this **[WAR-ARIA basics](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/WAI-ARIA_basics)** page for more info.
+
+Thank you for coming to my TED talk.
