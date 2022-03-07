@@ -19,20 +19,6 @@ import Head from "next/head";
 
 const portfolio = [
   {
-    title: "Movie App",
-    description:
-      "A responsive web app for discovering and exploring movies utilizing The Movie Database API.",
-    siteUrl: "https://neilsmovieapp.netlify.app/",
-    githubUrl: "https://github.com/neilgebhard/movie-app-react",
-    img: "/images/movie-laptop-frame.png",
-    icons: [
-      <SiReact size="2rem" title="React" color="dimgrey" />,
-      <SiTypescript size="2rem" title="TypeScript" color="dimgrey" />,
-      <SiCss3 size="2rem" title="CSS Modules" color="dimgrey" />,
-      <SiJest size="2rem" title="Jest" color="dimgrey" />,
-    ],
-  },
-  {
     title: "Reddit Clone",
     description:
       "A full-stack clone of Reddit. The features include user authentication, posts, comments, replies, and upvoting/downvoting.",
@@ -64,6 +50,20 @@ const portfolio = [
       <SiNodedotjs size="2rem" title="Node.js" color="dimgrey" />,
       <SiExpress size="2rem" title="Express.js" color="dimgrey" />,
       <SiMongodb size="2rem" title="MongoDB" color="dimgrey" />,
+      <SiJest size="2rem" title="Jest" color="dimgrey" />,
+    ],
+  },
+  {
+    title: "Movie App",
+    description:
+      "A responsive web app for discovering and exploring movies utilizing The Movie Database API.",
+    siteUrl: "https://neilsmovieapp.netlify.app/",
+    githubUrl: "https://github.com/neilgebhard/movie-app-react",
+    img: "/images/movie-laptop-frame.png",
+    icons: [
+      <SiReact size="2rem" title="React" color="dimgrey" />,
+      <SiTypescript size="2rem" title="TypeScript" color="dimgrey" />,
+      <SiCss3 size="2rem" title="CSS Modules" color="dimgrey" />,
       <SiJest size="2rem" title="Jest" color="dimgrey" />,
     ],
   },
