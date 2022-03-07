@@ -36,7 +36,7 @@ export default function MobileNavbar({
         <li>
           <a
             className="text-white font-bold"
-            href="https://drive.google.com/file/d/1MkH1xE0nQg61F4_Z-P4DN_Vs_8uXZ58L/view?usp=sharing"
+            href="https://drive.google.com/file/d/1259m3muZFfw88eZTFTTYuNY1O8-S2ERk/view?usp=sharing"
           >
             Resume
           </a>
