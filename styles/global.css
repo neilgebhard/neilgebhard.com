@@ -51,7 +51,7 @@
   }
 
   a {
-    @apply text-gray-900 no-underline;
+    @apply no-underline text-blue-700 font-bold;
   }
 
   a:hover {
