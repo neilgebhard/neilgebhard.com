@@ -18,8 +18,8 @@ export default function Navbar() {
         </a>
       </Link>
       <ul className="flex gap-x-4 list-none text-xl">
-        {links.map((link) => (
-          <li>
+        {links.map((link, index) => (
+          <li key={index}>
             <Link href={link.href}>
               <a className="text-inherit font-extrabold">{link.label}</a>
             </Link>
