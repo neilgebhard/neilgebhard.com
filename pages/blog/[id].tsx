@@ -6,6 +6,7 @@ import CodeBlock from "../../components/CodeBlock";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import remarkHint from "remark-hint";
+import Comments from "./../../components/Comments";
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = getAllPostIds();
@@ -44,6 +45,7 @@ export default function Post({ postData }) {
         >
           {postData.markdown}
         </ReactMarkdown>
+        <Comments />
       </article>
     </>
   );
