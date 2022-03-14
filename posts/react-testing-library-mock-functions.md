@@ -1,0 +1,104 @@
+---
+title: "React Testing Library: Mock Functions"
+date: "2022-03-12"
+---
+
+To conclude this series on unit testing with React Testing Library, we will talk about mock functions. If you haven't already, you may check out the other articles on this topic: [queries](https://neilgebhard.com/blog/react-testing-library-queries), [interactions](https://neilgebhard.com/blog/react-testing-library-interactions), and [assertions](https://neilgebhard.com/blog/react-testing-library-assertions).
+
+A **mock function** is a function that simulates the behavior of a real function.
+
+They are useful in unit testing when it's impractical to use the actual function in a test.
+
+For example, let's say you have a function that makes an API call. In this situation, it's not proper to use the endpoint for the test because the test becomes dependent on the API working as expected.
+
+What if the server is down? What if the data being returned from the endpoint changes? Your tests will break.
+
+What if you want to test a `POST` function such as registering a user? Surely you don't want to add a user to your database every time you run your tests. You may also want to avoid bogging down your server with fake requests.
+
+In general, you want your unit tests to be as isolated, encapsulated, and independent as possible.
+
+That's where mock functions come into play. With mock functions, you can do things like replace the function that makes the API request with a function that simulates the same behavior. Therefore, it allows you to build tests that focus on the correctness of your React component.
+
+One way to create mock functions is with [Jest](https://jestjs.io/docs/mock-functions). Here is an example of how this would work in practice.
+
+```jsx
+// App.jsx
+
+import { useEffect, useState } from "react";
+import axios from "axios";
+
+export default function App() {
+  const [pokemon, setPokemon] = useState([]);
+
+  useEffect(() => {
+    axios.get("/pokemon").then(({ data }) => {
+      setPokemon(data.results);
+    });
+  }, []);
+
+  return (
+    <ol>
+      {pokemon.map((p, index) => (
+        <li key={index}>{p.name}</li>
+      ))}
+    </ol>
+  );
+}
+```
+
+```jsx
+// App.test.jsx
+
+import { render, screen } from "@testing-library/react";
+import axios from "axios";
+import App from "./App";
+
+jest.mock("axios");
+
+test("example of mocking a function", async () => {
+  const data = { results: [{ name: "bulbasaur" }] };
+
+  axios.get.mockImplementationOnce(() => Promise.resolve({ data }));
+
+  render(<App />);
+
+  const textContent = await screen.findByText(/bulbasaur/);
+  expect(textContent).toBeInTheDocument();
+});
+```
+
+In this example, we're using Jest to mock the function `.get()` from axios (which is making an API request).
+
+Another way to create a mock function is with [Mock Service Worker](https://mswjs.io/) (MSW). This library is much more powerful as it intercepts requests at the network level. Not to mention, MSW allows you to keep tests and mock functions separated. This will make your unit tests simpler, smaller, and easier to read.
+
+Here is an example of using MSW. Keep in mind that it's common practice to split up your MSW code and the code for your unit tests.
+
+```jsx
+// App.test.jsx
+
+import { render, screen } from "@testing-library/react";
+import { rest } from "msw";
+import { setupServer } from "msw/node";
+import App from "./App";
+
+const data = { results: [{ name: "bulbasaur" }] };
+
+export const handlers = [
+  rest.get("/pokemon", (req, res, ctx) => {
+    return res(ctx.json(data));
+  }),
+];
+const server = setupServer(...handlers);
+
+beforeAll(() => server.listen());
+
+test("example of mocking with msw", async () => {
+  render(<App />);
+  const text = await screen.findByText(/bulbasaur/);
+  expect(text).toBeInTheDocument();
+});
+```
+
+In this example, MSW starts up a server to to intercept API calls to the `/pokemon` endpoint.
+
+Both Jest mock functions and Mock Service Worker (MSW) can be used together with React Testing Library to help you write unit tests in React.
