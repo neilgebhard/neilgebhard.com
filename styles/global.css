@@ -12,7 +12,7 @@
   }
 
   h1 {
-    @apply text-5xl mb-12;
+    @apply text-5xl;
   }
 
   h2 {
@@ -34,20 +34,12 @@
     @apply mb-4 mt-12;
   }
 
-  ul {
-    @apply m-0 p-0;
-  }
-
-  ol {
-    @apply mt-4 mb-12;
-  }
-
   li {
     @apply text-lg;
   }
 
   p {
-    @apply mb-8 text-lg;
+    @apply my-6 text-lg;
   }
 
   a {
