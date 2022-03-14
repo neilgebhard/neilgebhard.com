@@ -53,6 +53,10 @@
   img {
     @apply w-full;
   }
+
+  code {
+    @apply bg-gray-200 rounded px-1 inline-block;
+  }
 }
 
 @tailwind components;
