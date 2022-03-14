@@ -1,9 +1,11 @@
 import Head from "next/head";
-import Navbar from "../../components/Navbar";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import Date from "../../components/Date";
 import { GetStaticProps, GetStaticPaths } from "next";
-import Footer from "../../components/Footer";
+import CodeBlock from "../../components/CodeBlock";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import remarkHint from "remark-hint";
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = getAllPostIds();
@@ -36,7 +38,12 @@ export default function Post({ postData }) {
             <Date dateString={postData.date} />
           </p>
         </header>
-        <section dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <ReactMarkdown
+          components={CodeBlock}
+          remarkPlugins={[remarkGfm, remarkHint]}
+        >
+          {postData.markdown}
+        </ReactMarkdown>
       </article>
     </>
   );

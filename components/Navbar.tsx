@@ -17,7 +17,7 @@ export default function Navbar() {
           Neil Gebhard
         </a>
       </Link>
-      <ul className="flex gap-x-4 list-none text-xl">
+      <ul className="pl-0 flex gap-x-4 list-none text-xl">
         {links.map((link, index) => (
           <li key={index}>
             <Link href={link.href}>

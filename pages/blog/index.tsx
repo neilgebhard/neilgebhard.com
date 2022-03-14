@@ -23,7 +23,7 @@ export default function Blog({ allPostsData }) {
       <section className="max-w-xl mx-auto">
         <h1>Blog</h1>
         <motion.ul
-          className="list-none space-y-5"
+          className="pl-0 list-none space-y-5"
           initial={{ scale: 0.99, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.5 }}
