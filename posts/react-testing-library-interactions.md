@@ -7,13 +7,62 @@ Building off my previous post about **[queries](https://neilgebhard.com/blog/rea
 
 A common way of interacting with elements by end-users is clicking. It's a great way to test things like buttons, checkboxes, and their corresponding event handlers. Here's a way to click a checkbox in a unit test using the User Event library.
 
-![User Event library clicking example](/images/react-testing-library/user-event-click.png)
+```jsx
+// Checkbox.test.jsx
+
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+
+const Checkbox = () => {
+  return (
+    <>
+      <label htmlFor="checkbox">Checkbox</label>
+      <input id="checkbox" type="checkbox" />
+    </>
+  );
+};
+
+test("clicks a checkbox", () => {
+  render(<Checkbox />);
+  const checkbox = screen.getByLabelText(/Checkbox/);
+
+  // simulates clicking a checkbox
+  userEvent.click(checkbox);
+
+  expect(checkbox).toBeChecked();
+});
+```
 
 Buttons would be clicked in a similar fashion.
 
 Another common way of interacting with elements is by typing. This would be important for testing things like forms and textboxes. Here's an example of typing into a textbox.
 
-![User Event library typing example](/images/react-testing-library/user-event-type.png)
+```jsx
+// Input.test.jsx
+
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+
+const Input = () => {
+  return (
+    <>
+      <label htmlFor="textbox">Textbox</label>
+      <input id="textbox" type="text" />
+    </>
+  );
+};
+
+test("types in a textbox", () => {
+  render(<Input />);
+  const input = screen.getByLabelText(/Textbox/);
+  expect(input).toBeInTheDocument();
+
+  // simulates typing hello world
+  userEvent.type(input, "hello world");
+
+  expect(input).toHaveValue("hello world");
+});
+```
 
 There are many other ways of interacting with elements. Here is the exhaustive list:
 

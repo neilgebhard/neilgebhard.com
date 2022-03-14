@@ -13,11 +13,93 @@ The libraries commonly used for assertions in React are [Jest](https://jestjs.io
 
 Here are some **examples of Jest**. Note that each assertion is independent of the DOM. Still, they will be useful in writing tests in React.
 
-![Jest assertions](/images/react-testing-library/jest-assertions.png)
+```jsx
+// App.test.jsx
+
+import { render, screen } from "@testing-library/react";
+
+const App = () => <h1>Hello world</h1>;
+
+test("examples of Jest assertions", () => {
+  render(<App />);
+
+  // checks for deep equality
+  const person1 = { name: "Neil Gebhard" };
+  const person2 = { name: "Neil Gebhard" };
+  expect(person1).toEqual(person2);
+
+  // checks for strict equality
+  expect(true).toBe(true);
+  expect(2 + 2).toBe(4);
+
+  // checks if opposite is true
+  expect(false).not.toBe(true);
+
+  // checks for truthy value
+  expect(1).toBeTruthy();
+
+  // checks for falsy value
+  expect(undefined).toBeFalsy();
+
+  // checks if null
+  const textContent = screen.queryByText(/Hi world/);
+  expect(textContent).toBeNull();
+
+  // checks if function was called
+  const drink = jest.fn();
+  drink();
+  expect(drink).toBeCalled();
+
+  // checks if list has 2 items
+  expect(["item 1", "item 2"]).toHaveLength(2);
+});
+```
 
 Now let's look at some **examples of jest-dom**. Not how the assertions are checking various conditions about the DOM.
 
-![Jest assertions](/images/react-testing-library/jest-dom-assertions.png)
+```jsx
+// Button.test.jsx
+
+import { render, screen } from "@testing-library/react";
+
+const Button = () => {
+  return (
+    <button className="btn" style={{ backgroundColor: "blue" }} type="submit">
+      A Button
+    </button>
+  );
+};
+
+test("examples of jest-dom assertions", () => {
+  render(<Button />);
+
+  // checks if in document
+  const button = screen.getByRole("button", { name: /A Button/ });
+  expect(button).toBeInTheDocument();
+
+  // checks if not in document
+  const textContent = screen.queryByText(/hello world/i);
+  expect(textContent).not.toBeInTheDocument();
+
+  // checks for certain CSS properties
+  expect(button).toHaveStyle({ backgroundColor: "blue" });
+
+  // checks for certain text content
+  expect(button).toHaveTextContent("A Button");
+
+  // checks if enabled
+  expect(button).toBeEnabled();
+
+  // checks if not disabled
+  expect(button).not.toBeDisabled();
+
+  // checks if has certain attribute
+  expect(button).toHaveAttribute("type", "submit");
+
+  // checks if has certain class
+  expect(button).toHaveClass("btn");
+});
+```
 
 There are many more assertions that were not mentioned in the examples. You should definitely check out the documentation to get the exhaustive list of assertions by visiting the webpages for [Jest](https://jestjs.io/docs/expect) and [jest-dom](https://github.com/testing-library/jest-dom)
 

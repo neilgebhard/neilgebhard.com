@@ -7,7 +7,17 @@ Let’s talk about the React hook `useEffect`. It’s probably the most popular 
 
 The `useEffect` hook allows something to be done after a React component renders. Then, it will run again if a variable you specify changes. That’s it. That’s all it really does.
 
-![simple useEffect example](/images/use-effect-example-1.png)
+```jsx
+import { useEffect } from "react";
+
+export default function Component() {
+  useEffect(() => {
+    // run some code after render
+  }, []);
+
+  return <h1>Hello world</h1>;
+}
+```
 
 Okay, well there’s more to it. What is the point of this hook? It gives developers a way to run side effects. A **side effect** is a fancy name for an interaction with something outside of the app’s local environment. Some examples of side effects are data fetching, setting up a subscription, manually modifying the DOM, and saving to local storage.
 
@@ -25,8 +35,32 @@ As a general rule, you almost never want to opt for `useLayoutEffect` over `useE
 
 So I did mention earlier that `useEffect` will run again if a variable you specify changes. The `useEffect` hook accepts an array of variables as the second argument. Whenever a variable inside this dependency array changes, it will trigger the `useEffect` to run again. If the dependency array is empty, it will run only once. If there’s no dependency array, `useEffect` will run every render (careful about this condition as it may lead to infinite loops).
 
-![useEffect example with dependency array](/images/use-effect-example-2.png)
+```jsx
+import { useEffect } from "react";
+
+export default function Component() {
+  useEffect(() => {
+    // activate side effect
+  }, [rerunIfThisVariableChanges]);
+
+  return <h1>Hello world</h1>;
+}
+```
 
 The `useEffect` clean-up mechanism must be mentioned. Some side effects need to be cleaned up after the component unmounts. The purpose is to avoid memory leaks. Returning a callback function inside `useEffect` gives you a chance to perform the clean-up. This function runs when the component unmounts. This function also runs before the execution of a side effect every time after the first time. An example of a clean-up operation is unsubscribing from a data source.
 
-![useEffect example with clean-up](/images/use-effect-example-3.png)
+```jsx
+import { useEffect } from "react";
+
+export default function Component() {
+  useEffect(() => {
+    // activate side effect
+
+    return () => {
+      // clean up side effect
+    };
+  }, []);
+
+  return <h1>Hello world</h1>;
+}
+```
