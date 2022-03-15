@@ -176,7 +176,7 @@ export default function About() {
           viewport={{ once: true }}
           className="space-y-0 max-w-xl"
         >
-          <ul className="flex flex-wrap gap-6 sm:grid sm:grid-cols-6">
+          <ul className="pl-0 flex flex-wrap gap-6 sm:grid sm:grid-cols-6">
             {skills.map(({ label, icon }, index) => (
               <li key={index} className="flex flex-col items-center flex-1">
                 <div>{icon}</div>
@@ -193,7 +193,7 @@ export default function About() {
           viewport={{ once: true }}
           className="space-y-0 max-w-xl"
         >
-          <ul className="flex flex-wrap gap-6 sm:grid sm:grid-cols-6">
+          <ul className="pl-0 flex flex-wrap gap-6 sm:grid sm:grid-cols-6">
             {other.map(({ label, icon }, index) => (
               <li key={index} className="flex flex-col items-center flex-1">
                 <div>{icon}</div>
