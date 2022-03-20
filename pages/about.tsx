@@ -165,8 +165,8 @@ export default function About() {
             Bachelor of Science: Computer Science
           </div>
           <div className="text-2xl">Portland State University</div>
-          <div className="text-neutral-600">2011 - 2014</div>
-          <div className="text-neutral-600">Cum laude</div>
+          <div className="text-neutral-600">2011 - 2014 • Magna cum laude</div>
+          <div className="text-neutral-600"></div>
         </motion.section>
         <h2>Web Skills</h2>
         <motion.section
