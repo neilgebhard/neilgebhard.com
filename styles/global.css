@@ -55,7 +55,7 @@
   }
 
   code {
-    @apply bg-gray-100 rounded px-1 inline-block;
+    @apply bg-gray-200 rounded px-1 inline-block;
   }
 }
 
