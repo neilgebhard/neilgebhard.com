@@ -18,8 +18,6 @@ Note: reducer functions are functions that take in the current state and return 
 A slice provides you with an interface for changing the state. It accepts a set of reducer functions and an initial state value. Here's an example using a Todo App.
 
 ```tsx
-// src/features/todo/todoSlice.js
-
 export const todoSlice = createSlice({
   name: "todo",
   initialState: { tasks: [] },
@@ -46,16 +44,12 @@ Here, we can see that a slice is made called `todoSlice`. The initial state is a
 The store holds all your reducer functions. They are passed into the `Provider` allowing them to be available throughout your app.
 
 ```js
-// src/app/store.js
-
 export const store = configureStore({
   reducer: { todo },
 });
 ```
 
 ```jsx
-// src/index.jsx
-
 ReactDOM.render(
   <Provider store={store}>
     <App />
