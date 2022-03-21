@@ -61,8 +61,6 @@ ReactDOM.render(
 Then, we have our Todo component. This is just normal React. We can see how actions are dispatched to access the reducer functions in our slice.
 
 ```jsx
-// src/features/todo/Todo.jsx
-
 export default function Todo() {
   const tasks = useSelector(selectTasks);
   const dispatch = useDispatch();
