@@ -39,7 +39,7 @@ export const todoSlice = createSlice({
 });
 ```
 
-Here, we can see that a slice is made called `todoSlice`. The initial state is an object with an array of tasks: `{ tasks: [] }`. There are 2 reducer functions: `addTask` and `removeTask`.
+Here, we can see that a slice is made called `todoSlice` with a name ot `todo`. The initial state is an object with an array of tasks: `{ tasks: [] }`. There are 2 reducer functions: `addTask` and `removeTask`.
 
 The store holds all your reducer functions. They are passed into the `Provider` allowing them to be available throughout your app.
 
