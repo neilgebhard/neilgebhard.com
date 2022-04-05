@@ -3,6 +3,7 @@ import Date from "../../components/Date";
 import { motion } from "framer-motion";
 import { getSortedPostsData } from "../../lib/posts";
 import Head from "next/head";
+import Script from "next/script";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -13,12 +14,27 @@ export async function getStaticProps() {
   };
 }
 
+const jsonLd = () => {
+  return `{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    name: "Redux: A Simple Guide",
+    datePublished: "2022-03-19",
+  }`;
+};
+
 export default function Blog({ allPostsData }) {
   return (
     <>
       <Head>
         <title>Blog | Neil Gebhard</title>
-        <meta name="description" content="The blog of Neil Gebhard"></meta>
+        <meta name="description" content="The blog of Neil Gebhard" />
+        <Script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: jsonLd(),
+          }}
+        />
       </Head>
       <section className="max-w-xl mx-auto">
         <h1>Blog</h1>
