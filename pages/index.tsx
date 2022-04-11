@@ -8,7 +8,7 @@ export default function Home() {
         <title>Home | Neil Gebhard</title>
         <meta
           name="description"
-          content="The personal website of Neil Gebhard"
+          content="The personal website of Neil Gebhard featuring a portfolio and blog."
         ></meta>
       </Head>
       <section className="my-32">
