@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../styles/global.css";
 import "../styles/mobile-navbar.css";
-import "../styles/text-animate.css";
+import "../styles/animations.css";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
