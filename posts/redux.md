@@ -1,6 +1,7 @@
 ---
 title: "Redux: A Simple Guide"
 date: "2022-03-19"
+tags: ["JS", "React", "Redux"]
 ---
 
 This guide is designed to be a stripped down introduction to Redux. There are many layers to this library and it's easy to get overwhelmed with it all at the beginning.

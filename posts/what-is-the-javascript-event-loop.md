@@ -1,6 +1,7 @@
 ---
 title: "What is the JavaScript event loop?"
 date: "2021-12-26"
+tags: ["JS"]
 ---
 
 **The JavaScript event loop helps determine what parts of your code runs and when.**

@@ -1,6 +1,7 @@
 ---
 title: "React Testing Library: Mock Functions"
 date: "2022-03-12"
+tags: ["JS", "React", "Testing"]
 ---
 
 To conclude this series on unit testing with React Testing Library, we will talk about mock functions. If you haven't already, you may check out the other articles on this topic: [queries](https://neilgebhard.com/blog/react-testing-library-queries), [interactions](https://neilgebhard.com/blog/react-testing-library-interactions), and [assertions](https://neilgebhard.com/blog/react-testing-library-assertions).

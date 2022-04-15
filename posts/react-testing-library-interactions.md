@@ -1,6 +1,7 @@
 ---
 title: "React Testing Library: Interactions"
 date: "2022-03-08"
+tags: ["JS", "React", "Testing"]
 ---
 
 Building off my previous post about **[queries](https://neilgebhard.com/blog/react-testing-library-queries)**, this post will cover another part of React Testing library: interactions. Sometimes, you need to interact with elements inside your unit tests to ensure your application is working properly. The **[User Event](https://testing-library.com/docs/ecosystem-user-event/)** library is the standard library used to accomplish these simulations. Let's look at some examples.

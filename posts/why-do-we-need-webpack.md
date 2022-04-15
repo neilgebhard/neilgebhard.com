@@ -1,6 +1,7 @@
 ---
 title: "Why do we need Webpack?"
 date: "2022-01-31"
+tags: ["JS"]
 ---
 
 Well, us programmers don’t _need_ Webpack per say. It is possible to make web applications without Webpack. But the tool is something that makes coding applications easier and more efficient.

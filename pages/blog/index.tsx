@@ -39,17 +39,26 @@ export default function Blog({ allPostsData }) {
       <section className="max-w-xl mx-auto">
         <h1>Blog</h1>
         <motion.ul
-          className="pl-0 list-none space-y-5"
+          className="pl-0 list-none space-y-6"
           initial={{ scale: 0.99, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          {allPostsData.map(({ id, date, title }) => (
-            <li key={id} className="text-2xl flex flex-col">
+          {allPostsData.map(({ id, date, title, tags }) => (
+            <li key={id} className="text-2xl flex flex-col space-y-1">
               <Link href={`/blog/${id}`}>
                 <a className="font-bold text-black">{title}</a>
               </Link>
+              {tags && (
+                <ul className="pl-0 flex flex-wrap items-center gap-2">
+                  {tags?.map((tag) => (
+                    <span className="rounded bg-gray-200 p-1 text-sm uppercase font-medium">
+                      {tag}
+                    </span>
+                  ))}
+                </ul>
+              )}
               <p className="text-gray-600 mt-0 mb-2">
                 <Date dateString={date} />
               </p>

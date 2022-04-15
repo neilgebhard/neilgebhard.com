@@ -1,6 +1,7 @@
 ---
 title: "React: Memoization"
 date: "2022-02-15"
+tags: ["JS", "React"]
 ---
 
 Most of the time, having a component re-render is completely fine. The React engine is efficient. React’s reconciliation algorithm, the algorithm which determines updates to the DOM, is done in memory so it's relatively lightweight. However, if your app is noticeably suffering from performance issues, you may want to adjust the way your components render.

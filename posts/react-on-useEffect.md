@@ -1,6 +1,7 @@
 ---
 title: "React: on useEffect"
 date: "2022-02-11"
+tags: ["JS", "React"]
 ---
 
 Let’s talk about the React hook `useEffect`. It’s probably the most popular hook after `useState`. Some people may be confused by this hook. At first, it may seem complicated. But at its core, it’s really quite simple. So what does it do?

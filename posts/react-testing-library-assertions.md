@@ -1,6 +1,7 @@
 ---
 title: "React Testing Library: Assertions"
 date: "2022-03-09"
+tags: ["JS", "React"]
 ---
 
 So we've talked about [queries](https://neilgebhard.com/blog/react-testing-library-queries) and [interactions](https://neilgebhard.com/blog/react-testing-library-interactions). There are a couple more parts to creating unit tests in React, particularly assertions and mock functions. For now, let's explore assertions.

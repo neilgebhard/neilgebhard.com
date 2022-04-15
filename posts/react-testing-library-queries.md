@@ -1,6 +1,7 @@
 ---
 title: "React Testing Library: Queries"
 date: "2022-03-05"
+tags: ["JS", "React", "Testing"]
 ---
 
 React Testing Library is the standard testing library used in React. It is focused on testing components as if the user is interacting with them as opposed testing their implementation details. The point is that you don't want your tests to break if you refactor your code.

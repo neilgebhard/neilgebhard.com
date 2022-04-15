@@ -1,6 +1,7 @@
 ---
 title: "React: Context vs Redux"
 date: "2022-02-24"
+tags: ["JS", "React"]
 ---
 
 In React, you may need to share data through your entire app. Two common tools used to accomplish this task are React Context and Redux. Which one should you use? Is one better than the other? Let’s dive into this dilemma.

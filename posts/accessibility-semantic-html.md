@@ -1,6 +1,7 @@
 ---
 title: "Accessibility: Semantic HTML"
 date: "2022-02-27"
+tags: ["HTML", "Accessibility"]
 ---
 
 **Semantic HTML is about using the right HTML element for a particular piece of content.** Using the most specific element for the job is key; the more specific, the better. For example, a `<div>` can be used for a section, by it’s much more correct to just use `<section>`.

@@ -1,6 +1,7 @@
 ---
 title: "Tips for Good UI Design"
 date: "2022-01-02"
+tags: ["UI", "Design"]
 ---
 
 Good UI design allows you to create a user interface that is both functional and beautiful. Well-designed websites are easier to use and a pleasure to interact with. It removes obstacles and barriers to the core features of your product. Here are some small tips I've picked up along the way that are timeless and widely applicable.
