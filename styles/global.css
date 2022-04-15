@@ -57,6 +57,10 @@
   code {
     @apply bg-gray-200 rounded px-1 inline-block;
   }
+
+  blockquote {
+    @apply border-l-gray-300 border-0 border-l-4 border-solid m-0 pl-5;
+  }
 }
 
 @tailwind components;
