@@ -31,6 +31,7 @@ export default function Home() {
             alt="Picture of the Neil Gebhard"
             layout="fill"
             className="rounded-full flex justify-center"
+            priority
           />
         </div>
         <span
