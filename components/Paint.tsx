@@ -56,7 +56,7 @@ const Paint = () => {
 
   return (
     <canvas
-      width={size.width - 20}
+      width={size?.width - 32}
       height={630}
       ref={canvasRef}
       onMouseDown={mouseDownHandler}
