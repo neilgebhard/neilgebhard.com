@@ -1,84 +1,84 @@
 const react = [
   {
-    label: "React",
-    href: "https://reactjs.org/",
+    label: 'React',
+    href: 'https://reactjs.org/'
   },
   {
-    label: "React Router",
-    href: "https://reactrouter.com/",
+    label: 'React Router',
+    href: 'https://reactrouter.com/'
   },
   {
-    label: "React Query",
-    href: "https://react-query.tanstack.com/reference/useQuery",
+    label: 'React Query',
+    href: 'https://react-query.tanstack.com/reference/useQuery'
   },
   {
-    label: "awesome-react",
-    href: "https://github.com/enaqx/awesome-react",
+    label: 'awesome-react',
+    href: 'https://github.com/enaqx/awesome-react'
   },
   {
-    label: "Framer Motion",
-    href: "https://www.framer.com/motion/",
+    label: 'Framer Motion',
+    href: 'https://www.framer.com/motion/'
   },
   {
-    label: "React Icons",
-    href: "https://react-icons.github.io/react-icons/",
+    label: 'React Icons',
+    href: 'https://react-icons.github.io/react-icons/'
   },
   {
-    label: "React Spinners",
-    href: "https://www.davidhu.io/react-spinners/",
-  },
+    label: 'React Spinners',
+    href: 'https://www.davidhu.io/react-spinners/'
+  }
 ];
 
 const testing = [
   {
-    label: "jest-dom",
-    href: "https://github.com/testing-library/jest-dom",
+    label: 'jest-dom',
+    href: 'https://github.com/testing-library/jest-dom'
   },
   {
-    label: "RTL queries",
-    href: "https://testing-library.com/docs/queries/about/",
+    label: 'RTL queries',
+    href: 'https://testing-library.com/docs/queries/about/'
   },
   {
-    label: "Cypress",
-    href: "https://www.cypress.io/",
-  },
+    label: 'Cypress',
+    href: 'https://www.cypress.io/'
+  }
 ];
 
 const blogs = [
-  { label: "Kent C. Dodds", href: "https://kentcdodds.com/blog" },
-  { label: "Dan Abramov", href: "https://overreacted.io/" },
+  { label: 'Kent C. Dodds', href: 'https://kentcdodds.com/blog' },
+  { label: 'Dan Abramov', href: 'https://overreacted.io/' }
 ];
 
 const learning = [
   {
-    label: "MDN",
-    href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    label: 'MDN',
+    href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
   },
-  { label: "JavaScript Info", href: "javascript.info" },
+  { label: 'JavaScript Info', href: 'javascript.info' }
 ];
 
 const design = [
   {
-    label: "Section Divider",
-    href: "https://www.shapedivider.app/",
+    label: 'Section Divider',
+    href: 'https://www.shapedivider.app/'
   },
   {
-    label: "CSS Separator Generator",
-    href: "https://wweb.dev/resources/css-separator-generator/",
+    label: 'CSS Separator Generator',
+    href: 'https://wweb.dev/resources/css-separator-generator/'
   },
-  { label: "Radix", href: "https://www.radix-ui.com/" },
+  { label: 'Radix', href: 'https://www.radix-ui.com/' },
   {
-    label: "Contrast Checker",
-    href: "https://coolors.co/contrast-checker/112a46-acc8e5",
-  },
-  {
-    label: "Open color",
-    href: "https://yeun.github.io/open-color/",
+    label: 'Contrast Checker',
+    href: 'https://coolors.co/contrast-checker/112a46-acc8e5'
   },
   {
-    label: "Flat UI Colors",
-    href: "https://flatuicolors.com/",
+    label: 'Open color',
+    href: 'https://yeun.github.io/open-color/'
   },
+  {
+    label: 'Flat UI Colors',
+    href: 'https://flatuicolors.com/'
+  }
 ];
 
 const renderLinks = (links) => {

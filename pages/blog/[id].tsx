@@ -1,19 +1,19 @@
-import Head from "next/head";
-import { getAllPostIds, getPostData } from "../../lib/posts";
-import Date from "../../components/Date";
-import { GetStaticProps, GetStaticPaths } from "next";
-import CodeBlock from "../../components/CodeBlock";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
-import remarkHint from "remark-hint";
-import Comments from "./../../components/Comments";
-import Script from "next/script";
+import Head from 'next/head';
+import { getAllPostIds, getPostData } from '../../lib/posts';
+import Date from '../../components/Date';
+import { GetStaticProps, GetStaticPaths } from 'next';
+import CodeBlock from '../../components/CodeBlock';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import remarkHint from 'remark-hint';
+import Comments from './../../components/Comments';
+import Script from 'next/script';
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = getAllPostIds();
   return {
     paths,
-    fallback: false,
+    fallback: false
   };
 };
 
@@ -21,8 +21,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const postData = await getPostData(params.id);
   return {
     props: {
-      postData,
-    },
+      postData
+    }
   };
 };
 
@@ -45,7 +45,7 @@ export default function Post({ postData }) {
         <Script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: jsonLd(),
+            __html: jsonLd()
           }}
         />
       </Head>

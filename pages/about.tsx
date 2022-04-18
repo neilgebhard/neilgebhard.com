@@ -1,7 +1,7 @@
-import { motion } from "framer-motion";
-import Head from "next/head";
-import React from "react";
-import { BiCog } from "react-icons/bi";
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import React from 'react';
+import { BiCog } from 'react-icons/bi';
 import {
   SiAndroid,
   SiCplusplus,
@@ -25,109 +25,109 @@ import {
   SiSwift,
   SiTailwindcss,
   SiTypescript,
-  SiVisualstudiocode,
-} from "react-icons/si";
+  SiVisualstudiocode
+} from 'react-icons/si';
 
 const skills = [
   {
-    label: "React",
-    icon: <SiReact size="2rem" />,
+    label: 'React',
+    icon: <SiReact size="2rem" />
   },
   {
-    label: "JavaScript",
-    icon: <SiJavascript size="2rem" />,
+    label: 'JavaScript',
+    icon: <SiJavascript size="2rem" />
   },
   {
-    label: "TypeScript",
-    icon: <SiTypescript size="2rem" />,
+    label: 'TypeScript',
+    icon: <SiTypescript size="2rem" />
   },
   {
-    label: "HTML",
-    icon: <SiHtml5 size="2rem" />,
+    label: 'HTML',
+    icon: <SiHtml5 size="2rem" />
   },
   {
-    label: "CSS",
-    icon: <SiCss3 size="2rem" />,
+    label: 'CSS',
+    icon: <SiCss3 size="2rem" />
   },
   {
-    label: "Node.js",
-    icon: <SiNodedotjs size="2rem" />,
+    label: 'Node.js',
+    icon: <SiNodedotjs size="2rem" />
   },
   {
-    label: "Express",
-    icon: <SiExpress size="2rem" />,
+    label: 'Express',
+    icon: <SiExpress size="2rem" />
   },
   {
-    label: "Next.js",
-    icon: <SiNextdotjs size="2rem" />,
+    label: 'Next.js',
+    icon: <SiNextdotjs size="2rem" />
   },
   {
-    label: "Git",
-    icon: <SiGithub size="2rem" />,
+    label: 'Git',
+    icon: <SiGithub size="2rem" />
   },
   {
-    label: "Tailwind",
-    icon: <SiTailwindcss size="2rem" />,
+    label: 'Tailwind',
+    icon: <SiTailwindcss size="2rem" />
   },
   {
-    label: "VSCode",
-    icon: <SiVisualstudiocode size="2rem" />,
+    label: 'VSCode',
+    icon: <SiVisualstudiocode size="2rem" />
   },
   {
-    label: "Rest",
-    icon: <BiCog size="2rem" />,
+    label: 'Rest',
+    icon: <BiCog size="2rem" />
   },
   {
-    label: "GraphQL",
-    icon: <SiGraphql size="2rem" />,
+    label: 'GraphQL',
+    icon: <SiGraphql size="2rem" />
   },
   {
-    label: "MongoDB",
-    icon: <SiMongodb size="2rem" />,
+    label: 'MongoDB',
+    icon: <SiMongodb size="2rem" />
   },
   {
-    label: "SQL",
-    icon: <SiPostgresql size="2rem" />,
+    label: 'SQL',
+    icon: <SiPostgresql size="2rem" />
   },
   {
-    label: "Cypress",
-    icon: <SiCypress size="2rem" />,
+    label: 'Cypress',
+    icon: <SiCypress size="2rem" />
   },
   {
-    label: "React Testing Library",
-    icon: <SiJest size="2rem" />,
+    label: 'React Testing Library',
+    icon: <SiJest size="2rem" />
   },
   {
-    label: "JSON Web token",
-    icon: <SiJsonwebtokens size="2rem" />,
-  },
+    label: 'JSON Web token',
+    icon: <SiJsonwebtokens size="2rem" />
+  }
 ];
 
 const other = [
   {
-    label: "Java",
-    icon: <SiJava size="2rem" />,
+    label: 'Java',
+    icon: <SiJava size="2rem" />
   },
   {
-    label: "Python",
-    icon: <SiPython size="2rem" />,
+    label: 'Python',
+    icon: <SiPython size="2rem" />
   },
   {
-    label: "C++",
-    icon: <SiCplusplus size="2rem" />,
+    label: 'C++',
+    icon: <SiCplusplus size="2rem" />
   },
   {
-    label: "Swift",
-    icon: <SiSwift size="2rem" />,
+    label: 'Swift',
+    icon: <SiSwift size="2rem" />
   },
   {
-    label: "iOS",
-    icon: <SiIos size="2rem" />,
+    label: 'iOS',
+    icon: <SiIos size="2rem" />
   },
   {
-    label: "Android",
-    icon: <SiAndroid size="2rem" />,
-  },
+    label: 'Android',
+    icon: <SiAndroid size="2rem" />
+  }
 ];
 
 export default function About() {
@@ -169,7 +169,7 @@ export default function About() {
           <div className="text-neutral-600">2011 - 2014 • Magna cum laude</div>
           <div className="text-neutral-600"></div>
         </motion.section>
-        <h2>Web Skills</h2>
+        <h2>Current Skills</h2>
         <motion.section
           initial={{ scale: 0.99, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
@@ -186,7 +186,7 @@ export default function About() {
             ))}
           </ul>
         </motion.section>
-        <h2>Other</h2>
+        <h2>Past Experience</h2>
         <motion.section
           initial={{ scale: 0.99, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}

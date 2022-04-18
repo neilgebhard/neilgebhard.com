@@ -1,14 +1,14 @@
 ---
 title: "What's the big deal with Next.js?"
-date: "2021-12-19"
-tags: ["JS", "React", "Next.js"]
+date: '2021-12-19'
+tags: ['JS', 'React', 'Next.js']
 ---
 
 When choosing a framework for a project, a few questions pop into my head. How do we increase performance? How do we reduce complexity? How do we scale?
 
 With this in mind, Next.js does a great job in answering these questions. It does it in several ways.
 
-## Static generation (SSG) allows a single-page application to serve static HTML files.
+## Static site generation (SSG) allows a single-page application to serve static HTML files.
 
 The way this works is content gets pre-loaded into HTML at build time. This means static HTML is delivered to the client on initial load. With this setup, HTML files are cached by CDNs, increasing data transfer speeds.
 
