@@ -1,4 +1,21 @@
 {
+  "name": "neilgebhard.com",
+  "description": "The personal website of Neil Gebhard",
+  "homepage": "https://neilgebhard.com",
+  "author": {
+    "name": "Neil Gebhard",
+    "email": "neilgebhard@gmail.com",
+    "url": "https://neilgebhard.com"
+  },
+  "bugs": {
+    "url": "https://github.com/neilgebhard/neilgebhard.com/issues",
+    "email": "neilgebhard@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neilgebhard/neilgebhard.com.git"
+  },
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "next dev",
