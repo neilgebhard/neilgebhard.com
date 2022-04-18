@@ -1,13 +1,11 @@
-:root {
-  --green: #10ac84;
-  --red: #ee5253;
-  --blue: #2e86de;
+* {
+  box-sizing: border-box;
 }
 
 @tailwind base;
 
 @layer base {
-  body {
+  /* body {
     @apply m-0 font-sans text-gray-900;
   }
 
@@ -50,25 +48,29 @@
     @apply underline;
   }
 
-  img {
-    @apply w-full;
-  }
-
   code {
     @apply bg-gray-200 rounded px-1 inline-block;
   }
 
   blockquote {
     @apply border-l-gray-300 border-0 border-l-4 border-solid m-0 pl-5;
+  } */
+
+  .prose img {
+    @apply w-full;
+  }
+
+  .prose img {
+    @apply my-0;
   }
 }
 
 @tailwind components;
 
 @layer components {
-  .button {
-    @apply bg-bleu text-white text-xl font-bold px-4 py-2 rounded-lg inline-flex items-center justify-center gap-x-2 shadow-lg active:shadow-md hover:shadow-xl hover:no-underline;
-  }
+  /* .button {
+    @apply bg-blue-600 text-white text-xl font-bold px-4 py-2 rounded-lg inline-flex items-center justify-center gap-x-2 shadow-lg active:shadow-md hover:shadow-xl hover:no-underline;
+  } */
 }
 
 @tailwind utilities;

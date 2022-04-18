@@ -1,9 +1,9 @@
-import { SiGithub, SiLinkedin, SiTwitter } from "react-icons/si";
-import { MdEmail } from "react-icons/md";
+import { SiGithub, SiLinkedin, SiTwitter } from 'react-icons/si'
+import { MdEmail } from 'react-icons/md'
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col items-center justify-center py-32 bg-gray-100 space-y-5">
+    <footer className="flex flex-col items-center justify-center py-20 bg-gray-100 space-y-5">
       <ul className="p-0 m-0 list-none flex items-center justify-center gap-x-4">
         <li>
           <a
@@ -41,5 +41,5 @@ export default function Footer() {
       <p>© Neil Gebhard 2022</p>
       <p>Built with Next.js & Tailwind</p>
     </footer>
-  );
+  )
 }

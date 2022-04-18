@@ -1,7 +1,7 @@
-import React from 'react';
-import Image from 'next/image';
-import ReactTooltip from 'react-tooltip';
-import { motion } from 'framer-motion';
+import React from 'react'
+import Image from 'next/image'
+import ReactTooltip from 'react-tooltip'
+import { motion } from 'framer-motion'
 import {
   SiTailwindcss,
   SiExpress,
@@ -13,11 +13,12 @@ import {
   SiCss3,
   SiJest,
   SiGithub
-} from 'react-icons/si';
-import { BiLink } from 'react-icons/bi';
-import Head from 'next/head';
+} from 'react-icons/si'
+import { BiLink } from 'react-icons/bi'
+import Head from 'next/head'
+import Container from '../components/Container'
 
-const portfolio = [
+const projects = [
   {
     title: 'Reddit Clone',
     description:
@@ -67,18 +68,18 @@ const portfolio = [
       <SiJest size="2rem" title="Jest" color="dimgrey" />
     ]
   }
-];
+]
 
-export default function Portfolio() {
+export default function Projects() {
   return (
-    <>
+    <Container>
       <Head>
-        <title>Portfolio | Neil Gebhard</title>
-        <meta name="description" content="The portfolio of Neil Gebhard"></meta>
+        <title>Projects | Neil Gebhard</title>
+        <meta name="description" content="Neil Gebhard's projects"></meta>
       </Head>
       <section>
-        <h1>Portfolio</h1>
-        {portfolio.map((item, i) => (
+        <h1>Projects</h1>
+        {projects.map((item, i) => (
           <motion.article
             className="flex flex-col sm:flex-row items-center gap-x-4 mb-20"
             initial={{ scale: 0.99, opacity: 0 }}
@@ -93,13 +94,13 @@ export default function Portfolio() {
                 src={item.img}
                 width="650"
                 height="383"
-                alt="Screenshot of portfolio site"
+                alt="Screenshot of a project"
               ></Image>
             </a>
             <div className="sm:w-5/6 md:w-4/6">
               <h2>{item.title}</h2>
               <a
-                className="button bg-jungle"
+                className="button bg-gray-200"
                 href={item.githubUrl}
                 target="_blank"
                 rel="noreferrer"
@@ -123,12 +124,12 @@ export default function Portfolio() {
                     </div>
                     <ReactTooltip place="top" type="dark" effect="solid" />
                   </span>
-                );
+                )
               })}
             </div>
           </motion.article>
         ))}
       </section>
-    </>
-  );
+    </Container>
+  )
 }

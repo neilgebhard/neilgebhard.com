@@ -1,4 +1,4 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 class MyDocument extends Document {
   render() {
@@ -11,13 +11,13 @@ class MyDocument extends Document {
           />
           <link rel="shortcut icon" href="/favicon.ico" />
         </Head>
-        <body>
+        <body className="bg-neutral-50 dark:bg-neutral-800 text-neutral-900 dark:text-neutral-50">
           <Main />
           <NextScript />
         </body>
       </Html>
-    );
+    )
   }
 }
 
-export default MyDocument;
+export default MyDocument

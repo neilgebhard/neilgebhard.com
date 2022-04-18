@@ -1,49 +1,47 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import { useState } from 'react';
+import { getSortedPostsData } from '../lib/posts'
+import Container from '../components/Container'
+import BlogList from '../components/BlogList'
+import Image from 'next/image'
 
-export default function Home() {
-  const [animate, setAnimate] = useState(false);
-
-  const handleClick = () => {
-    setAnimate((animate) => !animate);
-  };
-
+const Introduction = () => {
   return (
-    <>
-      <Head>
-        <title>Home | Neil Gebhard</title>
-        <meta
-          name="description"
-          content="The personal website of Neil Gebhard featuring a portfolio and blog."
-        ></meta>
-      </Head>
-      <section className="my-32 text-center">
-        <h1 className="hidden">Neil Gebhard</h1>
-        <div
-          className="h-52 w-52 sm:h-64 sm:w-64 relative m-auto cursor-pointer"
-          onClick={handleClick}
-        >
-          <Image
-            src="/images/portrait.webp"
-            alt="Picture of the Neil Gebhard"
-            layout="fill"
-            className="rounded-full flex justify-center"
-            priority
-          />
-        </div>
-        <span
-          className={`text-5xl sm:text-7xl font-sans font-bold tracking-tight cursor-pointer ${
-            animate ? 'animated fontalicious' : ''
-          }`}
-          onClick={handleClick}
-        >
+    <header>
+      <div className="flex items-center gap-5">
+        <Image
+          className="rounded-full"
+          src="/images/portrait.webp"
+          alt="Portrait of Neil Gebhard"
+          width={100}
+          height={100}
+        />
+        <div className="text-3xl sm:text-5xl font-bold">
           Hi, I'm{' '}
-          <span className="hidden sm:inline text-animate">Neil Gebhard</span>
-          <span className="sm:hidden text-animate">Neil</span>
-          <span className="sm:hidden text-animate"> Gebhard</span>.
-        </span>
-      </section>
-    </>
-  );
+          <h1 className="block bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-900 normal-case my-0 text-3xl sm:text-5xl">
+            Neil Gebhard.
+          </h1>
+        </div>
+      </div>
+      <p className="mt-4 text-gray-700">
+        I'm a full-stack software engineer based in Saipan, USA. 🌴
+      </p>
+    </header>
+  )
+}
+
+export default function Home({ posts }) {
+  return (
+    <Container>
+      <Introduction />
+      <BlogList posts={posts} />
+    </Container>
+  )
+}
+
+export async function getStaticProps() {
+  const posts = getSortedPostsData()
+  return {
+    props: {
+      posts
+    }
+  }
 }

@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion';
-import Head from 'next/head';
-import React from 'react';
-import { BiCog } from 'react-icons/bi';
+import { motion } from 'framer-motion'
+import Head from 'next/head'
+import React from 'react'
+import { BiCog } from 'react-icons/bi'
 import {
   SiAndroid,
   SiCplusplus,
@@ -26,7 +26,8 @@ import {
   SiTailwindcss,
   SiTypescript,
   SiVisualstudiocode
-} from 'react-icons/si';
+} from 'react-icons/si'
+import Container from '../components/Container'
 
 const skills = [
   {
@@ -101,7 +102,7 @@ const skills = [
     label: 'JSON Web token',
     icon: <SiJsonwebtokens size="2rem" />
   }
-];
+]
 
 const other = [
   {
@@ -128,16 +129,37 @@ const other = [
     label: 'Android',
     icon: <SiAndroid size="2rem" />
   }
-];
+]
+
+const IconGrid = ({ icons }) => {
+  return (
+    <motion.section
+      initial={{ scale: 0.99, opacity: 0 }}
+      whileInView={{ scale: 1, opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+      className="space-y-0 max-w-xl"
+    >
+      <ul className="pl-0 gap-6 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6">
+        {icons.map(({ label, icon }, index) => (
+          <li key={index} className="flex flex-col items-center flex-1">
+            <div>{icon}</div>
+            <div className="text-center">{label}</div>
+          </li>
+        ))}
+      </ul>
+    </motion.section>
+  )
+}
 
 export default function About() {
   return (
-    <>
+    <Container>
       <Head>
         <title>About | Neil Gebhard</title>
         <meta name="description" content="An about of Neil Gebhard"></meta>
       </Head>
-      <section className="max-w-xl mx-auto">
+      <section>
         <h1>About</h1>
         <motion.section
           initial={{ scale: 0.99, opacity: 0 }}
@@ -170,40 +192,10 @@ export default function About() {
           <div className="text-neutral-600"></div>
         </motion.section>
         <h2>Current Skills</h2>
-        <motion.section
-          initial={{ scale: 0.99, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="space-y-0 max-w-xl"
-        >
-          <ul className="pl-0 flex flex-wrap gap-6 sm:grid sm:grid-cols-6">
-            {skills.map(({ label, icon }, index) => (
-              <li key={index} className="flex flex-col items-center flex-1">
-                <div>{icon}</div>
-                <div className="text-center">{label}</div>
-              </li>
-            ))}
-          </ul>
-        </motion.section>
+        <IconGrid icons={skills} />
         <h2>Past Experience</h2>
-        <motion.section
-          initial={{ scale: 0.99, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="space-y-0 max-w-xl"
-        >
-          <ul className="pl-0 flex flex-wrap gap-6 sm:grid sm:grid-cols-6">
-            {other.map(({ label, icon }, index) => (
-              <li key={index} className="flex flex-col items-center flex-1">
-                <div>{icon}</div>
-                <div className="text-center">{label}</div>
-              </li>
-            ))}
-          </ul>
-        </motion.section>
+        <IconGrid icons={other} />
       </section>
-    </>
-  );
+    </Container>
+  )
 }
