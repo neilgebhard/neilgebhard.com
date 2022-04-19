@@ -168,12 +168,10 @@ export default function About() {
           viewport={{ once: true }}
         >
           <p className="text-xl">
-            I'm a software engineer specializing in React. I've been writing
-            code for about 8 years (professionally for 4 of those). I aim to
-            write code that is simple, straightforward, and elegant. I know how
-            to leverage cloud services in my web applications to create a full
-            user experience. During my free time, I'm an avid soccer player. I'm
-            currently living in Saipan, USA.
+            Hello! I'm a software engineer based in Saipan, USA. I've been
+            writing code for about 8 years (professionally for 4 of those). I
+            aim to write code that is simple, straightforward, and easy to
+            change. During my free time, I play soccer and listen to podcasts.
           </p>
         </motion.section>
         <h2>Education</h2>

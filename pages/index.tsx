@@ -2,6 +2,7 @@ import Container from '../components/Container'
 import Blog from '../components/Blog'
 import Image from 'next/image'
 import { getSortedPostsData } from '../lib/posts'
+import Head from 'next/head'
 
 const Introduction = () => {
   return (
@@ -31,6 +32,10 @@ const Introduction = () => {
 export default function Home({ posts }) {
   return (
     <Container>
+      <Head>
+        <title>Home | Neil Gebhard</title>
+        <meta name="description" content="An about of Neil Gebhard"></meta>
+      </Head>
       <Introduction />
       <Blog posts={posts} />
     </Container>

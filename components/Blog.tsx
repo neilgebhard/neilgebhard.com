@@ -22,7 +22,7 @@ export default function Blog({ posts }) {
           fill="currentColor"
         />
         <input
-          className="text-lg block w-full px-4 py-2 pl-14 text-neutral-900 bg-white border border-neutral-200 rounded-md dark:border-neutral-900 focus:ring-blue-500 focus:border-blue-500 dark:bg-neutral-800 dark:text-neutral-100"
+          className="text-lg block w-full px-4 py-2 pl-14 text-neutral-900 bg-white border-solid border-neutral-300 rounded-md dark:border-neutral-700 focus:ring-blue-500 focus:border-blue-500 dark:bg-neutral-800 dark:text-neutral-100"
           type="search"
           aria-label="Search blog"
           placeholder="Search blog"
