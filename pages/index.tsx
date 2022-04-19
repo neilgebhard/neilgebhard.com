@@ -21,7 +21,7 @@ const Introduction = () => {
           </h1>
         </div>
       </div>
-      <p className="mt-4 text-gray-700">
+      <p className="mt-4 mute">
         I'm a full-stack software engineer based in Saipan, USA. 🌴
       </p>
     </header>

@@ -33,13 +33,13 @@ export default function Post({ posts }) {
         <title>{posts.title} | Neil Gebhard</title>
         <meta name="description" content={posts.title}></meta>
       </Head>
-      <article className="prose lg:prose-xl prose-blue prose-a:no-underline hover:prose-a:underline">
-        <header>
-          <h1 className="mb-2 mt-0">{posts.title}</h1>
-          <p className="text-gray-600 mb-12 mt-0">
-            <Date dateString={posts.date} />
-          </p>
-        </header>
+      <header>
+        <h1 className="mb-2 mt-0">{posts.title}</h1>
+        <p className="text-gray-600 mb-12 mt-0">
+          <Date dateString={posts.date} />
+        </p>
+      </header>
+      <article className="prose lg:prose-xl dark:prose-invert prose-blue prose-a:no-underline hover:prose-a:underline">
         <ReactMarkdown
           components={CodeBlock}
           remarkPlugins={[remarkGfm, remarkHint]}

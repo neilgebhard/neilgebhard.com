@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import Container from './Container'
+import { useTheme } from 'next-themes'
+import { CgMoon, CgSun } from 'react-icons/cg'
 
 const links = [
   { href: '/', label: 'Blog' },
@@ -8,15 +9,24 @@ const links = [
 ]
 
 export default function Navbar() {
+  const { theme, setTheme } = useTheme()
+
   return (
-    <nav className="flex items-center pt-6 pb-10 font-extrabold">
-      <div className="pl-0 flex gap-x-4 list-none text-xl">
+    <nav className="text-xl sm:text-2xl pt-6 pb-10 flex justify-between items-center">
+      <div className="space-x-3">
         {links.map((link, index) => (
           <Link href={link.href} key={index}>
             <a className="text-inherit font-extrabold">{link.label}</a>
           </Link>
         ))}
       </div>
+      <button
+        className="w-9 h-9 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center hover:ring-2 ring-gray-300 cursor-pointer"
+        aria-label="Toggle Dark Mode"
+        onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      >
+        {theme === 'dark' ? <CgSun /> : <CgMoon />}
+      </button>
     </nav>
   )
 }

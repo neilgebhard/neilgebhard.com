@@ -40,13 +40,13 @@ const BlogList = ({ posts }) => {
         {filteredPosts.map(({ id, date, title, tags }) => (
           <li key={id} className="text-2xl flex flex-col space-y-1">
             <Link href={`/blog/${id}`}>
-              <a className="font-bold text-black">{title}</a>
+              <a className="font-bold">{title}</a>
             </Link>
             {tags && (
               <ul className="pl-0 flex flex-wrap items-center gap-2">
                 {tags?.map((tag, index) => (
                   <span
-                    className="rounded bg-gray-200 hover:bg-gray-300 p-1 text-sm uppercase font-medium cursor-pointer"
+                    className="rounded bg-neutral-200 hover:bg-neutral-300 dark:bg-neutral-700 dark:hover:bg-neutral-800 p-1 text-sm uppercase font-medium cursor-pointer mute"
                     onClick={() => setSearchValue(tag)}
                     key={index}
                   >
@@ -55,7 +55,7 @@ const BlogList = ({ posts }) => {
                 ))}
               </ul>
             )}
-            <p className="text-gray-600 mt-0 mb-2">
+            <p className="mute mt-0 mb-2">
               <Date dateString={date} />
             </p>
           </li>

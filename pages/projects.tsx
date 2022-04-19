@@ -27,13 +27,13 @@ const projects = [
     githubUrl: 'https://github.com/neilgebhard/mern-reddit',
     img: '/images/reddit-laptop-frame.png',
     icons: [
-      <SiReact size="2rem" title="React" color="dimgrey" />,
-      <SiTypescript size="2rem" title="TypeScript" color="dimgrey" />,
-      <SiTailwindcss size="2rem" title="Tailwind CSS" color="dimgrey" />,
-      <SiNodedotjs size="2rem" title="Node.js" color="dimgrey" />,
-      <SiExpress size="2rem" title="Express.js" color="dimgrey" />,
-      <SiMongodb size="2rem" title="MongoDB" color="dimgrey" />,
-      <SiCypress size="2rem" title="Cypress" color="dimgrey" />
+      <SiReact size="2rem" title="React" color="mute" />,
+      <SiTypescript size="2rem" title="TypeScript" color="mute" />,
+      <SiTailwindcss size="2rem" title="Tailwind CSS" color="mute" />,
+      <SiNodedotjs size="2rem" title="Node.js" color="mute" />,
+      <SiExpress size="2rem" title="Express.js" color="mute" />,
+      <SiMongodb size="2rem" title="MongoDB" color="mute" />,
+      <SiCypress size="2rem" title="Cypress" color="mute" />
     ]
   },
   {
@@ -45,13 +45,13 @@ const projects = [
     githubUrl: 'https://github.com/neilgebhard/mern-twitter',
     img: '/images/twitter-laptop-frame.png',
     icons: [
-      <SiReact size="2rem" title="React" color="dimgrey" />,
-      <SiTypescript size="2rem" title="TypeScript" color="dimgrey" />,
-      <SiTailwindcss size="2rem" title="Tailwind CSS" color="dimgrey" />,
-      <SiNodedotjs size="2rem" title="Node.js" color="dimgrey" />,
-      <SiExpress size="2rem" title="Express.js" color="dimgrey" />,
-      <SiMongodb size="2rem" title="MongoDB" color="dimgrey" />,
-      <SiJest size="2rem" title="Jest" color="dimgrey" />
+      <SiReact size="2rem" title="React" color="mute" />,
+      <SiTypescript size="2rem" title="TypeScript" color="mute" />,
+      <SiTailwindcss size="2rem" title="Tailwind CSS" color="mute" />,
+      <SiNodedotjs size="2rem" title="Node.js" color="mute" />,
+      <SiExpress size="2rem" title="Express.js" color="mute" />,
+      <SiMongodb size="2rem" title="MongoDB" color="mute" />,
+      <SiJest size="2rem" title="Jest" color="mute" />
     ]
   },
   {
@@ -62,10 +62,10 @@ const projects = [
     githubUrl: 'https://github.com/neilgebhard/movie-app-react',
     img: '/images/movie-laptop-frame.png',
     icons: [
-      <SiReact size="2rem" title="React" color="dimgrey" />,
-      <SiTypescript size="2rem" title="TypeScript" color="dimgrey" />,
-      <SiCss3 size="2rem" title="CSS Modules" color="dimgrey" />,
-      <SiJest size="2rem" title="Jest" color="dimgrey" />
+      <SiReact size="2rem" title="React" color="mute" />,
+      <SiTypescript size="2rem" title="TypeScript" color="mute" />,
+      <SiCss3 size="2rem" title="CSS Modules" color="mute" />,
+      <SiJest size="2rem" title="Jest" color="mute" />
     ]
   }
 ]
@@ -100,20 +100,20 @@ export default function Projects() {
             <div className="sm:w-5/6 md:w-4/6">
               <h2>{item.title}</h2>
               <a
-                className="button bg-gray-200"
+                className="button mute"
                 href={item.githubUrl}
                 target="_blank"
                 rel="noreferrer"
               >
-                <SiGithub size="1.4rem" /> Github
+                <SiGithub size="1.4rem" className="mute" /> Github
               </a>
               <a
-                className="button ml-4"
+                className="button ml-4 mute"
                 href={item.siteUrl}
                 target="_blank"
                 rel="noreferrer"
               >
-                <BiLink size="1.4rem" /> Demo
+                <BiLink size="1.4rem" className="mute" /> Demo
               </a>
               <p className="mb-4">{item.description}</p>
               {item.icons?.map((icon, i) => {

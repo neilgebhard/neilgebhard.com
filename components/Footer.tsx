@@ -3,7 +3,7 @@ import { MdEmail } from 'react-icons/md'
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col items-center justify-center py-20 bg-gray-100 space-y-5">
+    <footer className="flex flex-col items-center justify-center py-20 space-y-5 mute">
       <ul className="p-0 m-0 list-none flex items-center justify-center gap-x-4">
         <li>
           <a
@@ -11,7 +11,7 @@ export default function Footer() {
             target="_blank"
             rel="noreferrer"
           >
-            <SiGithub size="1.5rem" title="GitHub" color="black" />
+            <SiGithub size="1.5rem" title="GitHub" className="mute" />
           </a>
         </li>
         <li>
@@ -20,7 +20,7 @@ export default function Footer() {
             target="_blank"
             rel="noreferrer"
           >
-            <SiTwitter size="1.5rem" title="Twitter" color="black" />
+            <SiTwitter size="1.5rem" title="Twitter" className="mute" />
           </a>
         </li>
         <li>
@@ -29,12 +29,12 @@ export default function Footer() {
             target="_blank"
             rel="noreferrer"
           >
-            <SiLinkedin size="1.5rem" title="LinkedIn" color="black" />
+            <SiLinkedin size="1.5rem" title="LinkedIn" className="mute" />
           </a>
         </li>
         <li>
           <a href="mailto:neilgebhard@gmail.com">
-            <MdEmail size="1.75rem" title="E-mail" color="black" />
+            <MdEmail size="1.75rem" title="E-mail" className="mute" />
           </a>
         </li>
       </ul>
