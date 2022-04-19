@@ -100,7 +100,7 @@ export default function Projects() {
             <div className="sm:w-5/6 md:w-4/6">
               <h2>{item.title}</h2>
               <a
-                className="button mute"
+                className="mute button inline-flex items-center gap-1 text-lg p-2"
                 href={item.githubUrl}
                 target="_blank"
                 rel="noreferrer"
@@ -108,14 +108,14 @@ export default function Projects() {
                 <SiGithub size="1.4rem" className="mute" /> Github
               </a>
               <a
-                className="button ml-4 mute"
+                className="mute button inline-flex items-center gap-1 text-lg p-2 ml-4 "
                 href={item.siteUrl}
                 target="_blank"
                 rel="noreferrer"
               >
                 <BiLink size="1.4rem" className="mute" /> Demo
               </a>
-              <p className="mb-4">{item.description}</p>
+              <p>{item.description}</p>
               {item.icons?.map((icon, i) => {
                 return (
                   <span key={i} className="ml-2 inline-block">

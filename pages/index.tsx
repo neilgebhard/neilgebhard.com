@@ -1,7 +1,7 @@
-import { getSortedPostsData } from '../lib/posts'
 import Container from '../components/Container'
-import BlogList from '../components/BlogList'
+import Blog from '../components/Blog'
 import Image from 'next/image'
+import { getSortedPostsData } from '../lib/posts'
 
 const Introduction = () => {
   return (
@@ -22,7 +22,7 @@ const Introduction = () => {
         </div>
       </div>
       <p className="mt-4 mute">
-        I'm a full-stack software engineer based in Saipan, USA. 🌴
+        I'm a software engineer based in Saipan, USA. 🌴
       </p>
     </header>
   )
@@ -32,7 +32,7 @@ export default function Home({ posts }) {
   return (
     <Container>
       <Introduction />
-      <BlogList posts={posts} />
+      <Blog posts={posts} />
     </Container>
   )
 }

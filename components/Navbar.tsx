@@ -21,7 +21,7 @@ export default function Navbar() {
         ))}
       </div>
       <button
-        className="w-9 h-9 bg-gray-200 border-none rounded-lg dark:bg-gray-600 flex items-center justify-center hover:ring-2 ring-neutral-500 dark:ring-neutral-300 cursor-pointer"
+        className="w-9 h-9 flex items-center justify-center button"
         aria-label="Toggle Dark Mode"
         onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
       >

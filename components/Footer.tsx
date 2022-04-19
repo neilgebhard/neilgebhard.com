@@ -10,6 +10,7 @@ export default function Footer() {
             href="https://github.com/neilgebhard"
             target="_blank"
             rel="noreferrer"
+            aria-label="Link to My GitHub"
           >
             <SiGithub size="1.5rem" title="GitHub" className="mute" />
           </a>
@@ -19,6 +20,7 @@ export default function Footer() {
             href="https://twitter.com/neil_gebhard"
             target="_blank"
             rel="noreferrer"
+            aria-label="Link to My Twitter"
           >
             <SiTwitter size="1.5rem" title="Twitter" className="mute" />
           </a>
@@ -28,12 +30,13 @@ export default function Footer() {
             href="https://www.linkedin.com/in/neilgebhard/"
             target="_blank"
             rel="noreferrer"
+            aria-label="Link to My LinkedIn"
           >
             <SiLinkedin size="1.5rem" title="LinkedIn" className="mute" />
           </a>
         </li>
         <li>
-          <a href="mailto:neilgebhard@gmail.com">
+          <a href="mailto:neilgebhard@gmail.com" aria-label="Link to My Email">
             <MdEmail size="1.75rem" title="E-mail" className="mute" />
           </a>
         </li>

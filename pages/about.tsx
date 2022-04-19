@@ -184,10 +184,10 @@ export default function About() {
           viewport={{ once: true }}
           className="space-y-0"
         >
-          <div className="text-2xl font-bold">
+          <div className="text-xl font-semibold">
             Bachelor of Science: Computer Science
           </div>
-          <div className="text-2xl">Portland State University • 2014</div>
+          <div className="text-xl">Portland State University • 2014</div>
         </motion.section>
         <h2>Current Skills</h2>
         <IconGrid icons={skills} />

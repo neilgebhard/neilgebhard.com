@@ -35,7 +35,8 @@ export default function Post({ posts }) {
       </Head>
       <header>
         <h1 className="mb-2 mt-0">{posts.title}</h1>
-        <p className="text-gray-600 mb-12 mt-0">
+        <p className="mute my-2">By Neil Gebhard</p>
+        <p className="mute mb-12 mt-0">
           <Date dateString={posts.date} />
         </p>
       </header>

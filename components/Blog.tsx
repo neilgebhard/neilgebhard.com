@@ -1,10 +1,10 @@
 import Link from 'next/link'
-import Date from '../components/Date'
+import Date from './Date'
 import { motion } from 'framer-motion'
 import { BiSearchAlt } from 'react-icons/bi'
 import { useState } from 'react'
 
-const BlogList = ({ posts }) => {
+export default function Blog({ posts }) {
   const [searchValue, setSearchValue] = useState('')
 
   const filteredPosts = posts.filter(
@@ -16,13 +16,13 @@ const BlogList = ({ posts }) => {
   return (
     <>
       <h2 className="mb-4">Blog</h2>
-      <label className="relative text-gray-400 focus-within:text-gray-600 block">
+      <label className="relative text-neutral-400 focus-within:text-neutral-600 block">
         <BiSearchAlt
           className="pointer-events-none w-8 h-8 absolute top-1/2 transform -translate-y-1/2 left-3"
           fill="currentColor"
         />
         <input
-          className="text-lg appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 pl-14 text-gray-700 leading-tight focus:outline-none focus:border-blue-600"
+          className="text-lg block w-full px-4 py-2 pl-14 text-neutral-900 bg-white border border-neutral-200 rounded-md dark:border-neutral-900 focus:ring-blue-500 focus:border-blue-500 dark:bg-neutral-800 dark:text-neutral-100"
           type="search"
           aria-label="Search blog"
           placeholder="Search blog"
@@ -61,8 +61,7 @@ const BlogList = ({ posts }) => {
           </li>
         ))}
       </motion.ul>
+      {filteredPosts.length === 0 && <p className="mute">No posts found.</p>}
     </>
   )
 }
-
-export default BlogList
