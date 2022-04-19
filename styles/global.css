@@ -5,6 +5,10 @@
 @tailwind base;
 
 @layer base {
+  html {
+    @apply font-sans;
+  }
+
   /* body {
     @apply m-0 font-sans text-gray-900;
   }

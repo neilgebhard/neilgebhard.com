@@ -55,7 +55,7 @@ const BlogList = ({ posts }) => {
                 ))}
               </ul>
             )}
-            <p className="mute mt-0 mb-2">
+            <p className="mute mt-0 mb-2 text-base">
               <Date dateString={date} />
             </p>
           </li>
