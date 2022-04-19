@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { useTheme } from 'next-themes'
 import { CgMoon, CgSun } from 'react-icons/cg'
+import useMount from '../hooks/useMount'
 
 const links = [
   { href: '/', label: 'Blog' },
@@ -10,6 +11,7 @@ const links = [
 
 export default function Navbar() {
   const { theme, setTheme } = useTheme()
+  const { isMounted } = useMount()
 
   return (
     <nav className="text-xl sm:text-2xl pt-6 pb-10 flex justify-between items-center">
@@ -20,13 +22,15 @@ export default function Navbar() {
           </Link>
         ))}
       </div>
-      <button
-        className="w-9 h-9 flex items-center justify-center button"
-        aria-label="Toggle Dark Mode"
-        onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-      >
-        {theme === 'dark' ? <CgSun size={20} /> : <CgMoon size={20} />}
-      </button>
+      {isMounted && (
+        <button
+          className="w-9 h-9 flex items-center justify-center button"
+          aria-label="Toggle Dark Mode"
+          onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+        >
+          {theme === 'dark' ? <CgSun size={20} /> : <CgMoon size={20} />}
+        </button>
+      )}
     </nav>
   )
 }
