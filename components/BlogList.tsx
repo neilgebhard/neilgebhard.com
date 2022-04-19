@@ -40,7 +40,7 @@ const BlogList = ({ posts }) => {
         {filteredPosts.map(({ id, date, title, tags }) => (
           <li key={id} className="text-2xl flex flex-col space-y-1">
             <Link href={`/blog/${id}`}>
-              <a className="font-bold">{title}</a>
+              <a className="link">{title}</a>
             </Link>
             {tags && (
               <ul className="pl-0 flex flex-wrap items-center gap-2">

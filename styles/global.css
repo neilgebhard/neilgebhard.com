@@ -79,6 +79,10 @@
   .mute {
     @apply text-neutral-700 dark:text-neutral-200;
   }
+
+  .link {
+    @apply font-semibold no-underline hover:underline text-neutral-900 dark:text-neutral-50;
+  }
 }
 
 @tailwind utilities;

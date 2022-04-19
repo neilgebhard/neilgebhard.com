@@ -16,16 +16,16 @@ export default function Navbar() {
       <div className="space-x-3">
         {links.map((link, index) => (
           <Link href={link.href} key={index}>
-            <a className="text-inherit font-extrabold">{link.label}</a>
+            <a className="link font-bold">{link.label}</a>
           </Link>
         ))}
       </div>
       <button
-        className="w-9 h-9 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center hover:ring-2 ring-gray-300 cursor-pointer"
+        className="w-9 h-9 bg-gray-200 border-none rounded-lg dark:bg-gray-600 flex items-center justify-center hover:ring-2 ring-neutral-500 dark:ring-neutral-300 cursor-pointer"
         aria-label="Toggle Dark Mode"
         onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
       >
-        {theme === 'dark' ? <CgSun /> : <CgMoon />}
+        {theme === 'dark' ? <CgSun size={20} /> : <CgMoon size={20} />}
       </button>
     </nav>
   )
