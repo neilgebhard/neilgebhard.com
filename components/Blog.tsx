@@ -16,13 +16,13 @@ export default function Blog({ posts }) {
   return (
     <>
       <h2 className="mb-4">Blog</h2>
-      <label className="relative text-neutral-400 focus-within:text-neutral-600 block">
+      <label className="relative text-gray-400 focus-within:text-gray-600 block">
         <BiSearchAlt
           className="pointer-events-none w-8 h-8 absolute top-1/2 transform -translate-y-1/2 left-3"
           fill="currentColor"
         />
         <input
-          className="text-lg block w-full px-4 py-2 pl-14 text-neutral-900 bg-white border-solid border-neutral-300 rounded-md dark:border-neutral-700 focus:ring-blue-500 focus:border-blue-500 dark:bg-neutral-800 dark:text-neutral-100"
+          className="text-lg block w-full px-4 py-2 pl-14 text-gray-900 bg-white border-solid border-gray-300 rounded-md dark:border-gray-700 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-gray-100"
           type="search"
           aria-label="Search blog"
           placeholder="Search blog"
@@ -46,7 +46,7 @@ export default function Blog({ posts }) {
               <ul className="pl-0 flex flex-wrap items-center gap-2">
                 {tags?.map((tag, index) => (
                   <span
-                    className="rounded bg-neutral-200 hover:bg-neutral-300 dark:bg-neutral-700 dark:hover:bg-neutral-800 p-1 text-sm uppercase font-medium cursor-pointer mute"
+                    className="rounded bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-800 p-1 text-sm uppercase font-medium cursor-pointer mute"
                     onClick={() => setSearchValue(tag)}
                     key={index}
                   >

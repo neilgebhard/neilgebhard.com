@@ -29,7 +29,7 @@ class MyDocument extends Document {
             type="image/png"
           />
         </Head>
-        <body className="bg-neutral-100 text-neutral-900 dark:text-neutral-100 dark:bg-neutral-900 transition-all">
+        <body className="bg-gray-100 text-gray-900 dark:text-gray-100 dark:bg-gray-900 transition-all">
           <Main />
           <NextScript />
         </body>

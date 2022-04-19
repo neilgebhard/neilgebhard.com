@@ -30,15 +30,15 @@
 
 @layer components {
   .mute {
-    @apply text-neutral-700 dark:text-neutral-200;
+    @apply text-gray-700 dark:text-gray-200;
   }
 
   .link {
-    @apply font-semibold no-underline hover:underline text-neutral-900 dark:text-neutral-50;
+    @apply font-semibold no-underline hover:underline text-gray-900 dark:text-gray-50;
   }
 
   .button {
-    @apply rounded-lg border-none bg-neutral-200 dark:bg-neutral-600 hover:ring-2 ring-neutral-500 dark:ring-neutral-300 cursor-pointer no-underline;
+    @apply rounded-lg border-none bg-gray-200 dark:bg-gray-600 hover:ring-2 ring-gray-500 dark:ring-gray-300 cursor-pointer no-underline;
   }
 }
 

@@ -12,7 +12,11 @@ export default function Footer() {
             rel="noreferrer"
             aria-label="Link to My GitHub"
           >
-            <SiGithub size="1.5rem" title="GitHub" className="mute" />
+            <SiGithub
+              size="1.5rem"
+              title="GitHub"
+              className="mute hover:text-gray-500"
+            />
           </a>
         </li>
         <li>
@@ -22,7 +26,11 @@ export default function Footer() {
             rel="noreferrer"
             aria-label="Link to My Twitter"
           >
-            <SiTwitter size="1.5rem" title="Twitter" className="mute" />
+            <SiTwitter
+              size="1.5rem"
+              title="Twitter"
+              className="mute hover:text-twitter"
+            />
           </a>
         </li>
         <li>
@@ -32,12 +40,20 @@ export default function Footer() {
             rel="noreferrer"
             aria-label="Link to My LinkedIn"
           >
-            <SiLinkedin size="1.5rem" title="LinkedIn" className="mute" />
+            <SiLinkedin
+              size="1.5rem"
+              title="LinkedIn"
+              className="mute hover:text-linked-in"
+            />
           </a>
         </li>
         <li>
           <a href="mailto:neilgebhard@gmail.com" aria-label="Link to My Email">
-            <MdEmail size="1.75rem" title="E-mail" className="mute" />
+            <MdEmail
+              size="1.75rem"
+              title="E-mail"
+              className="mute hover:text-google"
+            />
           </a>
         </li>
       </ul>
