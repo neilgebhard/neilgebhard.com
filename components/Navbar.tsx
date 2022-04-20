@@ -25,7 +25,7 @@ export default function Navbar() {
             href={href}
             key={index}
           >
-            <a className="link font-bold">{label}</a>
+            <a className="nav-link font-bold">{label}</a>
           </ActiveLink>
         ))}
       </div>

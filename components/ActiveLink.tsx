@@ -4,7 +4,12 @@ import PropTypes from 'prop-types'
 import Link from 'next/link'
 import React, { Children } from 'react'
 
-export default function ActiveLink({ children, activeClassName, ...props }) {
+export default function ActiveLink({
+  children,
+  activeClassName,
+  href,
+  ...props
+}) {
   const { asPath, isReady } = useRouter()
 
   const child = Children.only(children)
@@ -15,9 +20,8 @@ export default function ActiveLink({ children, activeClassName, ...props }) {
     // Check if the router fields are updated client-side
     if (isReady) {
       // Dynamic route will be matched via props.as
-      // Static route will be matched via props.href
-      const linkPathname = new URL(props.as || props.href, location.href)
-        .pathname
+      // Static route will be matched via href
+      const linkPathname = new URL(props.as || href, location.href).pathname
 
       // Using URL().pathname to get rid of query and hash
       const activePathname = new URL(asPath, location.href).pathname
@@ -35,7 +39,7 @@ export default function ActiveLink({ children, activeClassName, ...props }) {
     asPath,
     isReady,
     props.as,
-    props.href,
+    href,
     childClassName,
     activeClassName,
     setClassName,
@@ -43,7 +47,7 @@ export default function ActiveLink({ children, activeClassName, ...props }) {
   ])
 
   return (
-    <Link {...props}>
+    <Link href={href} {...{ href, ...props }}>
       {React.cloneElement(child, {
         className: className || null
       })}

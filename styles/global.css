@@ -34,7 +34,11 @@
   }
 
   .link {
-    @apply font-semibold no-underline hover:bg-gray-200 px-2 py-3 rounded text-gray-900 dark:text-gray-50;
+    @apply font-semibold no-underline hover:underline text-gray-900 dark:text-gray-50;
+  }
+
+  .nav-link {
+    @apply font-semibold no-underline hover:bg-gray-200 px-2 py-3 rounded text-gray-900 dark:text-gray-50 dark:hover:bg-gray-800;
   }
 
   .button {

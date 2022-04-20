@@ -88,7 +88,7 @@ export default function About() {
         <meta name="description" content="An about of Neil Gebhard"></meta>
       </Head>
       <section>
-        <h1>About</h1>
+        <h1 className="sr-only">About</h1>
         <motion.section
           initial={{ scale: 0.99, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
@@ -96,10 +96,13 @@ export default function About() {
           viewport={{ once: true }}
         >
           <p className="text-xl">
-            Hello! I'm a software engineer based in Saipan, USA. I've been
-            writing code for about 8 years (professionally for 4 of those). I
-            aim to write code that is simple, straightforward, and easy to
-            change. During my free time, I play soccer and listen to podcasts.
+            I'm a software engineer currently residing in a small island in the
+            Pacific called Saipan. It's a U.S. territory with about 50,000
+            people. I've been writing code for about 8 years (professionally for
+            4 of those). I aim to write code that is guided by pragmatic
+            software engineering practices and principles. My current favorite
+            stack is Next.js, Tailwind, Primsa, and Postgres. During my free
+            time, I play soccer and listen to podcasts.
           </p>
         </motion.section>
         <h2>Education</h2>

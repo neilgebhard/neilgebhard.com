@@ -15,16 +15,14 @@ const Introduction = () => {
           width={100}
           height={100}
         />
-        <div className="text-3xl sm:text-5xl font-bold">
+        <div className="text-3xl sm:text-5xl font-bold tracking-tight">
           Hi, I'm{' '}
           <h1 className="my-0 text-3xl sm:text-5xl text-yellow-600 dark:text-yellow-300">
             Neil Gebhard
           </h1>
         </div>
       </div>
-      <p className="mt-4 mute">
-        I'm a software engineer based in Saipan, USA. 🌴
-      </p>
+      <p className="mt-4 mute">Software engineer based in Saipan, USA. 🌴</p>
     </header>
   )
 }
