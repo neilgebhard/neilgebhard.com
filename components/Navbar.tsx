@@ -2,6 +2,8 @@ import Link from 'next/link'
 import { useTheme } from 'next-themes'
 import { CgMoon, CgSun } from 'react-icons/cg'
 import useMount from '../hooks/useMount'
+import { useRouter } from 'next/router'
+import ActiveLink from './ActiveLink'
 
 const links = [
   ['/', 'Home'],
@@ -12,14 +14,19 @@ const links = [
 export default function Navbar() {
   const { theme, setTheme } = useTheme()
   const { isMounted } = useMount()
+  const { asPath, isReady } = useRouter()
 
   return (
     <nav className="text-xl sm:text-2xl pt-6 pb-10 flex justify-between items-center">
       <div className="space-x-3">
         {links.map(([href, label], index) => (
-          <Link href={href} key={index}>
+          <ActiveLink
+            activeClassName="underline decoration decoration-yellow-600 dark:decoration-yellow-300 decoration-4"
+            href={href}
+            key={index}
+          >
             <a className="link font-bold">{label}</a>
-          </Link>
+          </ActiveLink>
         ))}
       </div>
       {isMounted && (

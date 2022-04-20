@@ -37,8 +37,8 @@ export default function Post({ posts }) {
       </Head>
       <header>
         <h1 className="mb-2 mt-0">{posts.title}</h1>
-        <div className="flex items-center gap-1">
-          <p className="mute my-2 flex items-center gap-1">
+        <div className="flex items-center gap-1 mb-12">
+          <div className="mute flex gap-1 items-center">
             <Image
               className="rounded-full"
               src="/images/portrait.webp"
@@ -47,12 +47,12 @@ export default function Post({ posts }) {
               width={24}
             />{' '}
             Neil Gebhard
-          </p>
-          <span>/</span>
-          <p className="mute mb-12 mt-0 flex items-center gap-1">
+          </div>
+          <div> / </div>
+          <div className="mute flex items-center gap-1">
             <BiCalendar />
             <Date dateString={posts.date} />
-          </p>
+          </div>
         </div>
       </header>
       <article className="prose lg:prose-xl dark:prose-invert prose-blue prose-a:no-underline hover:prose-a:underline">
