@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import { useRef } from 'react'
 import useScript from '../lib/use-script'
 import { useTheme } from 'next-themes'
 

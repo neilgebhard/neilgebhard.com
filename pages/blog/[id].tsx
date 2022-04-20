@@ -8,6 +8,8 @@ import remarkGfm from 'remark-gfm'
 import remarkHint from 'remark-hint'
 import Comments from './../../components/Comments'
 import Container from '../../components/Container'
+import { BiCalendar } from 'react-icons/bi'
+import Image from 'next/image'
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = getAllPostIds()
@@ -35,10 +37,23 @@ export default function Post({ posts }) {
       </Head>
       <header>
         <h1 className="mb-2 mt-0">{posts.title}</h1>
-        <p className="mute my-2">By Neil Gebhard</p>
-        <p className="mute mb-12 mt-0">
-          <Date dateString={posts.date} />
-        </p>
+        <div className="flex items-center gap-1">
+          <p className="mute my-2 flex items-center gap-1">
+            <Image
+              className="rounded-full"
+              src="/images/portrait.webp"
+              alt="Avatar of Neil Gebhard"
+              height={24}
+              width={24}
+            />{' '}
+            Neil Gebhard
+          </p>
+          <span>/</span>
+          <p className="mute mb-12 mt-0 flex items-center gap-1">
+            <BiCalendar />
+            <Date dateString={posts.date} />
+          </p>
+        </div>
       </header>
       <article className="prose lg:prose-xl dark:prose-invert prose-blue prose-a:no-underline hover:prose-a:underline">
         <ReactMarkdown

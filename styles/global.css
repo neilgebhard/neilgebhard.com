@@ -3,6 +3,8 @@
 }
 
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
   html {
@@ -18,15 +20,13 @@
   }
 
   .prose img {
-    @apply w-full;
+    @apply w-full my-0;
   }
 
-  .prose img {
-    @apply my-0;
+  .prose pre {
+    @apply border border-solid border-gray-300 bg-gray-100 dark:border-gray-800 dark:bg-gray-900;
   }
 }
-
-@tailwind components;
 
 @layer components {
   .mute {
@@ -41,5 +41,3 @@
     @apply rounded-lg border-none bg-gray-200 dark:bg-gray-600 hover:ring-2 ring-gray-500 dark:ring-gray-300 cursor-pointer no-underline;
   }
 }
-
-@tailwind utilities;

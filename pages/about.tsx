@@ -29,106 +29,34 @@ import {
 } from 'react-icons/si'
 import Container from '../components/Container'
 
-const skills = [
-  {
-    label: 'React',
-    icon: <SiReact size="2rem" />
-  },
-  {
-    label: 'JavaScript',
-    icon: <SiJavascript size="2rem" />
-  },
-  {
-    label: 'TypeScript',
-    icon: <SiTypescript size="2rem" />
-  },
-  {
-    label: 'HTML',
-    icon: <SiHtml5 size="2rem" />
-  },
-  {
-    label: 'CSS',
-    icon: <SiCss3 size="2rem" />
-  },
-  {
-    label: 'Node.js',
-    icon: <SiNodedotjs size="2rem" />
-  },
-  {
-    label: 'Express',
-    icon: <SiExpress size="2rem" />
-  },
-  {
-    label: 'Next.js',
-    icon: <SiNextdotjs size="2rem" />
-  },
-  {
-    label: 'Git',
-    icon: <SiGithub size="2rem" />
-  },
-  {
-    label: 'Tailwind',
-    icon: <SiTailwindcss size="2rem" />
-  },
-  {
-    label: 'VSCode',
-    icon: <SiVisualstudiocode size="2rem" />
-  },
-  {
-    label: 'Rest',
-    icon: <BiCog size="2rem" />
-  },
-  {
-    label: 'GraphQL',
-    icon: <SiGraphql size="2rem" />
-  },
-  {
-    label: 'MongoDB',
-    icon: <SiMongodb size="2rem" />
-  },
-  {
-    label: 'SQL',
-    icon: <SiPostgresql size="2rem" />
-  },
-  {
-    label: 'Cypress',
-    icon: <SiCypress size="2rem" />
-  },
-  {
-    label: 'React Testing Library',
-    icon: <SiJest size="2rem" />
-  },
-  {
-    label: 'JSON Web token',
-    icon: <SiJsonwebtokens size="2rem" />
-  }
+const current = [
+  ['React', <SiReact size="2rem" />],
+  ['JavaScript', <SiJavascript size="2rem" />],
+  ['TypeScript', <SiTypescript size="2rem" />],
+  ['HTML', <SiHtml5 size="2rem" />],
+  ['CSS', <SiCss3 size="2rem" />],
+  ['Node.js', <SiNodedotjs size="2rem" />],
+  ['Express', <SiExpress size="2rem" />],
+  ['Next.js', <SiNextdotjs size="2rem" />],
+  ['Git', <SiGithub size="2rem" />],
+  ['Tailwind', <SiTailwindcss size="2rem" />],
+  ['VSCode', <SiVisualstudiocode size="2rem" />],
+  ['Rest', <BiCog size="2rem" />],
+  ['GraphQL', <SiGraphql size="2rem" />],
+  ['MongoDB', <SiMongodb size="2rem" />],
+  ['SQL', <SiPostgresql size="2rem" />],
+  ['Cypress', <SiCypress size="2rem" />],
+  ['React Testing Library', <SiJest size="2rem" />],
+  ['JSON Web token', <SiJsonwebtokens size="2rem" />]
 ]
 
-const other = [
-  {
-    label: 'Java',
-    icon: <SiJava size="2rem" />
-  },
-  {
-    label: 'Python',
-    icon: <SiPython size="2rem" />
-  },
-  {
-    label: 'C++',
-    icon: <SiCplusplus size="2rem" />
-  },
-  {
-    label: 'Swift',
-    icon: <SiSwift size="2rem" />
-  },
-  {
-    label: 'iOS',
-    icon: <SiIos size="2rem" />
-  },
-  {
-    label: 'Android',
-    icon: <SiAndroid size="2rem" />
-  }
+const past = [
+  ['Java', <SiJava size="2rem" />],
+  ['Python', <SiPython size="2rem" />],
+  ['C++', <SiCplusplus size="2rem" />],
+  ['Swift', <SiSwift size="2rem" />],
+  ['iOS', <SiIos size="2rem" />],
+  ['Android', <SiAndroid size="2rem" />]
 ]
 
 const IconGrid = ({ icons }) => {
@@ -141,7 +69,7 @@ const IconGrid = ({ icons }) => {
       className="space-y-0 max-w-xl"
     >
       <ul className="pl-0 gap-6 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6">
-        {icons.map(({ label, icon }, index) => (
+        {icons.map(([label, icon], index) => (
           <li key={index} className="flex flex-col items-center flex-1">
             <div>{icon}</div>
             <div className="text-center">{label}</div>
@@ -188,9 +116,9 @@ export default function About() {
           <div className="text-xl">Portland State University • 2014</div>
         </motion.section>
         <h2>Current Skills</h2>
-        <IconGrid icons={skills} />
+        <IconGrid icons={current} />
         <h2>Past Experience</h2>
-        <IconGrid icons={other} />
+        <IconGrid icons={past} />
       </section>
     </Container>
   )

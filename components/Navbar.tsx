@@ -4,9 +4,9 @@ import { CgMoon, CgSun } from 'react-icons/cg'
 import useMount from '../hooks/useMount'
 
 const links = [
-  { href: '/', label: 'Blog' },
-  { href: '/about', label: 'About' },
-  { href: '/projects', label: 'Projects' }
+  ['/', 'Home'],
+  ['/projects', 'Projects'],
+  ['/about', 'About']
 ]
 
 export default function Navbar() {
@@ -16,9 +16,9 @@ export default function Navbar() {
   return (
     <nav className="text-xl sm:text-2xl pt-6 pb-10 flex justify-between items-center">
       <div className="space-x-3">
-        {links.map((link, index) => (
-          <Link href={link.href} key={index}>
-            <a className="link font-bold">{link.label}</a>
+        {links.map(([href, label], index) => (
+          <Link href={href} key={index}>
+            <a className="link font-bold">{label}</a>
           </Link>
         ))}
       </div>

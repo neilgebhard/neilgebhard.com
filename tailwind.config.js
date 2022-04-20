@@ -6,13 +6,14 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
-    colors: {
-      gray: colors.neutral,
-      twitter: '#1da1f2',
-      'linked-in': '#0077b5',
-      google: '#ea4335'
-    },
-    extend: {}
+    extend: {
+      colors: {
+        gray: colors.neutral,
+        twitter: '#1da1f2',
+        google: '#ea4335',
+        'linked-in': '#0077b5'
+      }
+    }
   },
   darkMode: 'class',
   plugins: [require('@tailwindcss/typography')],

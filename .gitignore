@@ -29,5 +29,5 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
-# peronal notes
+# personal notes
 /post-notes

@@ -17,8 +17,8 @@ const Introduction = () => {
         />
         <div className="text-3xl sm:text-5xl font-bold">
           Hi, I'm{' '}
-          <h1 className="block bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-900 normal-case my-0 text-3xl sm:text-5xl">
-            Neil Gebhard.
+          <h1 className="my-0 text-3xl sm:text-5xl text-yellow-600 dark:text-yellow-300">
+            Neil Gebhard
           </h1>
         </div>
       </div>

@@ -15,7 +15,6 @@ export default function Blog({ posts }) {
 
   return (
     <>
-      <h2 className="mb-4">Blog</h2>
       <label className="relative text-gray-400 focus-within:text-gray-600 block">
         <BiSearchAlt
           className="pointer-events-none w-8 h-8 absolute top-1/2 transform -translate-y-1/2 left-3"
