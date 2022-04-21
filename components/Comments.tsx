@@ -8,7 +8,7 @@ export default function Comments() {
 
   const status = useScript({
     url: 'https://utteranc.es/client.js',
-    theme: theme === 'dark' ? 'github-dark' : 'github-light',
+    theme: theme === 'dark' ? 'photon-dark' : 'github-light',
     issueTerm: 'url',
     repo: 'neilgebhard/neilgebhard.com',
     ref: comment

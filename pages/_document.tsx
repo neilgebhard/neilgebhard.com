@@ -5,10 +5,6 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap"
-            rel="stylesheet"
-          />
           <link href="/favicons/favicon.ico" rel="shortcut icon" />
           <link href="/favicons/site.webmanifest" rel="manifest" />
           <link
@@ -28,6 +24,7 @@ class MyDocument extends Document {
             sizes="16x16"
             type="image/png"
           />
+          <meta content="#ffffff" name="theme-color" />
         </Head>
         <body className="bg-gray-100 text-gray-900 dark:text-gray-100 dark:bg-gray-900 transition-all">
           <Main />

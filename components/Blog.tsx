@@ -42,7 +42,7 @@ export default function Blog({ posts }) {
               <a className="link">{title}</a>
             </Link>
             {tags && (
-              <ul className="pl-0 flex flex-wrap items-center gap-2">
+              <div className="pl-0 flex flex-wrap items-center gap-2">
                 {tags?.map((tag, index) => (
                   <span
                     className="rounded bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-800 p-1 text-sm uppercase font-medium cursor-pointer mute"
@@ -52,7 +52,7 @@ export default function Blog({ posts }) {
                     {tag}
                   </span>
                 ))}
-              </ul>
+              </div>
             )}
             <p className="mute mt-0 mb-2 text-base">
               <Date dateString={date} />

@@ -22,7 +22,7 @@ const Introduction = () => {
           </h1>
         </div>
       </div>
-      <p className="mt-4 mute">Software engineer based in Saipan, USA. 🌴</p>
+      <p className="mt-4 mute">Software engineer based in Saipan, USA 🌴</p>
     </header>
   )
 }

@@ -101,26 +101,25 @@ export default function About() {
             people. I've been writing code for about 8 years (professionally for
             4 of those). I aim to write code that is guided by pragmatic
             software engineering practices and principles. My current favorite
-            stack is Next.js, Tailwind, Primsa, and Postgres. During my free
-            time, I play soccer and listen to podcasts.
+            stack is Next.js, Tailwind, Prisma, and Postgres. During my free
+            time, I like to play soccer and listen to podcasts.
           </p>
         </motion.section>
-        <h2>Education</h2>
         <motion.section
           initial={{ scale: 0.99, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="space-y-0"
+          className="space-y-0 mb-16"
         >
           <div className="text-xl font-semibold">
             Bachelor of Science: Computer Science
           </div>
           <div className="text-xl">Portland State University • 2014</div>
         </motion.section>
-        <h2>Current Skills</h2>
+        <h2 className="uppercase">Current</h2>
         <IconGrid icons={current} />
-        <h2>Past Experience</h2>
+        <h2 className="uppercase">Before</h2>
         <IconGrid icons={past} />
       </section>
     </Container>

@@ -18,14 +18,14 @@ export default function Navbar() {
 
   return (
     <nav className="text-xl sm:text-2xl pt-6 pb-10 flex justify-between items-center">
-      <div className="space-x-3">
+      <div className="space-x-0">
         {links.map(([href, label], index) => (
           <ActiveLink
             activeClassName="underline decoration decoration-yellow-600 dark:decoration-yellow-300 decoration-4"
             href={href}
             key={index}
           >
-            <a className="nav-link font-bold">{label}</a>
+            <a className="nav-link font-bold uppercase">{label}</a>
           </ActiveLink>
         ))}
       </div>
