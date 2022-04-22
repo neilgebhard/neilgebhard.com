@@ -36,7 +36,7 @@ export default function Post({ posts }) {
         <meta name="description" content={posts.title}></meta>
       </Head>
       <header>
-        <h1 className="mb-2 mt-0">{posts.title}</h1>
+        <h1 className="mb-2 mt-0 text-3xl sm:text-5xl">{posts.title}</h1>
         <div className="flex items-center gap-1 mb-12">
           <div className="mute flex gap-1 items-center">
             <Image

@@ -3,6 +3,7 @@ import Blog from '../components/Blog'
 import Image from 'next/image'
 import { getSortedPostsData } from '../lib/posts'
 import Head from 'next/head'
+import { GetStaticProps } from 'next'
 
 const Introduction = () => {
   return (
@@ -16,7 +17,7 @@ const Introduction = () => {
           height={100}
         />
         <div className="text-3xl sm:text-5xl font-bold tracking-tight">
-          Hi, I'm{' '}
+          Hi, I&apos;m{' '}
           <h1 className="my-0 text-3xl sm:text-5xl text-yellow-600 dark:text-yellow-300">
             Neil Gebhard
           </h1>

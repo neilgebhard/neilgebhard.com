@@ -117,16 +117,14 @@ export default function Projects() {
                   <BiLink size="1.4rem" className="mute" /> Demo
                 </a>
                 <p className="leading-6">{description}</p>
-                {icons?.map((icon, i) => {
-                  return (
-                    <span key={i} className="ml-2 inline-block">
-                      <div className="inline-block" data-tip={icon.props.title}>
-                        {icon}
-                      </div>
-                      <ReactTooltip place="top" type="dark" effect="solid" />
-                    </span>
-                  )
-                })}
+                {icons?.map((icon, i) => (
+                  <span className="ml-2 inline-block" key={i}>
+                    <div className="inline-block" data-tip={icon.props.title}>
+                      {icon}
+                    </div>
+                    <ReactTooltip place="top" type="dark" effect="solid" />
+                  </span>
+                ))}
               </div>
             </motion.article>
           )

@@ -96,13 +96,13 @@ export default function About() {
           viewport={{ once: true }}
         >
           <p className="text-xl">
-            I'm a software engineer currently residing in a small island in the
-            Pacific called Saipan. It's a U.S. territory with about 50,000
-            people. I've been writing code for about 8 years (professionally for
-            4 of those). I aim to write code that is guided by pragmatic
-            software engineering practices and principles. My current favorite
-            stack is Next.js, Tailwind, Prisma, and Postgres. During my free
-            time, I like to play soccer and listen to podcasts.
+            I&apos;m a software engineer currently residing in a small island in
+            the Pacific called Saipan. It&apos;s a U.S. territory with about
+            50,000 people. I&apos;ve been writing code for about 8 years
+            (professionally for 4 of those). I aim to write code that is guided
+            by pragmatic software engineering practices and principles. My
+            current favorite stack is Next.js, Tailwind, Prisma, and Postgres.
+            During my free time, I like to play soccer and listen to podcasts.
           </p>
         </motion.section>
         <motion.section

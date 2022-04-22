@@ -27,7 +27,7 @@ const react = [
     label: 'React Spinners',
     href: 'https://www.davidhu.io/react-spinners/'
   }
-];
+]
 
 const testing = [
   {
@@ -42,12 +42,12 @@ const testing = [
     label: 'Cypress',
     href: 'https://www.cypress.io/'
   }
-];
+]
 
 const blogs = [
   { label: 'Kent C. Dodds', href: 'https://kentcdodds.com/blog' },
   { label: 'Dan Abramov', href: 'https://overreacted.io/' }
-];
+]
 
 const learning = [
   {
@@ -55,7 +55,7 @@ const learning = [
     href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
   },
   { label: 'JavaScript Info', href: 'javascript.info' }
-];
+]
 
 const design = [
   {
@@ -79,13 +79,13 @@ const design = [
     label: 'Flat UI Colors',
     href: 'https://flatuicolors.com/'
   }
-];
+]
 
 const renderLinks = (links) => {
   return (
     <ul className="list-none p-0">
-      {links.map(({ label, href }) => (
-        <li>
+      {links.map(({ label, href }, i) => (
+        <li key={i}>
           <a
             className="text-black"
             href={href}
@@ -97,8 +97,8 @@ const renderLinks = (links) => {
         </li>
       ))}
     </ul>
-  );
-};
+  )
+}
 
 export default function Resources() {
   return (
@@ -112,5 +112,5 @@ export default function Resources() {
       <h2>Learning</h2>
       {renderLinks(learning)}
     </>
-  );
+  )
 }

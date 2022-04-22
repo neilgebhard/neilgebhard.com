@@ -11,16 +11,8 @@
     @apply font-sans;
   }
 
-  h1 {
-    @apply text-5xl;
-  }
-
   h2 {
     @apply mb-4 mt-6;
-  }
-
-  em {
-    @apply hidden;
   }
 }
 
@@ -30,7 +22,7 @@
   }
 
   .prose pre {
-    @apply border border-solid border-gray-300 bg-gray-100 dark:border-gray-800 dark:bg-gray-900;
+    @apply border border-solid border-gray-300 bg-gray-50 dark:border-gray-700 dark:bg-gray-800;
   }
 
   .mute {
@@ -47,9 +39,5 @@
 
   .button {
     @apply rounded-lg border-none bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500 cursor-pointer;
-  }
-
-  .timeline-header {
-    @apply hidden;
   }
 }
