@@ -1,7 +1,7 @@
 ---
-title: "React Testing Library: Mock Functions"
-date: "2022-03-12"
-tags: ["JS", "React", "Testing"]
+title: 'React Testing Library: Mock Functions'
+date: '2022-03-12'
+tags: ['JS', 'React', 'Testing']
 ---
 
 To conclude this series on unit testing with React Testing Library, we will talk about mock functions. If you haven't already, you may check out the other articles on this topic: [queries](https://neilgebhard.com/blog/react-testing-library-queries), [interactions](https://neilgebhard.com/blog/react-testing-library-interactions), and [assertions](https://neilgebhard.com/blog/react-testing-library-assertions).
@@ -25,17 +25,17 @@ One way to create mock functions is with [Jest](https://jestjs.io/docs/mock-func
 ```jsx
 // App.jsx
 
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useEffect, useState } from 'react'
+import axios from 'axios'
 
 export default function App() {
-  const [pokemon, setPokemon] = useState([]);
+  const [pokemon, setPokemon] = useState([])
 
   useEffect(() => {
-    axios.get("/pokemon").then(({ data }) => {
-      setPokemon(data.results);
-    });
-  }, []);
+    axios.get('/pokemon').then(({ data }) => {
+      setPokemon(data.results)
+    })
+  }, [])
 
   return (
     <ol>
@@ -43,29 +43,29 @@ export default function App() {
         <li key={index}>{p.name}</li>
       ))}
     </ol>
-  );
+  )
 }
 ```
 
 ```jsx
 // App.test.jsx
 
-import { render, screen } from "@testing-library/react";
-import axios from "axios";
-import App from "./App";
+import { render, screen } from '@testing-library/react'
+import axios from 'axios'
+import App from './App'
 
-jest.mock("axios");
+jest.mock('axios')
 
-test("example of mocking a function", async () => {
-  const data = { results: [{ name: "bulbasaur" }] };
+test('example of mocking a function', async () => {
+  const data = { results: [{ name: 'bulbasaur' }] }
 
-  axios.get.mockImplementationOnce(() => Promise.resolve({ data }));
+  axios.get.mockImplementationOnce(() => Promise.resolve({ data }))
 
-  render(<App />);
+  render(<App />)
 
-  const textContent = await screen.findByText(/bulbasaur/);
-  expect(textContent).toBeInTheDocument();
-});
+  const textContent = await screen.findByText(/bulbasaur/)
+  expect(textContent).toBeInTheDocument()
+})
 ```
 
 In this example, we're using Jest to mock the function `.get()` from axios (which is making an API request).
@@ -77,27 +77,27 @@ Here is an example of using MSW. Keep in mind that it's common practice to split
 ```jsx
 // App.test.jsx
 
-import { render, screen } from "@testing-library/react";
-import { rest } from "msw";
-import { setupServer } from "msw/node";
-import App from "./App";
+import { render, screen } from '@testing-library/react'
+import { rest } from 'msw'
+import { setupServer } from 'msw/node'
+import App from './App'
 
-const data = { results: [{ name: "bulbasaur" }] };
+const data = { results: [{ name: 'bulbasaur' }] }
 
 export const handlers = [
-  rest.get("/pokemon", (req, res, ctx) => {
-    return res(ctx.json(data));
-  }),
-];
-const server = setupServer(...handlers);
+  rest.get('/pokemon', (req, res, ctx) => {
+    return res(ctx.json(data))
+  })
+]
+const server = setupServer(...handlers)
 
-beforeAll(() => server.listen());
+beforeAll(() => server.listen())
 
-test("example of mocking with msw", async () => {
-  render(<App />);
-  const text = await screen.findByText(/bulbasaur/);
-  expect(text).toBeInTheDocument();
-});
+test('example of mocking with msw', async () => {
+  render(<App />)
+  const text = await screen.findByText(/bulbasaur/)
+  expect(text).toBeInTheDocument()
+})
 ```
 
 In this example, MSW starts up a server to to intercept API calls to the `/pokemon` endpoint.

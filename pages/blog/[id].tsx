@@ -63,6 +63,7 @@ export default function Post({ post }: { post: Post }) {
         <ReactMarkdown
           components={CodeBlock}
           remarkPlugins={[remarkGfm, remarkHint]}
+          rehypePlugins={[]}
         >
           {post.body.raw}
         </ReactMarkdown>
