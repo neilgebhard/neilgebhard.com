@@ -1,17 +1,18 @@
+import Image from 'next/image'
 import Head from 'next/head'
-import { getAllPostIds, getPostData } from '../../lib/posts'
-import Date from '../../components/Date'
 import { GetStaticProps, GetStaticPaths } from 'next'
-import CodeBlock from '../../components/CodeBlock'
 import ReactMarkdown from 'react-markdown'
-import remarkGfm from 'remark-gfm'
-import remarkHint from 'remark-hint'
+import { BiCalendar } from 'react-icons/bi'
+import Date from '../../components/Date'
+import CodeBlock from '../../components/CodeBlock'
 import Comments from './../../components/Comments'
 import Container from '../../components/Container'
-import { BiCalendar } from 'react-icons/bi'
-import Image from 'next/image'
 import { allPosts } from 'contentlayer/generated'
 import type { Post } from 'contentlayer/generated'
+import remarkHint from 'remark-hint'
+import remarkGfm from 'remark-gfm'
+import rehypeSlug from 'rehype-slug'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = allPosts.map((post) => `/blog/${post.id}`)
@@ -63,7 +64,17 @@ export default function Post({ post }: { post: Post }) {
         <ReactMarkdown
           components={CodeBlock}
           remarkPlugins={[remarkGfm, remarkHint]}
-          rehypePlugins={[]}
+          rehypePlugins={[
+            rehypeSlug,
+            [
+              rehypeAutolinkHeadings,
+              {
+                properties: {
+                  className: ['anchor']
+                }
+              }
+            ]
+          ]}
         >
           {post.body.raw}
         </ReactMarkdown>

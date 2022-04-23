@@ -1,8 +1,8 @@
+import Head from 'next/head'
+import Image from 'next/image'
 import Container from '../components/Container'
 import Blog from '../components/Blog'
-import Image from 'next/image'
 import { compareDesc } from 'date-fns'
-import Head from 'next/head'
 import { allPosts } from 'contentlayer/generated'
 
 const Introduction = () => {
@@ -15,6 +15,7 @@ const Introduction = () => {
           alt="Portrait of Neil Gebhard"
           width={100}
           height={100}
+          priority
         />
         <div className="text-3xl sm:text-5xl font-bold tracking-tight">
           Hi, I&apos;m{' '}

@@ -42,6 +42,8 @@
     "react-markdown": "^8.0.0",
     "react-syntax-highlighter": "^15.4.5",
     "react-tooltip": "^4.2.21",
+    "rehype-autolink-headings": "^6.1.1",
+    "rehype-slug": "^5.0.1",
     "remark-gfm": "^3.0.1",
     "remark-hint": "^1.0.10",
     "remark-rehype": "^10.1.0",
