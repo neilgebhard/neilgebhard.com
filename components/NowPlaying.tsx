@@ -60,15 +60,15 @@ function AnimatedBars() {
     <div className="w-auto flex items-end overflow-hidden">
       <span
         id="bar1"
-        className="w-1 mr-[3px] h-2 bg-gray-300 dark:bg-gray-500 opacity-75"
+        className="w-1 mr-[3px] h-2 bg-gray-400 dark:bg-gray-500 opacity-75"
       />
       <span
         id="bar2"
-        className="w-1 mr-[3px] h-1 bg-gray-300 dark:bg-gray-500"
+        className="w-1 mr-[3px] h-1 bg-gray-400 dark:bg-gray-500"
       />
       <span
         id="bar3"
-        className="w-1 h-3 bg-gray-300 dark:bg-gray-500 opacity-80"
+        className="w-1 h-3 bg-gray-400 dark:bg-gray-500 opacity-80"
       />
     </div>
   )
@@ -92,8 +92,8 @@ export default function NowPlaying() {
           </a>
         </div>
       ) : (
-        <div className="flex items-center gap-2">
-          <SiSpotify /> Spotify - Not Listening
+        <div className="flex items-center gap-2 mute">
+          <SiSpotify /> Spotify - Not active
         </div>
       )}
     </>

@@ -88,7 +88,7 @@ export default function About() {
         <meta name="description" content="An about of Neil Gebhard"></meta>
       </Head>
       <section>
-        <h1 className="sr-only">About</h1>
+        <h1>About</h1>
         <motion.section
           initial={{ scale: 0.99, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
@@ -97,12 +97,12 @@ export default function About() {
         >
           <p className="text-xl">
             I&apos;m a software engineer currently residing in a small island in
-            the Pacific called Saipan. It&apos;s a U.S. territory with about
-            50,000 people. I&apos;ve been writing code for about 8 years
-            (professionally for 4 of those). I aim to write code that is guided
-            by pragmatic software engineering practices and principles. My
-            current favorite stack is Next.js, Tailwind, Prisma, and Postgres.
-            During my free time, I like to play soccer and listen to podcasts.
+            the Pacific called Saipan, a U.S. territory with only about 50,000
+            people. I&apos;ve been writing code for about 8 years
+            (professionally for 4 of those). I write code guided by pragmatic
+            software engineering practices and principles. My current favorite
+            stack is Next.js, TypeScript, Tailwind, and Prisma. During my free
+            time, I like to play soccer and listen to podcasts.
           </p>
         </motion.section>
         <motion.section
@@ -117,9 +117,9 @@ export default function About() {
           </div>
           <div className="text-xl">Portland State University • 2014</div>
         </motion.section>
-        <h2 className="uppercase">Current</h2>
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-medium">Current</h2>
         <IconGrid icons={current} />
-        <h2 className="uppercase">Before</h2>
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-medium">Before</h2>
         <IconGrid icons={past} />
       </section>
     </Container>
