@@ -31,3 +31,6 @@ yarn-error.log*
 
 # personal notes
 /post-notes
+
+# Contentlayer
+.contentlayer

@@ -1,9 +1,9 @@
 import Container from '../components/Container'
 import Blog from '../components/Blog'
 import Image from 'next/image'
-import { getSortedPostsData } from '../lib/posts'
+import { compareDesc } from 'date-fns'
 import Head from 'next/head'
-import { GetStaticProps } from 'next'
+import { allPosts } from 'contentlayer/generated'
 
 const Introduction = () => {
   return (
@@ -42,7 +42,10 @@ export default function Home({ posts }) {
 }
 
 export async function getStaticProps() {
-  const posts = getSortedPostsData()
+  const posts = allPosts.sort((a, b) => {
+    return compareDesc(new Date(a.date), new Date(b.date))
+  })
+
   return {
     props: {
       posts

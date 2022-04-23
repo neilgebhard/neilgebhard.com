@@ -10,9 +10,12 @@ import Comments from './../../components/Comments'
 import Container from '../../components/Container'
 import { BiCalendar } from 'react-icons/bi'
 import Image from 'next/image'
+import { allPosts } from 'contentlayer/generated'
+import type { Post } from 'contentlayer/generated'
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = getAllPostIds()
+  const paths = allPosts.map((post) => `/blog/${post.id}`)
+
   return {
     paths,
     fallback: false
@@ -20,23 +23,24 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const posts = await getPostData(params.id)
+  const post = allPosts.find((post) => post.id === params.id)
+
   return {
     props: {
-      posts
+      post
     }
   }
 }
 
-export default function Post({ posts }) {
+export default function Post({ post }: { post: Post }) {
   return (
     <Container>
       <Head>
-        <title>{posts.title} | Neil Gebhard</title>
-        <meta name="description" content={posts.title}></meta>
+        <title>{post.title} | Neil Gebhard</title>
+        <meta name="description" content={post.title}></meta>
       </Head>
       <header>
-        <h1 className="mb-2 mt-0 text-3xl sm:text-5xl">{posts.title}</h1>
+        <h1 className="mb-2 mt-0 text-3xl sm:text-5xl">{post.title}</h1>
         <div className="flex items-center gap-1 mb-12">
           <div className="mute flex gap-1 items-center">
             <Image
@@ -51,7 +55,7 @@ export default function Post({ posts }) {
           <div> / </div>
           <div className="mute flex items-center gap-1">
             <BiCalendar />
-            <Date dateString={posts.date} />
+            <Date dateString={post.date} />
           </div>
         </div>
       </header>
@@ -60,7 +64,7 @@ export default function Post({ posts }) {
           components={CodeBlock}
           remarkPlugins={[remarkGfm, remarkHint]}
         >
-          {posts.markdown}
+          {post.body.raw}
         </ReactMarkdown>
         <Comments />
       </article>
