@@ -75,7 +75,7 @@ function AnimatedBars() {
 }
 
 export default function NowPlaying() {
-  const { data } = useSWR<NowPlayingSong>('/api/now-playing', fetcher)
+  const { data } = useSWR<SpotifySong>('/api/now-playing', fetcher)
 
   return (
     <>
