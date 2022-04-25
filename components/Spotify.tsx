@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import useSWR from 'swr'
 import { animate } from 'motion'
 import fetcher from '../lib/fetcher'
-import { NowPlayingSong } from '../lib/types'
+import { SpotifySong } from '../lib/types'
 import { SiSpotify } from 'react-icons/si'
 
 function AnimatedBars() {

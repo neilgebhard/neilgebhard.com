@@ -1,4 +1,4 @@
-export type NowPlayingSong = {
+export type SpotifySong = {
   album: string
   albumImageUrl: string
   artist: string
