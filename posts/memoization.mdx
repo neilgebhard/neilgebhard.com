@@ -1,7 +1,7 @@
 ---
-title: "React: Memoization"
-date: "2022-02-15"
-tags: ["JS", "React"]
+title: 'React: Memoization'
+date: '2022-02-15'
+tags: ['JS', 'React']
 ---
 
 Most of the time, having a component re-render is completely fine. The React engine is efficient. React’s reconciliation algorithm, the algorithm which determines updates to the DOM, is done in memory so it's relatively lightweight. However, if your app is noticeably suffering from performance issues, you may want to adjust the way your components render.
@@ -19,9 +19,7 @@ An important concept in understanding rendering performance in React is memoizat
 
 One way to use memoization in React is through `React.memo`. This is a higher order component, a function that takes a component as an argument and returns a component. In short, it wraps the component in logic. What it does is it prevents the component from rendering if its props remain the same. It’s important to note that it still re-renders if its state or context changes. Its sole purpose is performance optimization.
 
-```jsx
-// Component.jsx
-
+```jsx:Component.jsx
 import React from "react";
 
 const Component = (props) => {
@@ -37,29 +35,27 @@ If a component is passed a function as props, it will always re-render despite w
 
 The solution to this problem is to wrap the function with `useCallback`. `useCallback` memoizes the function. Another way to put it is that the variable storing the function maintains the reference to the same function across renders. Hence, the function being passed as a prop maintains referential equality, preventing the re-render with `React.memo`.
 
-```jsx
-// Component.jsx
-
-import React, { useCallback } from "react";
-import { doSomething } from "./lib";
+```jsx:Component.jsx
+import React, { useCallback } from 'react'
+import { doSomething } from './lib'
 
 const Component = (props) => {
   const memoizedCallback = useCallback(() => {
-    doSomething(a, b);
-  }, [a, b]);
+    doSomething(a, b)
+  }, [a, b])
 
-  return <Component memoizedCallback={memoizedCallback} />;
-};
+  return <Component memoizedCallback={memoizedCallback} />
+}
 
-export default React.memo(Component);
+export default React.memo(Component)
 ```
 
 If you simply have an expensive calculation being done inside a component, preventing renders is not really an option. What you can do is wrap the function with `useMemo`. This React hook memoizes the value of what’s being returned in the function call.
 
 ```jsx
 const memoizedValue = useMemo(() => {
-  return computeExpensiveValue(a, b);
-}, [a, b]);
+  return computeExpensiveValue(a, b)
+}, [a, b])
 ```
 
 **Boiling all this down, use `React.memo` when:**

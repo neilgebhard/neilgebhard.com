@@ -1,18 +1,13 @@
 import Image from 'next/image'
 import Head from 'next/head'
 import { GetStaticProps, GetStaticPaths } from 'next'
-import ReactMarkdown from 'react-markdown'
 import { BiCalendar } from 'react-icons/bi'
 import Date from '../../components/Date'
-import CodeBlock from '../../components/CodeBlock'
 import Comments from './../../components/Comments'
 import Container from '../../components/Container'
 import { allPosts } from 'contentlayer/generated'
 import type { Post } from 'contentlayer/generated'
-import remarkHint from 'remark-hint'
-import remarkGfm from 'remark-gfm'
-import rehypeSlug from 'rehype-slug'
-import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import { useMDXComponent } from 'next-contentlayer/hooks'
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = allPosts.map((post) => `/blog/${post.id}`)
@@ -34,6 +29,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 }
 
 export default function Post({ post }: { post: Post }) {
+  const MDXContent = useMDXComponent(post.body.code)
+
   return (
     <Container>
       <Head>
@@ -61,7 +58,7 @@ export default function Post({ post }: { post: Post }) {
         </div>
       </header>
       <article className="prose lg:prose-xl dark:prose-invert prose-blue prose-a:no-underline hover:prose-a:underline">
-        <ReactMarkdown
+        {/* <ReactMarkdown
           components={CodeBlock}
           remarkPlugins={[remarkGfm, remarkHint]}
           rehypePlugins={[
@@ -77,7 +74,8 @@ export default function Post({ post }: { post: Post }) {
           ]}
         >
           {post.body.raw}
-        </ReactMarkdown>
+        </ReactMarkdown> */}
+        <MDXContent components={{}} />
         <Comments />
       </article>
     </Container>

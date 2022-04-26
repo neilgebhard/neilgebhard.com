@@ -1,7 +1,7 @@
 ---
-title: "Redux: A Simple Guide"
-date: "2022-03-19"
-tags: ["JS", "React", "Redux"]
+title: 'Redux: A Simple Guide'
+date: '2022-03-19'
+tags: ['JS', 'React', 'Redux']
 ---
 
 This guide is designed to be a stripped down introduction to Redux. There are many layers to this library and it's easy to get overwhelmed with it all at the beginning.
@@ -20,24 +20,24 @@ A slice provides you with an interface for changing the state. It accepts a set 
 
 ```tsx
 export const todoSlice = createSlice({
-  name: "todo",
+  name: 'todo',
   initialState: { tasks: [] },
   reducers: {
     addTask: (state, action) => {
-      const text = action.payload;
+      const text = action.payload
       const newTodo = {
         id: uuid(),
-        text,
-      };
+        text
+      }
 
-      state.tasks.push(newTodo);
+      state.tasks.push(newTodo)
     },
     removeTask: (state, action) => {
-      const id = action.payload;
-      state.tasks = state.tasks.filter((task) => task.id !== id);
-    },
-  },
-});
+      const id = action.payload
+      state.tasks = state.tasks.filter((task) => task.id !== id)
+    }
+  }
+})
 ```
 
 Here, we can see that a slice is made called `todoSlice` with a name of `todo`. The initial state is an object with an array of tasks: `{ tasks: [] }`. There are 2 reducer functions: `addTask` and `removeTask`.
@@ -46,8 +46,8 @@ The store holds all your reducer functions. They are passed into the `Provider` 
 
 ```js
 export const store = configureStore({
-  reducer: { todo },
-});
+  reducer: { todo }
+})
 ```
 
 ```jsx
@@ -55,23 +55,23 @@ ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
-  document.getElementById("root")
-);
+  document.getElementById('root')
+)
 ```
 
 Then, we have our Todo component. This is just normal React. We can see how actions are dispatched to access the reducer functions in our slice.
 
 ```jsx
 export default function Todo() {
-  const tasks = useSelector(selectTasks);
-  const dispatch = useDispatch();
-  const inputRef = useRef();
+  const tasks = useSelector(selectTasks)
+  const dispatch = useDispatch()
+  const inputRef = useRef()
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    dispatch(addTask(inputRef.current.value));
-    inputRef.current.value = "";
-  };
+    e.preventDefault()
+    dispatch(addTask(inputRef.current.value))
+    inputRef.current.value = ''
+  }
 
   return (
     <>
@@ -86,7 +86,7 @@ export default function Todo() {
         ))}
       </ul>
     </>
-  );
+  )
 }
 ```
 

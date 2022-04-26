@@ -22,9 +22,7 @@ That's where mock functions come into play. With mock functions, you can do thin
 
 One way to create mock functions is with [Jest](https://jestjs.io/docs/mock-functions). Here is an example of how this would work in practice.
 
-```jsx
-// App.jsx
-
+```jsx:App.jsx
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 
@@ -47,9 +45,7 @@ export default function App() {
 }
 ```
 
-```jsx
-// App.test.jsx
-
+```jsx:App.test.jsx
 import { render, screen } from '@testing-library/react'
 import axios from 'axios'
 import App from './App'
@@ -74,9 +70,7 @@ Another way to create a mock function is with [Mock Service Worker](https://mswj
 
 Here is an example of using MSW. Keep in mind that it's common practice to split up your MSW code and the code for your unit tests.
 
-```jsx
-// App.test.jsx
-
+```jsx:App.test.jsx
 import { render, screen } from '@testing-library/react'
 import { rest } from 'msw'
 import { setupServer } from 'msw/node'

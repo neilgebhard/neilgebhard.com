@@ -43,9 +43,11 @@ export default function Home({ posts }) {
 }
 
 export async function getStaticProps() {
-  const posts = allPosts.sort((a, b) => {
-    return compareDesc(new Date(a.date), new Date(b.date))
-  })
+  const posts = allPosts
+    .map(({ id, tags, title, date }) => ({ id, tags, title, date }))
+    .sort((a, b) => {
+      return compareDesc(new Date(a.date), new Date(b.date))
+    })
 
   return {
     props: {

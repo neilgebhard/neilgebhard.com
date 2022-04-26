@@ -1,8 +1,15 @@
 import { defineDocumentType, makeSource } from 'contentlayer/source-files'
+import rehypePrism from 'rehype-prism-plus'
+import rehypeCodeTitles from 'rehype-code-titles'
+import remarkHint from 'remark-hint'
+import remarkGfm from 'remark-gfm'
+import rehypeSlug from 'rehype-slug'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 
 export const Post = defineDocumentType(() => ({
   name: 'Post',
-  filePathPattern: `**/*.md`,
+  filePathPattern: `**/*.mdx`,
+  contentType: 'mdx',
   fields: {
     title: {
       type: 'string',
@@ -30,5 +37,21 @@ export const Post = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: 'posts',
-  documentTypes: [Post]
+  documentTypes: [Post],
+  mdx: {
+    remarkPlugins: [remarkGfm, remarkHint],
+    rehypePlugins: [
+      rehypeSlug,
+      rehypeCodeTitles,
+      rehypePrism,
+      [
+        rehypeAutolinkHeadings,
+        {
+          properties: {
+            className: ['anchor']
+          }
+        }
+      ]
+    ]
+  }
 })
