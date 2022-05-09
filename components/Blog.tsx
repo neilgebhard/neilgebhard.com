@@ -15,13 +15,13 @@ export default function Blog({ posts }) {
 
   return (
     <>
-      <label className="relative text-gray-400 focus-within:text-gray-600 block">
+      <label className="text-gray-400 focus-within:text-gray-600 block relative">
         <BiSearchAlt
           className="pointer-events-none w-8 h-8 absolute top-1/2 transform -translate-y-1/2 left-3"
           fill="currentColor"
         />
         <input
-          className="text-lg block w-full px-4 py-2 pl-14 text-gray-900 bg-white border-solid border-gray-300 rounded-md dark:border-gray-700 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-gray-100"
+          className="text-lg block w-full px-4 py-2 pl-14 text-gray-900 bg-white border-solid border-gray-300 rounded-md dark:border-gray-700 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-gray-100 mt-4"
           type="search"
           aria-label="Search blog"
           placeholder="Search blog"

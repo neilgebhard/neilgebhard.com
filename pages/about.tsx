@@ -88,7 +88,7 @@ export default function About() {
         <meta name="description" content="An about of Neil Gebhard"></meta>
       </Head>
       <section>
-        <h1 className="text-3xl md:text-4xl">About</h1>
+        <h1 className="text-3xl md:text-4xl mb-6 font-semibold">About</h1>
         <motion.section
           initial={{ scale: 0.99, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}

@@ -8,6 +8,7 @@ import Container from '../../components/Container'
 import { allPosts } from 'contentlayer/generated'
 import type { Post } from 'contentlayer/generated'
 import { useMDXComponent } from 'next-contentlayer/hooks'
+import clsx from 'clsx'
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = allPosts.map((post) => `/blog/${post.id}`)
@@ -26,6 +27,21 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       post
     }
   }
+}
+
+const Input = () => <input type="text" />
+
+const TextInput = ({ className, ...rest }) => {
+  return (
+    <label className="block">
+      <span className="text-gray-500">Label</span>
+      <input
+        type="text"
+        className={clsx('appearance-none block w-full', className)}
+        {...{ ...rest }}
+      />
+    </label>
+  )
 }
 
 export default function Post({ post }: { post: Post }) {
@@ -58,24 +74,7 @@ export default function Post({ post }: { post: Post }) {
         </div>
       </header>
       <article className="prose lg:prose-xl dark:prose-invert prose-blue prose-a:no-underline hover:prose-a:underline">
-        {/* <ReactMarkdown
-          components={CodeBlock}
-          remarkPlugins={[remarkGfm, remarkHint]}
-          rehypePlugins={[
-            rehypeSlug,
-            [
-              rehypeAutolinkHeadings,
-              {
-                properties: {
-                  className: ['anchor']
-                }
-              }
-            ]
-          ]}
-        >
-          {post.body.raw}
-        </ReactMarkdown> */}
-        <MDXContent components={{}} />
+        <MDXContent components={{ Input, TextInput }} />
         <Comments />
       </article>
     </Container>

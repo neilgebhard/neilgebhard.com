@@ -1,0 +1,74 @@
+---
+title: 'Tailwind CSS: Text Inputs'
+date: '2022-04-26'
+tags: ['HTML', 'Accessibility']
+---
+
+This guide will help you style text inputs with Tailwind CSS.
+
+Let's get started!
+
+This is what a default text input looks like (no styling):
+
+```html
+<input type="text" />
+```
+
+<Input type="text" />
+
+There are several Tailwind CSS properties to take into consideration:
+
+- **width** (e.g. `block w-full`)
+- **font size** (e.g. `text-sm`, `text-base`, `text-lg`,` text-xl`)
+- **background color** (e.g. `bg-gray-300`, `bg-gray-700`)
+- **padding** (e.g. `px-2`, `py-1`)
+- **border** (e.g. `border-gray-300`)
+- **border radius** (e.g. `rounded`, `rounded-md`, `rounded-lg`, `rounded-full`)
+- **focus** state: (e.g. `focus:border-gray-500`)
+- **ring** (e.g. `focus:ring`, `focus:ring-indigo-200`, `focus:ring-opacity-50`)
+- **placeholder** (e.g. `placeholder:italic`, `placeholder:text-slate-400`)
+
+## Styling an Input From Scratch
+
+First, let's start with **width**. It's recommended to use `block` and `w-full` to control the width of an input element. This will make the width of the input element the same size as the parent container. Then, we can change the size of the parent container to control the width of the input element.
+
+```html
+<label className="block">
+  <span className="text-gray-500">Label</span>
+  <input className="block w-full" type="text" />
+</label>
+```
+
+<TextInput />
+
+Then we can continue with **font-size**:
+
+```html
+<input className="... text-lg" type="text" />
+```
+
+<TextInput className="text-xl" type="text" />
+
+Then we can change its **border**:
+
+```html
+<input className="... border-gray-300" />
+```
+
+<TextInput className="text-lg border-gray-300" type="text" />
+
+Next, we can add a **focus** state property:
+
+```html
+<input className="... focus:border-gray-500" />
+```
+
+<TextInput className="text-lg border-gray-300 focus:border-gray-500" />
+
+And finally, we can use Tailwind's **ring** property:
+
+```html
+<input className="... focus:ring focus:ring-indigo-200 focus:ring-opacity-50" />
+```
+
+<TextInput className="text-lg border-gray-300 focus:border-gray-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" />

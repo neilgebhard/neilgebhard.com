@@ -78,7 +78,9 @@ export default function Projects() {
         <meta name="description" content="Neil Gebhard's projects"></meta>
       </Head>
       <section>
-        <h1 className="text-3xl md:text-4xl">Personal Projects</h1>
+        <h1 className="text-3xl md:text-4xl mb-6 font-semibold">
+          Personal Projects
+        </h1>
         {projects.map(
           ({ siteUrl, imgSrc, title, githubUrl, description, icons }, i) => (
             <motion.article
@@ -98,7 +100,7 @@ export default function Projects() {
                   alt="Screenshot of a project"
                 />
               </a>
-              <div className="sm:w-5/6 md:w-4/6">
+              <div className="sm:w-5/6 md:w-4/6 space-y-4">
                 <h2 className="text-xl sm:text-2xl md:text-3xl font-medium">
                   {title}
                 </h2>
