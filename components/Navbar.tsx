@@ -28,7 +28,7 @@ export default function Navbar() {
       </div>
       {isMounted && (
         <button
-          className="w-9 h-9 flex items-center justify-center button"
+          className="w-8 h-8 flex items-center justify-center button"
           aria-label="Toggle Dark Mode"
           onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
         >
