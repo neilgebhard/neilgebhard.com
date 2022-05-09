@@ -1,7 +1,6 @@
 import { useTheme } from 'next-themes'
 import { CgMoon, CgSun } from 'react-icons/cg'
 import useMount from '../hooks/useMount'
-import { useRouter } from 'next/router'
 import ActiveLink from './ActiveLink'
 
 const links = [

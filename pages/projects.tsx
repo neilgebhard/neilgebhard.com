@@ -12,7 +12,11 @@ import {
   SiTypescript,
   SiCss3,
   SiJest,
-  SiGithub
+  SiGithub,
+  SiNextdotjs,
+  SiSupabase,
+  SiPrisma,
+  SiVercel
 } from 'react-icons/si'
 import { BiLink } from 'react-icons/bi'
 import Head from 'next/head'
@@ -20,12 +24,29 @@ import Container from '../components/Container'
 
 const projects = [
   {
+    title: 'Open Market app',
+    description:
+      'A full-stack app where you can post stuff to buy and sell. The features include Google OAuth, passwordless authentication, image uploading, and favoriting.',
+    siteUrl: 'https://open-market.vercel.app/',
+    githubUrl: 'https://github.com/neilgebhard/open-market',
+    imgSrc: '/images/openmarket-laptop-frame.webp',
+    icons: [
+      <SiNextdotjs size="2rem" title="Next.js" className="mute" />,
+      <SiTypescript size="2rem" title="TypeScript" className="mute" />,
+      <SiSupabase size="2rem" title="Supabase" className="mute" />,
+      <SiPrisma size="2rem" title="Prisma" className="mute" />,
+      <SiVercel size="2rem" title="Vercel" className="mute" />,
+      <SiTailwindcss size="2rem" title="Tailwind CSS" className="mute" />,
+      <SiNodedotjs size="2rem" title="Node.js" className="mute" />
+    ]
+  },
+  {
     title: 'Reddit Clone',
     description:
       'A full-stack clone of Reddit. The features include user authentication, posts, comments, replies, and upvoting/downvoting.',
     siteUrl: 'https://neilsreddit.herokuapp.com/',
     githubUrl: 'https://github.com/neilgebhard/mern-reddit',
-    imgSrc: '/images/reddit-laptop-frame.png',
+    imgSrc: '/images/reddit-laptop-frame.webp',
     icons: [
       <SiReact size="2rem" title="React" className="mute" />,
       <SiTypescript size="2rem" title="TypeScript" className="mute" />,
@@ -43,7 +64,7 @@ const projects = [
       'A full-stack clone of Twitter. The features include user authentication, tweets, follows, and likes.',
     siteUrl: 'https://neilstwitter.herokuapp.com/',
     githubUrl: 'https://github.com/neilgebhard/mern-twitter',
-    imgSrc: '/images/twitter-laptop-frame.png',
+    imgSrc: '/images/twitter-laptop-frame.webp',
     icons: [
       <SiReact size="2rem" title="React" className="mute" />,
       <SiTypescript size="2rem" title="TypeScript" className="mute" />,
@@ -60,7 +81,7 @@ const projects = [
       'A responsive web app for discovering and exploring movies utilizing The Movie Database API.',
     siteUrl: 'https://neilsmovieapp.netlify.app/',
     githubUrl: 'https://github.com/neilgebhard/movie-app-react',
-    imgSrc: '/images/movie-laptop-frame.png',
+    imgSrc: '/images/movie-laptop-frame.webp',
     icons: [
       <SiReact size="2rem" title="React" className="mute" />,
       <SiTypescript size="2rem" title="TypeScript" className="mute" />,
