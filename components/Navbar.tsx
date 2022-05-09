@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { useTheme } from 'next-themes'
 import { CgMoon, CgSun } from 'react-icons/cg'
 import useMount from '../hooks/useMount'
@@ -14,7 +13,6 @@ const links = [
 export default function Navbar() {
   const { theme, setTheme } = useTheme()
   const { isMounted } = useMount()
-  const { asPath, isReady } = useRouter()
 
   return (
     <nav className="text-xl sm:text-2xl pt-6 pb-10 flex justify-between items-center">
@@ -25,15 +23,7 @@ export default function Navbar() {
             href={href}
             key={index}
           >
-            <a className="nav-link font-bold">
-              
-              
-              
-              {label}</a>
-
-
-
-            
+            <a className="nav-link font-bold">{label}</a>
           </ActiveLink>
         ))}
       </div>
