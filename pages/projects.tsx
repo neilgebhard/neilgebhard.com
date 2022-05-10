@@ -41,7 +41,7 @@ const projects = [
     ]
   },
   {
-    title: 'Reddit Clone',
+    title: 'Reddit clone',
     description:
       'A full-stack clone of Reddit. The features include user authentication, posts, comments, replies, and upvoting/downvoting.',
     siteUrl: 'https://neilsreddit.herokuapp.com/',
@@ -58,7 +58,7 @@ const projects = [
     ]
   },
   {
-    title: 'Twitter Clone',
+    title: 'Twitter clone',
     used: 'React, Express, MongoDB, Node.js, JSON Web Tokens, Tailwind CSS',
     description:
       'A full-stack clone of Twitter. The features include user authentication, tweets, follows, and likes.',
@@ -76,7 +76,7 @@ const projects = [
     ]
   },
   {
-    title: 'Movie App',
+    title: 'Movie app',
     description:
       'A responsive web app for discovering and exploring movies utilizing The Movie Database API.',
     siteUrl: 'https://neilsmovieapp.netlify.app/',
@@ -122,7 +122,7 @@ export default function Projects() {
                 />
               </a>
               <div className="sm:w-5/6 md:w-4/6 space-y-4">
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-medium">
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-0">
                   {title}
                 </h2>
                 <a
