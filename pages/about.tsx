@@ -30,24 +30,21 @@ import {
 import Container from '../components/Container'
 
 const current = [
+  ['Next.js', <SiNextdotjs size="2rem" />],
   ['React', <SiReact size="2rem" />],
-  ['JavaScript', <SiJavascript size="2rem" />],
   ['TypeScript', <SiTypescript size="2rem" />],
+  ['Tailwind', <SiTailwindcss size="2rem" />],
   ['HTML', <SiHtml5 size="2rem" />],
   ['CSS', <SiCss3 size="2rem" />],
   ['Node.js', <SiNodedotjs size="2rem" />],
   ['Express', <SiExpress size="2rem" />],
-  ['Next.js', <SiNextdotjs size="2rem" />],
   ['Git', <SiGithub size="2rem" />],
-  ['Tailwind', <SiTailwindcss size="2rem" />],
   ['VSCode', <SiVisualstudiocode size="2rem" />],
-  ['Rest', <BiCog size="2rem" />],
-  ['GraphQL', <SiGraphql size="2rem" />],
+  ['PostreSQL', <SiPostgresql size="2rem" />],
   ['MongoDB', <SiMongodb size="2rem" />],
   ['SQL', <SiPostgresql size="2rem" />],
   ['Cypress', <SiCypress size="2rem" />],
-  ['React Testing Library', <SiJest size="2rem" />],
-  ['JSON Web token', <SiJsonwebtokens size="2rem" />]
+  ['React Testing Library', <SiJest size="2rem" />]
 ]
 
 const past = [
@@ -96,13 +93,13 @@ export default function About() {
           viewport={{ once: true }}
         >
           <p className="text-xl">
-            I&apos;m a software engineer currently residing in a small island in
-            the Pacific called Saipan, a U.S. territory with only about 50,000
-            people. I&apos;ve been writing code for about 8 years
-            (professionally for 4 of those). I write code guided by pragmatic
-            software engineering practices and principles. My current favorite
-            stack is Next.js, TypeScript, Tailwind, and Prisma. During my free
-            time, I like to play soccer and listen to podcasts.
+            I&apos;m a software engineer currently residing on a small island in
+            the Pacific Ocean called Saipan. It's a U.S. territory with a meager
+            population size of 50,000 people. I&apos;ve been writing code for
+            about 8 years (professionally for 4 of those). I try to write code
+            that is easy to understand and easy to change. My current favorite
+            stack is Next.js, TypeScript, Tailwind, Prisma, and PostgreSQL.
+            During my free time, I like to play soccer and listen to podcasts.
           </p>
         </motion.section>
         <motion.section
@@ -112,7 +109,7 @@ export default function About() {
           viewport={{ once: true }}
           className="space-y-0 mb-16"
         >
-          <div className="text-xl font-semibold">
+          <div className="text-xl font-semibold mt-10">
             Bachelor of Science: Computer Science
           </div>
           <div className="text-xl">Portland State University • 2014</div>
