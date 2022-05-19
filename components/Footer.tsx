@@ -6,13 +6,13 @@ import ActiveLink from './ActiveLink'
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-200 dark:bg-gray-800 mt-40 py-20 px-6">
-      <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-between space-y-5 text-xl max-w-screen-xl mx-auto">
+    <footer className="mt-40 bg-gray-200 py-20 px-6 dark:bg-gray-800">
+      <div className="mx-auto flex max-w-screen-xl flex-col items-center justify-center space-y-5 text-xl sm:flex-row sm:justify-between">
         <div className="space-y-5 text-center sm:text-left">
           <Link href="/">
-            <a className="md:text-left font-semibold text-2xl">Neil Gebhard</a>
+            <a className="text-2xl font-semibold md:text-left">Neil Gebhard</a>
           </Link>
-          <div className="p-0 m-0 list-none flex items-center justify-center sm:justify-start gap-x-4">
+          <div className="m-0 flex list-none items-center justify-center gap-x-4 p-0 sm:justify-start">
             <div>
               <a
                 href="https://github.com/neilgebhard"

@@ -25,19 +25,19 @@ export default function Contact() {
           content="The contact page for Neil Gebhard"
         ></meta>
       </Head>
-      <h1 className="text-4xl mb-12 font-semibold h1-underline">Contact</h1>
-      <div className="flex flex-col md:flex-row gap-x-16 xl:gap-x-32">
-        <section className="sm:basis-[400px] lg:w-1/2 lg:basis-auto shrink-0">
+      <h1 className="h1-underline mb-12 text-4xl font-semibold">Contact</h1>
+      <div className="flex flex-col gap-x-16 md:flex-row xl:gap-x-32">
+        <section className="shrink-0 sm:basis-[400px] lg:w-1/2 lg:basis-auto">
           <form onSubmit={handleSubmit}>
             <div className="mt-10">
               <label
-                className="block font-semibold text-gray-800 dark:text-gray-200 mb-2 text-xl"
+                className="mb-2 block text-xl font-semibold text-gray-800 dark:text-gray-200"
                 htmlFor="email"
               >
                 Email
               </label>
               <input
-                className="w-full text-2xl rounded bg-white dark:bg-black border dark:border-gray-800 dark:ring-gray-600 outline-none focus:ring focus:ring-gray-300 dark:focus:ring-gray-600 dark:focus:ring px-3 py-2"
+                className="w-full rounded border bg-white px-3 py-2 text-2xl outline-none focus:ring focus:ring-gray-300 dark:border-gray-800 dark:bg-black dark:ring-gray-600 dark:focus:ring dark:focus:ring-gray-600"
                 id="email"
                 type="email"
                 name="email"
@@ -51,13 +51,13 @@ export default function Contact() {
             </div>
             <div className="mt-10">
               <label
-                className="block font-semibold text-gray-800 dark:text-gray-200 mb-2 text-xl"
+                className="mb-2 block text-xl font-semibold text-gray-800 dark:text-gray-200"
                 htmlFor="message"
               >
                 Message
               </label>
               <textarea
-                className="w-full text-2xl rounded bg-white dark:bg-black border dark:border-gray-800 dark:ring-gray-600 outline-none focus:ring focus:ring-gray-300 dark:focus:ring-gray-600 dark:focus:ring px-3 py-2"
+                className="w-full rounded border bg-white px-3 py-2 text-2xl outline-none focus:ring focus:ring-gray-300 dark:border-gray-800 dark:bg-black dark:ring-gray-600 dark:focus:ring dark:focus:ring-gray-600"
                 id="message"
                 name="message"
                 rows={5}
@@ -69,28 +69,28 @@ export default function Contact() {
               />
             </div>
             <button
-              className="mt-12 bg-yellow-400 hover:bg-yellow-300 dark:bg-yellow-700 dark:hover:bg-yellow-600 px-6 py-3 rounded text-xl font-bold flex gap-x-2 items-center disabled:bg-gray-300 disabled:dark:bg-gray-600"
+              className="mt-12 flex items-center gap-x-2 rounded bg-yellow-400 px-6 py-3 text-xl font-bold hover:bg-yellow-300 disabled:bg-gray-300 dark:bg-yellow-700 dark:hover:bg-yellow-600 disabled:dark:bg-gray-600"
               disabled={state.submitting}
               type="submit"
             >
               <IoMdSend size={25} /> Send Message
             </button>
             {state.succeeded && (
-              <p className="text-green-500 font-semibold text-lg mt-4">
+              <p className="mt-4 text-lg font-semibold text-green-500">
                 Message sent!
               </p>
             )}
           </form>
         </section>
-        <div className="md:hidden bg-gray-300 dark:bg-gray-700 w-56 h-0.5 my-20 mx-auto" />
+        <div className="my-20 mx-auto h-0.5 w-56 bg-gray-300 dark:bg-gray-700 md:hidden" />
         <section className="space-y-10 text-xl lg:text-2xl">
-          <p className="font-bold text-2xl lg:text-3xl tracking-wide md:mt-8">
+          <p className="text-2xl font-bold tracking-wide md:mt-8 lg:text-3xl">
             Or get in touch another way...
           </p>
           <p>Currently open to new opportunities.</p>
           <div className="space-y-4">
             <Link href="https://www.google.com/maps/place/Saipan/@15.1882262,145.6948117,12z/data=!4m5!3m4!1s0x66d8b12c0d41abdd:0x662f5e089974f80f!8m2!3d15.1850483!4d145.7467259">
-              <a className="hover:underline mute flex gap-x-3 font-semibold">
+              <a className="mute flex gap-x-3 font-semibold hover:underline">
                 <FaMapMarkerAlt size="2rem" /> Saipan, USA
               </a>
             </Link>
@@ -103,7 +103,7 @@ export default function Contact() {
               neilgebhard@gmail.com
             </a>
           </div>
-          <ul className="p-0 m-0 list-none flex items-center gap-x-4">
+          <ul className="m-0 flex list-none items-center gap-x-4 p-0">
             <li>
               <a
                 href="https://github.com/neilgebhard"

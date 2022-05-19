@@ -14,5 +14,5 @@ export default function Comments() {
     ref: comment
   })
 
-  return <div className="w-full mt-10">{<div ref={comment}></div>}</div>
+  return <div className="mt-10 w-full">{<div ref={comment}></div>}</div>
 }

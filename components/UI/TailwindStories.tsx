@@ -1,17 +1,17 @@
 export default function TailwindStories() {
   return (
     <div className="m-10 text-gray-50">
-      <p className="text-fuchsia-400 uppercase font-semibold text-xl tracking-wide">
+      <p className="text-xl font-semibold uppercase tracking-wide text-fuchsia-400">
         Introducing...
       </p>
-      <h1 className="text-6xl mt-4 font-semibold tracking-tight">
+      <h1 className="mt-4 text-6xl font-semibold tracking-tight">
         Tailwind Stories.
       </h1>
-      <ul className="flex gap-4 mt-10">
+      <ul className="mt-10 flex gap-4">
         <li className="flex flex-col items-center space-y-3">
-          <div className="relative bg-gradient-to-tr from-pink-500 to-blue-500 p-1 block rounded-full">
+          <div className="relative block rounded-full bg-gradient-to-tr from-pink-500 to-blue-500 p-1">
             <a
-              className="bg-white rounded-full p-1 block -rotate-6 hover:rotate-0 transition"
+              className="block -rotate-6 rounded-full bg-white p-1 transition hover:rotate-0"
               href="#"
             >
               <img
@@ -20,16 +20,16 @@ export default function TailwindStories() {
                 alt="kitten"
               />
             </a>
-            <button className="absolute bg-blue-500 text-2xl rounded-full right-3 bottom-2 h-8 w-8 grid place-items-center font-semibold ring-4 ring-white font-mono hover:bg-blue-700">
+            <button className="absolute right-3 bottom-2 grid h-8 w-8 place-items-center rounded-full bg-blue-500 font-mono text-2xl font-semibold ring-4 ring-white hover:bg-blue-700">
               +
             </button>
           </div>
           <div className="text-xl">kitty_one</div>
         </li>
         <li className="flex flex-col items-center space-y-3">
-          <div className="bg-gradient-to-tr from-pink-500 to-blue-500 p-1 block rounded-full">
+          <div className="block rounded-full bg-gradient-to-tr from-pink-500 to-blue-500 p-1">
             <a
-              className="bg-white rounded-full p-1 block -rotate-6 hover:rotate-0 transition"
+              className="block -rotate-6 rounded-full bg-white p-1 transition hover:rotate-0"
               href="#"
             >
               <img
@@ -42,9 +42,9 @@ export default function TailwindStories() {
           <div className="text-xl">meowwwww123</div>
         </li>
         <li className="flex flex-col items-center space-y-3">
-          <div className="bg-gradient-to-tr from-pink-500 to-blue-500 p-1 block rounded-full">
+          <div className="block rounded-full bg-gradient-to-tr from-pink-500 to-blue-500 p-1">
             <a
-              className="bg-white rounded-full p-1 block -rotate-6 hover:rotate-0 transition"
+              className="block -rotate-6 rounded-full bg-white p-1 transition hover:rotate-0"
               href="#"
             >
               <img
@@ -57,9 +57,9 @@ export default function TailwindStories() {
           <div className="text-xl">puffy_cat987</div>
         </li>
         <li className="flex flex-col items-center space-y-3">
-          <div className="bg-gradient-to-tr from-pink-500 to-blue-500 p-1 block rounded-full">
+          <div className="block rounded-full bg-gradient-to-tr from-pink-500 to-blue-500 p-1">
             <a
-              className="bg-white rounded-full p-1 block -rotate-6 hover:rotate-0 transition"
+              className="block -rotate-6 rounded-full bg-white p-1 transition hover:rotate-0"
               href="#"
             >
               <img

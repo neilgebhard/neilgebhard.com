@@ -26,7 +26,7 @@ class MyDocument extends Document {
           />
           <meta content="#ffffff" name="theme-color" />
         </Head>
-        <body className="bg-gray-100 text-gray-900 dark:text-gray-100 dark:bg-gray-900 transition-all">
+        <body className="bg-gray-100 text-gray-900 transition-all dark:bg-gray-900 dark:text-gray-100">
           <Main />
           <NextScript />
         </body>

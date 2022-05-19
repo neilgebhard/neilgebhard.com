@@ -19,12 +19,12 @@ export default function Navbar() {
   const [showMobileNav, setShowMobileNav] = useState(false)
 
   return (
-    <nav className="text-xl sm:text-2xl pt-6 pb-32 flex justify-between items-center">
+    <nav className="flex items-center justify-between pt-6 pb-32 text-xl sm:text-2xl">
       <div className="flex items-center">
         <Link href="/">
-          <a className="font-bold mr-8 text-2xl">Neil Gebhard</a>
+          <a className="mr-8 text-2xl font-bold">Neil Gebhard</a>
         </Link>
-        <div className="hidden md:inline-flex items-center">
+        <div className="hidden items-center md:inline-flex">
           {links.map(([href, label], index) => (
             <ActiveLink
               activeClassName="underline decoration decoration-yellow-500 decoration-4"
@@ -36,7 +36,7 @@ export default function Navbar() {
           ))}
           {isMounted && (
             <button
-              className="ml-4 w-11 h-11 inline-flex items-center justify-center button transition"
+              className="button ml-4 inline-flex h-11 w-11 items-center justify-center transition"
               aria-label="Toggle Dark Mode"
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
             >
@@ -46,20 +46,20 @@ export default function Navbar() {
         </div>
       </div>
       <Link href="/contact">
-        <a className="hidden md:inline text-xl bg-yellow-400 hover:bg-yellow-300 dark:bg-yellow-700 dark:hover:bg-yellow-600 px-4 py-2 rounded font-semibold transition">
+        <a className="hidden rounded bg-yellow-400 px-4 py-2 text-xl font-semibold transition hover:bg-yellow-300 dark:bg-yellow-700 dark:hover:bg-yellow-600 md:inline">
           Contact me <span>→</span>
         </a>
       </Link>
       {/* Mobile Nav */}
       <button
-        className="inline md:hidden transition"
+        className="inline transition md:hidden"
         type="button"
         onClick={() => setShowMobileNav((show) => !show)}
       >
         <FiMenu size={30} />
       </button>
       {showMobileNav && (
-        <ul className="md:hidden absolute top-20 left-0 w-full px-6 space-y-4 py-4 bg-gray-200 dark:bg-gray-800 z-10">
+        <ul className="absolute top-20 left-0 z-10 w-full space-y-4 bg-gray-200 px-6 py-4 dark:bg-gray-800 md:hidden">
           {links.map(([href, label], index) => (
             <li key={index}>
               <ActiveLink activeClassName="font-semibold" href={href}>
@@ -73,7 +73,7 @@ export default function Navbar() {
             </ActiveLink>
           </li>
           <li
-            className="cursor-pointer flex items-center gap-x-2"
+            className="flex cursor-pointer items-center gap-x-2"
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
           >
             {theme === 'dark' ? <CgSun size={25} /> : <CgMoon size={25} />} Dark

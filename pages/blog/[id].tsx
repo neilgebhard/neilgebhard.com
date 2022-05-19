@@ -37,7 +37,7 @@ const TextInput = ({ className, ...rest }) => {
       <span className="text-gray-500">Label</span>
       <input
         type="text"
-        className={clsx('appearance-none block w-full', className)}
+        className={clsx('block w-full appearance-none', className)}
         {...{ ...rest }}
       />
     </label>
@@ -53,11 +53,11 @@ export default function Post({ post }: { post: Post }) {
         <title>{post.title} | Neil Gebhard</title>
         <meta name="description" content={post.title}></meta>
       </Head>
-      <section className="max-w-2xl mx-auto">
+      <section className="mx-auto max-w-2xl">
         <header>
           <h1 className="mb-2 mt-0 text-3xl sm:text-5xl">{post.title}</h1>
-          <div className="flex items-center gap-1 mb-12">
-            <div className="mute flex gap-1 items-center">
+          <div className="mb-12 flex items-center gap-1">
+            <div className="mute flex items-center gap-1">
               <Image
                 className="rounded-full"
                 src="/images/portrait.webp"
@@ -74,7 +74,7 @@ export default function Post({ post }: { post: Post }) {
             </div>
           </div>
         </header>
-        <article className="prose lg:prose-xl dark:prose-invert prose-blue prose-a:no-underline hover:prose-a:underline">
+        <article className="prose prose-blue prose-a:no-underline hover:prose-a:underline dark:prose-invert lg:prose-xl">
           <MDXContent components={{ Input, TextInput }} />
           <Comments />
         </article>

@@ -98,7 +98,7 @@ export default function Projects() {
         <meta name="description" content="Neil Gebhard's projects"></meta>
       </Head>
       <section>
-        <h1 className="text-3xl md:text-4xl mb-14 font-bold h1-underline">
+        <h1 className="h1-underline mb-14 text-3xl font-bold md:text-4xl">
           Projects
         </h1>
         {projects.map(
@@ -106,7 +106,7 @@ export default function Projects() {
             <article
               className={`flex flex-col sm:flex-row ${
                 i % 2 === 1 && 'sm:flex-row-reverse'
-              } items-center gap-x-4 mb-20`}
+              } mb-20 items-center gap-x-4`}
               key={i}
             >
               <a href={siteUrl} target="_blank" rel="noreferrer">
@@ -118,11 +118,11 @@ export default function Projects() {
                   alt="Screenshot of a project"
                 />
               </a>
-              <div className="sm:w-5/6 md:w-4/6 space-y-4">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-0">
+              <div className="space-y-4 sm:w-5/6 md:w-4/6">
+                <h2 className="mb-0 text-2xl font-semibold sm:text-3xl md:text-4xl">
                   {title}
                 </h2>
-                <p className="leading-8 text-xl font-light">{description}</p>
+                <p className="text-xl font-light leading-8">{description}</p>
                 <div>
                   {icons?.map((icon, i) => (
                     <span className="ml-2 inline-block" key={i}>
@@ -134,7 +134,7 @@ export default function Projects() {
                   ))}
                 </div>
                 <a
-                  className="mute button inline-flex items-center gap-1 text-xl p-3 no-underline"
+                  className="mute button inline-flex items-center gap-1 p-3 text-xl no-underline"
                   href={githubUrl}
                   target="_blank"
                   rel="noreferrer"
@@ -142,7 +142,7 @@ export default function Projects() {
                   <SiGithub size="1.4rem" className="mute" /> Github
                 </a>
                 <a
-                  className="mute button inline-flex items-center gap-1 text-xl p-3 ml-4 no-underline"
+                  className="mute button ml-4 inline-flex items-center gap-1 p-3 text-xl no-underline"
                   href={siteUrl}
                   target="_blank"
                   rel="noreferrer"

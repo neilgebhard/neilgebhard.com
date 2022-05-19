@@ -1,8 +1,8 @@
 export default function Hero() {
   return (
     <>
-      <div className="bg-gray-100 text-gray-900 grid grid-cols-2 xl:grid-cols-5">
-        <div className="p-8 max-w-sm ml-auto xl:col-span-2">
+      <div className="grid grid-cols-2 bg-gray-100 text-gray-900 xl:grid-cols-5">
+        <div className="ml-auto max-w-sm p-8 xl:col-span-2">
           <h1 className="text-3xl font-bold ">
             Lorem ipsum dolor sit, amet consectetur adipisicing
           </h1>
@@ -15,14 +15,14 @@ export default function Hero() {
         </div>
         <div className="relative xl:col-span-3">
           <img
-            className="absolute inset-0 w-full h-full object-cover object-center"
+            className="absolute inset-0 h-full w-full object-cover object-center"
             src="https://placekitten.com/400/400"
             alt="kitten"
           />
         </div>
       </div>
-      <div className="bg-white grid grid-cols-2 grid-rows-3 gap-6 p-4 group ">
-        <div className="bg-red-500 rounded-lg p-8 opacity-50 group-hover:opacity-100 transition">
+      <div className="group grid grid-cols-2 grid-rows-3 gap-6 bg-white p-4 ">
+        <div className="rounded-lg bg-red-500 p-8 opacity-50 transition group-hover:opacity-100">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id
           necessitatibus suscipit quod ipsa, facilis vel autem optio architecto
           praesentium esse quam, eius nam aliquam aspernatur molestiae et
@@ -31,7 +31,7 @@ export default function Hero() {
           blanditiis quod deleniti excepturi. Id quasi explicabo quibusdam,
           natus architecto tenetur vitae adipisci consequatur quas.
         </div>
-        <div className="bg-red-500 rounded-lg p-8 opacity-50 group-hover:opacity-100 transition">
+        <div className="rounded-lg bg-red-500 p-8 opacity-50 transition group-hover:opacity-100">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id
           necessitatibus suscipit quod ipsa, facilis vel autem optio architecto
           praesentium esse quam, eius nam aliquam aspernatur molestiae et
@@ -40,7 +40,7 @@ export default function Hero() {
           blanditiis quod deleniti excepturi. Id quasi explicabo quibusdam,
           natus architecto tenetur vitae adipisci consequatur quas.
         </div>
-        <div className="bg-red-500 rounded-lg p-8 opacity-50 group-hover:opacity-100 transition">
+        <div className="rounded-lg bg-red-500 p-8 opacity-50 transition group-hover:opacity-100">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id
           necessitatibus suscipit quod ipsa, facilis vel autem optio architecto
           praesentium esse quam, eius nam aliquam aspernatur molestiae et
@@ -49,7 +49,7 @@ export default function Hero() {
           blanditiis quod deleniti excepturi. Id quasi explicabo quibusdam,
           natus architecto tenetur vitae adipisci consequatur quas.
         </div>
-        <div className="bg-red-500 rounded-lg p-8 opacity-50 group-hover:opacity-100 transition">
+        <div className="rounded-lg bg-red-500 p-8 opacity-50 transition group-hover:opacity-100">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id
           necessitatibus suscipit quod ipsa, facilis vel autem optio architecto
           praesentium esse quam, eius nam aliquam aspernatur molestiae et
@@ -58,7 +58,7 @@ export default function Hero() {
           blanditiis quod deleniti excepturi. Id quasi explicabo quibusdam,
           natus architecto tenetur vitae adipisci consequatur quas.
         </div>
-        <div className="bg-red-500 rounded-lg p-8 opacity-50 group-hover:opacity-100 transition">
+        <div className="rounded-lg bg-red-500 p-8 opacity-50 transition group-hover:opacity-100">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id
           necessitatibus suscipit quod ipsa, facilis vel autem optio architecto
           praesentium esse quam, eius nam aliquam aspernatur molestiae et
@@ -67,7 +67,7 @@ export default function Hero() {
           blanditiis quod deleniti excepturi. Id quasi explicabo quibusdam,
           natus architecto tenetur vitae adipisci consequatur quas.
         </div>
-        <div className="bg-red-500 rounded-lg p-8 opacity-50 group-hover:opacity-100 transition">
+        <div className="rounded-lg bg-red-500 p-8 opacity-50 transition group-hover:opacity-100">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id
           necessitatibus suscipit quod ipsa, facilis vel autem optio architecto
           praesentium esse quam, eius nam aliquam aspernatur molestiae et
@@ -76,7 +76,7 @@ export default function Hero() {
           blanditiis quod deleniti excepturi. Id quasi explicabo quibusdam,
           natus architecto tenetur vitae adipisci consequatur quas.
         </div>
-        <div className="bg-red-500 rounded-lg p-8 opacity-50 group-hover:opacity-100 transition">
+        <div className="rounded-lg bg-red-500 p-8 opacity-50 transition group-hover:opacity-100">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id
           necessitatibus suscipit quod ipsa, facilis vel autem optio architecto
           praesentium esse quam, eius nam aliquam aspernatur molestiae et

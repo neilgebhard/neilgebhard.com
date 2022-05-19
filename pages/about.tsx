@@ -58,9 +58,9 @@ const past = [
 
 const IconGrid = ({ icons }) => {
   return (
-    <ul className="pl-0 gap-6 grid grid-cols-4 sm:grid-cols-8 lg:grid-cols-5 xl:grid-cols-8 space-y-0">
+    <ul className="grid grid-cols-4 gap-6 space-y-0 pl-0 sm:grid-cols-8 lg:grid-cols-5 xl:grid-cols-8">
       {icons.map(([label, icon], index) => (
-        <li key={index} className="flex flex-col items-center flex-1">
+        <li key={index} className="flex flex-1 flex-col items-center">
           <div>{icon}</div>
           <div className="text-center">{label}</div>
         </li>
@@ -76,13 +76,13 @@ export default function About() {
         <title>About | Neil Gebhard</title>
         <meta name="description" content="An about of Neil Gebhard"></meta>
       </Head>
-      <h1 className="text-3xl md:text-4xl mb-14 font-bold h1-underline">
+      <h1 className="h1-underline mb-14 text-3xl font-bold md:text-4xl">
         About
       </h1>
-      <div className="flex flex-col lg:flex-row gap-x-10">
+      <div className="flex flex-col gap-x-10 lg:flex-row">
         <div className="flex-1">
           <header className="relative">
-            <div className="flex items-center gap-5 mb-10">
+            <div className="mb-10 flex items-center gap-5">
               <Image
                 className="rounded-full"
                 src="/images/portrait.webp"
@@ -91,13 +91,13 @@ export default function About() {
                 height={100}
                 priority
               />
-              <div className="text-3xl sm:text-5xl font-extralight tracking-tight">
+              <div className="text-3xl font-extralight tracking-tight sm:text-5xl">
                 Hi, I&apos;m{' '}
                 <span className="my-0 font-bold">Neil Gebhard</span>
               </div>
             </div>
           </header>
-          <section className="text-xl space-y-8">
+          <section className="space-y-8 text-xl">
             <p>
               I&apos;m a software engineer in Saipan, USA. I&apos;ve been
               writing code for about 8 years (professionally for 4). My ambition
@@ -106,9 +106,9 @@ export default function About() {
               MongoDB.
             </p>
           </section>
-          <section className="space-y-0 mt-16 mb-8">
-            <h2 className="text-2xl md:text-3xl font-medium">Degree</h2>
-            <div className="flex flex-col sm:flex-row sm:items-center gap-x-4">
+          <section className="mt-16 mb-8 space-y-0">
+            <h2 className="text-2xl font-medium md:text-3xl">Degree</h2>
+            <div className="flex flex-col gap-x-4 sm:flex-row sm:items-center">
               <FaGraduationCap size={40} />
               <div>
                 <div className="text-xl font-semibold">
@@ -121,13 +121,13 @@ export default function About() {
         </div>
         <div className="flex-1">
           <section>
-            <h2 className="text-xl sm:text-xl md:text-2xl font-medium">
+            <h2 className="text-xl font-medium sm:text-xl md:text-2xl">
               Current Stack
             </h2>
             <IconGrid icons={current} />
           </section>
           <section>
-            <h2 className="text-xl sm:text-xl md:text-2xl font-medium">
+            <h2 className="text-xl font-medium sm:text-xl md:text-2xl">
               Previously
             </h2>
             <IconGrid icons={past} />

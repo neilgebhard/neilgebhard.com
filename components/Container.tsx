@@ -4,7 +4,7 @@ import Navbar from './Navbar'
 const Container = ({ children }) => {
   return (
     <>
-      <div className="max-w-screen-xl mx-auto px-6 mb-12 overflow-hidden">
+      <div className="mx-auto mb-12 max-w-screen-xl overflow-hidden px-6">
         <Navbar />
         <main>{children}</main>
       </div>

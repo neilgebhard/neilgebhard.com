@@ -10,9 +10,9 @@ export default function Home() {
         <title>Home | Neil Gebhard</title>
         <meta name="description" content="An about of Neil Gebhard"></meta>
       </Head>
-      <section className="py-20 md:py-40 relative">
+      <section className="relative py-20 md:py-40">
         <motion.div
-          className="hidden md:block absolute text-[100px] lg:text-[150px] leading-none tracking-wider uppercase font-extrabold sm:-top-10 lg:top-14 left-96 text-gray-200 dark:text-gray-800 -z-10 rotate-45 text-center"
+          className="absolute left-96 -z-10 hidden rotate-45 text-center text-[100px] font-extrabold uppercase leading-none tracking-wider text-gray-200 dark:text-gray-800 sm:-top-10 md:block lg:top-14 lg:text-[150px]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.25, delay: 1.5 }}
@@ -24,7 +24,7 @@ export default function Home() {
 
         <div className="text-center md:text-left">
           <motion.p
-            className="text-3xl md:text-4xl font-light mb-3"
+            className="mb-3 text-3xl font-light md:text-4xl"
             initial={{ opacity: 0.9, x: 10 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
@@ -32,7 +32,7 @@ export default function Home() {
             A Full Stack Developer
           </motion.p>
           <motion.p
-            className="text-5xl md:text-7xl max-w-3xl uppercase font-bold"
+            className="max-w-3xl text-5xl font-bold uppercase md:text-7xl"
             initial={{ opacity: 0, x: 10 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
@@ -45,14 +45,14 @@ export default function Home() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 1 }}
           >
-            <div className="flex gap-x-5 justify-center md:justify-start font-semibold">
+            <div className="flex justify-center gap-x-5 font-semibold md:justify-start">
               <Link href="/projects">
-                <a className="bg-yellow-400 hover:bg-yellow-300 dark:bg-yellow-700 dark:hover:bg-yellow-600 px-6 py-3 rounded text-xl transition">
+                <a className="rounded bg-yellow-400 px-6 py-3 text-xl transition hover:bg-yellow-300 dark:bg-yellow-700 dark:hover:bg-yellow-600">
                   My Projects
                 </a>
               </Link>
               <Link href="/contact">
-                <a className="border border-gray-500 hover:bg-white dark:hover:bg-gray-700 px-6 py-3 rounded text-xl transition">
+                <a className="rounded border border-gray-500 px-6 py-3 text-xl transition hover:bg-white dark:hover:bg-gray-700">
                   About Me
                 </a>
               </Link>

@@ -37,16 +37,16 @@ export default function Blog({ posts }) {
         <title>Home | Neil Gebhard</title>
         <meta name="description" content="An about of Neil Gebhard"></meta>
       </Head>
-      <h1 className="text-3xl md:text-4xl mb-14 font-semibold h1-underline">
+      <h1 className="h1-underline mb-14 text-3xl font-semibold md:text-4xl">
         Blog
       </h1>
-      <label className="text-gray-400 focus-within:text-gray-600 block relative">
+      <label className="relative block text-gray-400 focus-within:text-gray-600">
         <BiSearchAlt
-          className="pointer-events-none w-8 h-8 absolute top-1/2 transform -translate-y-1/2 left-3"
+          className="pointer-events-none absolute top-1/2 left-3 h-8 w-8 -translate-y-1/2 transform"
           fill="currentColor"
         />
         <input
-          className="text-2xl block sm:max-w-lg w-full px-4 py-2 pl-14 mt-4 text-gray-900 bg-white border-solid border-gray-300 rounded-md dark:border-gray-700 focus:gray-blue-500 focus:border-gray-500 dark:bg-gray-800 dark:text-gray-100"
+          className="focus:gray-blue-500 mt-4 block w-full rounded-md border-solid border-gray-300 bg-white px-4 py-2 pl-14 text-2xl text-gray-900 focus:border-gray-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100 sm:max-w-lg"
           type="search"
           aria-label="Search blog"
           placeholder="Search blog"
@@ -54,10 +54,10 @@ export default function Blog({ posts }) {
           onChange={(e) => setSearchValue(e.target.value)}
         />
       </label>
-      <ul className="pl-0 list-none space-y-6 mt-6">
+      <ul className="mt-6 list-none space-y-6 pl-0">
         {filteredPosts.map(({ id, date, title, tags }, index) => (
           <motion.li
-            className="text-2xl flex flex-col space-y-1"
+            className="flex flex-col space-y-1 text-2xl"
             initial={{ scale: 0.99, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.1, delay: index * 0.05 }}
@@ -67,10 +67,10 @@ export default function Blog({ posts }) {
               <a className="link">{title}</a>
             </Link>
             {tags && (
-              <div className="pl-0 flex flex-wrap items-center gap-2">
+              <div className="flex flex-wrap items-center gap-2 pl-0">
                 {tags?.map((tag, index) => (
                   <span
-                    className="rounded bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-800 p-1 text-sm uppercase font-medium cursor-pointer mute"
+                    className="mute cursor-pointer rounded bg-gray-200 p-1 text-sm font-medium uppercase hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-800"
                     onClick={() => setSearchValue(tag)}
                     key={index}
                   >
