@@ -87,7 +87,10 @@ export default function Contact() {
           <p className="text-2xl font-bold tracking-wide md:mt-8 lg:text-3xl">
             Or get in touch another way...
           </p>
-          <p>Currently open to new opportunities.</p>
+          <p>
+            Need a website? Maybe you have a proposition? Or do you just want to
+            say hi? Feel free to message me.
+          </p>
           <div className="space-y-4">
             <Link href="https://www.google.com/maps/place/Saipan/@15.1882262,145.6948117,12z/data=!4m5!3m4!1s0x66d8b12c0d41abdd:0x662f5e089974f80f!8m2!3d15.1850483!4d145.7467259">
               <a className="mute flex gap-x-3 font-semibold hover:underline">

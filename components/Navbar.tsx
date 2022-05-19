@@ -72,12 +72,14 @@ export default function Navbar() {
               <a>Contact</a>
             </ActiveLink>
           </li>
-          <li
-            className="flex cursor-pointer items-center gap-x-2"
-            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-          >
-            {theme === 'dark' ? <CgSun size={25} /> : <CgMoon size={25} />} Dark
-            mode
+          <li>
+            <button
+              className="flex cursor-pointer items-center gap-x-2"
+              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            >
+              {theme === 'dark' ? <CgSun size={25} /> : <CgMoon size={25} />}{' '}
+              Dark mode
+            </button>
           </li>
         </ul>
       )}
