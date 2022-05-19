@@ -74,7 +74,7 @@ function AnimatedBars() {
   )
 }
 
-export default function NowPlaying() {
+export default function Spotify() {
   const { data } = useSWR<SpotifySong>('/api/now-playing', fetcher)
 
   return (
@@ -92,7 +92,7 @@ export default function NowPlaying() {
           </a>
         </div>
       ) : (
-        <div className="flex items-center gap-2 mute">
+        <div className="flex items-center gap-2 mute justify-center sm:justify-start">
           <SiSpotify /> Spotify - Not active
         </div>
       )}

@@ -8,6 +8,10 @@
     scroll-behavior: smooth;
   }
 
+  h1 {
+    @apply relative;
+  }
+
   h2 {
     @apply mb-4 mt-6;
   }
@@ -28,6 +32,19 @@
 
   .button {
     @apply rounded-lg border-none bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500 cursor-pointer;
+  }
+
+  .h1-underline:before {
+    @apply content-[""] w-12 h-1 bg-yellow-500 top-11 block absolute;
+  }
+}
+
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
   }
 }
 

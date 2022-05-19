@@ -26,7 +26,7 @@ const projects = [
   {
     title: 'Open Market app',
     description:
-      'A full-stack app where you can post stuff to buy and sell. The features include Google OAuth, passwordless authentication, image uploading, and favoriting.',
+      'A place where you can post items to buy and sell. This is a full stack app with Google OAuth, passwordless authentication, image uploading, and favoriting.',
     siteUrl: 'https://open-market.vercel.app/',
     githubUrl: 'https://github.com/neilgebhard/open-market',
     imgSrc: '/images/openmarket-laptop-frame.webp',
@@ -43,7 +43,7 @@ const projects = [
   {
     title: 'Reddit clone',
     description:
-      'A full-stack clone of Reddit. The features include user authentication, posts, comments, replies, and upvoting/downvoting.',
+      'A clone of Reddit with features like user authentication, posts, comments, replies, and upvoting/downvoting.',
     siteUrl: 'https://neilsreddit.herokuapp.com/',
     githubUrl: 'https://github.com/neilgebhard/mern-reddit',
     imgSrc: '/images/reddit-laptop-frame.webp',
@@ -61,7 +61,7 @@ const projects = [
     title: 'Twitter clone',
     used: 'React, Express, MongoDB, Node.js, JSON Web Tokens, Tailwind CSS',
     description:
-      'A full-stack clone of Twitter. The features include user authentication, tweets, follows, and likes.',
+      'A clone of Twitter with user authentication, tweets, follows, and likes.',
     siteUrl: 'https://neilstwitter.herokuapp.com/',
     githubUrl: 'https://github.com/neilgebhard/mern-twitter',
     imgSrc: '/images/twitter-laptop-frame.webp',
@@ -77,8 +77,7 @@ const projects = [
   },
   {
     title: 'Movie app',
-    description:
-      'A responsive web app for discovering and exploring movies utilizing The Movie Database API.',
+    description: 'A web app for discovering and exploring movies.',
     siteUrl: 'https://neilsmovieapp.netlify.app/',
     githubUrl: 'https://github.com/neilgebhard/movie-app-react',
     imgSrc: '/images/movie-laptop-frame.webp',
@@ -99,17 +98,15 @@ export default function Projects() {
         <meta name="description" content="Neil Gebhard's projects"></meta>
       </Head>
       <section>
-        <h1 className="text-3xl md:text-4xl mb-6 font-semibold">
-          Personal Projects
+        <h1 className="text-3xl md:text-4xl mb-14 font-bold h1-underline">
+          Projects
         </h1>
         {projects.map(
           ({ siteUrl, imgSrc, title, githubUrl, description, icons }, i) => (
-            <motion.article
-              className="flex flex-col sm:flex-row items-center gap-x-4 mb-20"
-              initial={{ scale: 0.99, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
+            <article
+              className={`flex flex-col sm:flex-row ${
+                i % 2 === 1 && 'sm:flex-row-reverse'
+              } items-center gap-x-4 mb-20`}
               key={i}
             >
               <a href={siteUrl} target="_blank" rel="noreferrer">
@@ -122,11 +119,22 @@ export default function Projects() {
                 />
               </a>
               <div className="sm:w-5/6 md:w-4/6 space-y-4">
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-0">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-0">
                   {title}
                 </h2>
+                <p className="leading-8 text-xl font-light">{description}</p>
+                <div>
+                  {icons?.map((icon, i) => (
+                    <span className="ml-2 inline-block" key={i}>
+                      <div className="inline-block" data-tip={icon.props.title}>
+                        {icon}
+                      </div>
+                      <ReactTooltip place="top" type="dark" effect="solid" />
+                    </span>
+                  ))}
+                </div>
                 <a
-                  className="mute button inline-flex items-center gap-1 text-lg p-2 no-underline"
+                  className="mute button inline-flex items-center gap-1 text-xl p-3 no-underline"
                   href={githubUrl}
                   target="_blank"
                   rel="noreferrer"
@@ -134,24 +142,15 @@ export default function Projects() {
                   <SiGithub size="1.4rem" className="mute" /> Github
                 </a>
                 <a
-                  className="mute button inline-flex items-center gap-1 text-lg p-2 ml-4 no-underline"
+                  className="mute button inline-flex items-center gap-1 text-xl p-3 ml-4 no-underline"
                   href={siteUrl}
                   target="_blank"
                   rel="noreferrer"
                 >
                   <BiLink size="1.4rem" className="mute" /> Demo
                 </a>
-                <p className="leading-6">{description}</p>
-                {icons?.map((icon, i) => (
-                  <span className="ml-2 inline-block" key={i}>
-                    <div className="inline-block" data-tip={icon.props.title}>
-                      {icon}
-                    </div>
-                    <ReactTooltip place="top" type="dark" effect="solid" />
-                  </span>
-                ))}
               </div>
-            </motion.article>
+            </article>
           )
         )}
       </section>
