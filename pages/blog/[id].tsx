@@ -55,7 +55,9 @@ export default function Post({ post }: { post: Post }) {
       </Head>
       <section className="mx-auto max-w-2xl">
         <header>
-          <h1 className="mb-2 mt-0 text-3xl sm:text-5xl">{post.title}</h1>
+          <h1 className="mb-2 mt-0 text-3xl sm:text-5xl font-bold">
+            {post.title}
+          </h1>
           <div className="mb-12 flex items-center gap-1">
             <div className="mute flex items-center gap-1">
               <Image
