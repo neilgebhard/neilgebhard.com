@@ -109,7 +109,14 @@ export default function Projects() {
               } mb-20 items-center gap-x-4`}
               key={i}
             >
-              <a href={siteUrl} target="_blank" rel="noreferrer">
+              <motion.a
+                href={siteUrl}
+                target="_blank"
+                rel="noreferrer"
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.25 }}
+              >
                 <Image
                   priority
                   src={imgSrc}
@@ -117,13 +124,29 @@ export default function Projects() {
                   height="383"
                   alt="Screenshot of a project"
                 />
-              </a>
+              </motion.a>
               <div className="space-y-4 sm:w-5/6 md:w-4/6">
-                <h2 className="mb-0 text-2xl font-semibold sm:text-3xl md:text-4xl">
+                <motion.h2
+                  className="mb-0 text-2xl font-semibold sm:text-3xl md:text-4xl"
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.1, delay: 0.25 }}
+                >
                   {title}
-                </h2>
-                <p className="text-xl font-light leading-8">{description}</p>
-                <div>
+                </motion.h2>
+                <motion.p
+                  className="text-xl font-light leading-8"
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.1, delay: 0.2 }}
+                >
+                  {description}
+                </motion.p>
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.1, delay: 0.3 }}
+                >
                   {icons?.map((icon, i) => (
                     <span className="ml-2 inline-block" key={i}>
                       <div className="inline-block" data-tip={icon.props.title}>
@@ -132,23 +155,29 @@ export default function Projects() {
                       <ReactTooltip place="top" type="dark" effect="solid" />
                     </span>
                   ))}
-                </div>
-                <a
-                  className="mute button inline-flex items-center gap-1 p-3 text-xl no-underline"
-                  href={githubUrl}
-                  target="_blank"
-                  rel="noreferrer"
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.1, delay: 0.4 }}
                 >
-                  <SiGithub size="1.4rem" className="mute" /> Github
-                </a>
-                <a
-                  className="mute button ml-4 inline-flex items-center gap-1 p-3 text-xl no-underline"
-                  href={siteUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <BiLink size="1.4rem" className="mute" /> Demo
-                </a>
+                  <motion.a
+                    className="mute button inline-flex items-center gap-1 p-3 text-xl no-underline"
+                    href={githubUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <SiGithub size="1.4rem" className="mute" /> Github
+                  </motion.a>
+                  <a
+                    className="mute button ml-4 inline-flex items-center gap-1 p-3 text-xl no-underline"
+                    href={siteUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <BiLink size="1.4rem" className="mute" /> Demo
+                  </a>
+                </motion.div>
               </div>
             </article>
           )

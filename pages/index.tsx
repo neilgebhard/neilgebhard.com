@@ -10,7 +10,7 @@ export default function Home() {
         <title>Home | Neil Gebhard</title>
         <meta name="description" content="An about of Neil Gebhard"></meta>
       </Head>
-      <section className="relative py-20 md:py-40">
+      <section className="relative py-16 md:pt-30 md:pb-40">
         <motion.div
           className="absolute left-96 -z-10 hidden rotate-45 text-center text-[100px] font-extrabold uppercase leading-none tracking-wider text-gray-200 dark:text-gray-800 sm:-top-10 md:block lg:top-14 lg:text-[150px]"
           initial={{ opacity: 0 }}
@@ -51,7 +51,7 @@ export default function Home() {
                   My Projects
                 </a>
               </Link>
-              <Link href="/contact">
+              <Link href="/about">
                 <a className="rounded border border-gray-500 px-6 py-3 text-xl transition hover:bg-white dark:hover:bg-gray-700">
                   About Me
                 </a>

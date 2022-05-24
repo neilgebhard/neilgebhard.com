@@ -10,7 +10,9 @@ export default function Footer() {
       <div className="mx-auto flex max-w-screen-xl flex-col items-center justify-center space-y-5 text-xl sm:flex-row sm:justify-between">
         <div className="space-y-5 text-center sm:text-left">
           <Link href="/">
-            <a className="text-2xl font-semibold md:text-left">Neil Gebhard</a>
+            <a className="mute text-2xl font-semibold md:text-left">
+              Neil Gebhard
+            </a>
           </Link>
           <div className="m-0 flex list-none items-center justify-center gap-x-4 p-0 sm:justify-start">
             <div>
@@ -68,26 +70,32 @@ export default function Footer() {
               </a>
             </div>
           </div>
-          <p>Built with Next.js & Tailwind</p>
+          <p>
+            <Link href="https://github.com/neilgebhard/neilgebhard.com">
+              <a className="mute hover:underline" target="_blank">
+                Built with Next.js & Tailwind
+              </a>
+            </Link>
+          </p>
           <div className="max-w-xs">
             <Spotify />
           </div>
         </div>
         <nav className="flex flex-col space-y-4 text-center sm:text-right">
           <ActiveLink activeClassName="font-bold" href="/">
-            <a>Home</a>
+            <a className="mute">Home</a>
           </ActiveLink>
           <ActiveLink activeClassName="font-bold" href="/projects">
-            <a>Projects</a>
+            <a className="mute">Projects</a>
           </ActiveLink>
           <ActiveLink activeClassName="font-bold" href="/blog">
-            <a>Blog</a>
+            <a className="mute">Blog</a>
           </ActiveLink>
           <ActiveLink activeClassName="font-bold" href="/about">
-            <a>About</a>
+            <a className="mute">About</a>
           </ActiveLink>
           <ActiveLink activeClassName="font-bold" href="/contact">
-            <a>Contact</a>
+            <a className="mute">Contact</a>
           </ActiveLink>
         </nav>
       </div>

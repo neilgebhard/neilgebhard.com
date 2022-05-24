@@ -47,7 +47,7 @@ export default function Blog({ posts }) {
             fill="currentColor"
           />
           <input
-            className="focus:gray-blue-500 mt-4 block w-full rounded-md border-solid border-gray-300 bg-white px-4 py-2 pl-14 text-2xl text-gray-900 focus:border-gray-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100 sm:max-w-lg"
+            className="outline-none focus:gray-blue-500 mt-4 block w-full rounded-md border-solid border-gray-300 bg-white px-4 py-2 pl-14 text-2xl text-gray-900 focus:border-gray-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100 sm:max-w-lg focus:ring-gray-500 focus:ring-2 border"
             type="search"
             aria-label="Search blog"
             placeholder="Search blog"
