@@ -69,6 +69,21 @@ const IconGrid = ({ icons }) => {
   )
 }
 
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.25
+    }
+  }
+}
+
+const item = {
+  hidden: { opacity: 0, y: -20 },
+  show: { opacity: 1, y: 0, transition: { duration: 1 } }
+}
+
 export default function About() {
   return (
     <Container>
@@ -79,9 +94,14 @@ export default function About() {
       <h1 className="h1-underline mb-14 text-3xl font-bold md:text-4xl">
         About
       </h1>
-      <div className="flex flex-col gap-x-10 lg:flex-row">
+      <motion.div
+        className="flex flex-col gap-x-10 lg:flex-row"
+        variants={container}
+        initial="hidden"
+        animate="show"
+      >
         <div className="flex-1">
-          <header className="relative">
+          <motion.header className="relative" variants={item}>
             <div className="mb-10 flex items-center gap-5">
               <Image
                 className="rounded-full"
@@ -96,8 +116,8 @@ export default function About() {
                 <span className="my-0 font-bold">Neil Gebhard</span>
               </div>
             </div>
-          </header>
-          <section className="space-y-8 text-xl">
+          </motion.header>
+          <motion.section className="space-y-8 text-xl" variants={item}>
             <p>
               I&apos;m a software engineer in Saipan, USA. I&apos;ve been
               writing code for about 8 years (professionally for 4). My ambition
@@ -105,8 +125,8 @@ export default function About() {
               web with Next.js, TypeScript, Tailwind, Prisma, and PostgreSQL /
               MongoDB.
             </p>
-          </section>
-          <section className="mt-16 mb-8 space-y-0">
+          </motion.section>
+          <motion.section className="mt-16 mb-8 space-y-0" variants={item}>
             <h2 className="text-2xl font-medium md:text-3xl">Degree</h2>
             <div className="flex flex-col gap-x-4 sm:flex-row sm:items-center">
               <FaGraduationCap size={40} />
@@ -117,23 +137,23 @@ export default function About() {
                 <div className="text-xl">Portland State University • 2014</div>
               </div>
             </div>
-          </section>
+          </motion.section>
         </div>
         <div className="flex-1">
-          <section>
+          <motion.section variants={item}>
             <h2 className="text-xl font-medium sm:text-xl md:text-2xl">
               Current Stack
             </h2>
             <IconGrid icons={current} />
-          </section>
-          <section>
+          </motion.section>
+          <motion.section variants={item}>
             <h2 className="text-xl font-medium sm:text-xl md:text-2xl">
               Previously
             </h2>
             <IconGrid icons={past} />
-          </section>
+          </motion.section>
         </div>
-      </div>
+      </motion.div>
     </Container>
   )
 }

@@ -7,6 +7,22 @@ import { MdEmail } from 'react-icons/md'
 import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { useForm, ValidationError } from '@formspree/react'
+import { motion } from 'framer-motion'
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.25
+    }
+  }
+}
+
+const item = {
+  hidden: { opacity: 0, y: -20 },
+  show: { opacity: 1, y: 0, transition: { duration: 1 } }
+}
 
 export default function Contact() {
   const [state, handleSubmit] = useForm('mvolwyvj')
@@ -26,9 +42,14 @@ export default function Contact() {
         ></meta>
       </Head>
       <h1 className="h1-underline mb-12 text-4xl font-semibold">Contact</h1>
-      <div className="flex flex-col gap-x-16 md:flex-row xl:gap-x-32">
+      <motion.div
+        className="flex flex-col gap-x-16 md:flex-row xl:gap-x-32"
+        variants={container}
+        initial="hidden"
+        animate="show"
+      >
         <section className="shrink-0 sm:basis-[400px] lg:w-1/2 lg:basis-auto">
-          <form onSubmit={handleSubmit}>
+          <motion.form onSubmit={handleSubmit} variants={item}>
             <div className="mt-10">
               <label
                 className="mb-2 block text-xl font-semibold text-gray-800 dark:text-gray-200"
@@ -80,18 +101,21 @@ export default function Contact() {
                 Message sent!
               </p>
             )}
-          </form>
+          </motion.form>
         </section>
         <div className="my-20 mx-auto h-0.5 w-56 bg-gray-300 dark:bg-gray-700 md:hidden" />
         <section className="space-y-10 text-xl lg:text-2xl">
-          <p className="text-2xl font-bold tracking-wide md:mt-8 lg:text-3xl">
+          <motion.p
+            className="text-2xl font-bold tracking-wide md:mt-8 lg:text-3xl"
+            variants={item}
+          >
             Or get in touch another way...
-          </p>
-          <p>
+          </motion.p>
+          <motion.p variants={item}>
             Need a website? Maybe you have a proposition? Or do you just want to
             say hi? Feel free to message me.
-          </p>
-          <div className="space-y-4">
+          </motion.p>
+          <motion.div className="space-y-4" variants={item}>
             <Link href="https://www.google.com/maps/place/Saipan/@15.1882262,145.6948117,12z/data=!4m5!3m4!1s0x66d8b12c0d41abdd:0x662f5e089974f80f!8m2!3d15.1850483!4d145.7467259">
               <a className="mute flex gap-x-3 font-semibold hover:underline">
                 <FaMapMarkerAlt size="2rem" /> Saipan, USA
@@ -105,8 +129,11 @@ export default function Contact() {
               <MdEmail size="2rem" title="E-mail" className="mute" />
               neilgebhard@gmail.com
             </a>
-          </div>
-          <ul className="m-0 flex list-none items-center gap-x-4 p-0">
+          </motion.div>
+          <motion.ul
+            className="m-0 flex list-none items-center gap-x-4 p-0"
+            variants={item}
+          >
             <li>
               <a
                 href="https://github.com/neilgebhard"
@@ -149,9 +176,9 @@ export default function Contact() {
                 />
               </a>
             </li>
-          </ul>
+          </motion.ul>
         </section>
-      </div>
+      </motion.div>
     </Container>
   )
 }

@@ -5,6 +5,7 @@ import useMount from '../hooks/useMount'
 import ActiveLink from './ActiveLink'
 import { FiMenu } from 'react-icons/fi'
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 
 const links = [
   ['/', 'Home'],
@@ -19,7 +20,12 @@ export default function Navbar() {
   const [showMobileNav, setShowMobileNav] = useState(false)
 
   return (
-    <nav className="flex items-center justify-between pt-6 pb-32 text-xl sm:text-2xl">
+    <motion.nav
+      className="flex items-center justify-between pt-6 pb-32 text-xl sm:text-2xl"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
       <div className="flex items-center">
         <Link href="/">
           <a className="mr-8 text-2xl font-bold">Neil Gebhard</a>
@@ -83,6 +89,6 @@ export default function Navbar() {
           </li>
         </ul>
       )}
-    </nav>
+    </motion.nav>
   )
 }

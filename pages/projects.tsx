@@ -113,9 +113,10 @@ export default function Projects() {
                 href={siteUrl}
                 target="_blank"
                 rel="noreferrer"
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.25 }}
+                initial={{ opacity: 0, y: -20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+                viewport={{ once: true }}
               >
                 <Image
                   priority
@@ -128,24 +129,27 @@ export default function Projects() {
               <div className="space-y-4 sm:w-5/6 md:w-4/6">
                 <motion.h2
                   className="mb-0 text-2xl font-semibold sm:text-3xl md:text-4xl"
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.1, delay: 0.25 }}
+                  initial={{ opacity: 0, y: -20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, delay: 0 }}
+                  viewport={{ once: true }}
                 >
                   {title}
                 </motion.h2>
                 <motion.p
                   className="text-xl font-light leading-8"
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.1, delay: 0.2 }}
+                  initial={{ opacity: 0, y: -20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, delay: 0.2 }}
+                  viewport={{ once: true }}
                 >
                   {description}
                 </motion.p>
                 <motion.div
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.1, delay: 0.3 }}
+                  initial={{ opacity: 0, y: -20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, delay: 0.3 }}
+                  viewport={{ once: true }}
                 >
                   {icons?.map((icon, i) => (
                     <span className="ml-2 inline-block" key={i}>
@@ -157,9 +161,10 @@ export default function Projects() {
                   ))}
                 </motion.div>
                 <motion.div
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.1, delay: 0.4 }}
+                  initial={{ opacity: 0, y: -20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, delay: 0.4 }}
+                  viewport={{ once: true }}
                 >
                   <motion.a
                     className="mute button inline-flex items-center gap-1 p-3 text-xl no-underline"
