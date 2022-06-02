@@ -5,7 +5,6 @@ import useMount from '../hooks/useMount'
 import ActiveLink from './ActiveLink'
 import { FiMenu } from 'react-icons/fi'
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 
 const links = [
   ['/', 'Home'],
@@ -20,22 +19,17 @@ export default function Navbar() {
   const [showMobileNav, setShowMobileNav] = useState(false)
 
   return (
-    <motion.nav
-      className="flex items-center justify-between pt-6 pb-32 text-xl sm:text-2xl"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-    >
+    <nav className="flex items-center justify-between pt-6 pb-32 text-xl sm:text-2xl">
       <div className="flex items-center">
         <Link href="/">
           <a className="mr-8 text-2xl font-bold">Neil Gebhard</a>
         </Link>
-        <div className="hidden items-center md:inline-flex">
-          {links.map(([href, label], index) => (
+        <div className="hidden md:inline-flex items-center">
+          {links.map(([href, label]) => (
             <ActiveLink
               activeClassName="underline decoration decoration-yellow-500 decoration-4"
               href={href}
-              key={index}
+              key={label}
             >
               <a className="nav-link font-normal">{label}</a>
             </ActiveLink>
@@ -75,7 +69,9 @@ export default function Navbar() {
           ))}
           <li>
             <ActiveLink activeClassName="font-semibold" href="/contact">
-              <a>Contact</a>
+              <a className="rounded bg-yellow-400 px-4 py-2 text-xl font-semibold transition hover:bg-yellow-300 dark:bg-yellow-700 dark:hover:bg-yellow-600 md:inline">
+                Contact
+              </a>
             </ActiveLink>
           </li>
           <li>
@@ -89,6 +85,6 @@ export default function Navbar() {
           </li>
         </ul>
       )}
-    </motion.nav>
+    </nav>
   )
 }
