@@ -24,7 +24,7 @@ import Container from '../components/Container'
 
 const projects = [
   {
-    title: 'Open Market app',
+    title: 'Open Market',
     description:
       'A place where you can post items to buy and sell. This is a full stack app with Google OAuth, passwordless authentication, image uploading, and favoriting.',
     siteUrl: 'https://open-market.vercel.app/',
@@ -41,11 +41,11 @@ const projects = [
     ]
   },
   {
-    title: 'Reddit clone',
+    title: 'Posterly',
     description:
-      'A clone of Reddit with features like user authentication, posts, comments, replies, and upvoting/downvoting.',
-    siteUrl: 'https://neilsreddit.herokuapp.com/',
-    githubUrl: 'https://github.com/neilgebhard/mern-reddit',
+      'A place where you can make posts about anything. This is a full stack app with authentication, posts, comments, replies, and upvoting/downvoting.',
+    siteUrl: 'https://posterly.herokuapp.com/',
+    githubUrl: 'https://github.com/neilgebhard/posterly',
     imgSrc: '/images/reddit-laptop-frame.webp',
     icons: [
       <SiReact size="2rem" title="React" className="mute" />,
@@ -58,12 +58,12 @@ const projects = [
     ]
   },
   {
-    title: 'Twitter clone',
+    title: 'Chirplr',
     used: 'React, Express, MongoDB, Node.js, JSON Web Tokens, Tailwind CSS',
     description:
-      'A clone of Twitter with user authentication, tweets, follows, and likes.',
-    siteUrl: 'https://neilstwitter.herokuapp.com/',
-    githubUrl: 'https://github.com/neilgebhard/mern-twitter',
+      'A place where you can broadcast messages for people to see. This is a full stack app with authentication, messages, follows, and likes',
+    siteUrl: 'https://chirply.herokuapp.com/',
+    githubUrl: 'https://github.com/neilgebhard/chirply',
     imgSrc: '/images/twitter-laptop-frame.webp',
     icons: [
       <SiReact size="2rem" title="React" className="mute" />,
@@ -77,7 +77,8 @@ const projects = [
   },
   {
     title: 'Movie app',
-    description: 'A web app for discovering and exploring movies.',
+    description:
+      'A web app for discovering and exploring movies using the tMDB API.',
     siteUrl: 'https://neilsmovieapp.netlify.app/',
     githubUrl: 'https://github.com/neilgebhard/movie-app-react',
     imgSrc: '/images/movie-laptop-frame.webp',
@@ -109,15 +110,7 @@ export default function Projects() {
               } mb-20 items-center gap-x-4`}
               key={i}
             >
-              <motion.a
-                href={siteUrl}
-                target="_blank"
-                rel="noreferrer"
-                initial={{ opacity: 0, y: -20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1 }}
-                viewport={{ once: true }}
-              >
+              <a href={siteUrl} target="_blank" rel="noreferrer">
                 <Image
                   priority
                   src={imgSrc}
@@ -125,32 +118,13 @@ export default function Projects() {
                   height="383"
                   alt="Screenshot of a project"
                 />
-              </motion.a>
+              </a>
               <div className="space-y-4 sm:w-5/6 md:w-4/6">
-                <motion.h2
-                  className="mb-0 text-2xl font-semibold sm:text-3xl md:text-4xl"
-                  initial={{ opacity: 0, y: -20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1, delay: 0 }}
-                  viewport={{ once: true }}
-                >
+                <h2 className="mb-0 text-2xl font-semibold sm:text-3xl md:text-4xl">
                   {title}
-                </motion.h2>
-                <motion.p
-                  className="text-xl font-light leading-8"
-                  initial={{ opacity: 0, y: -20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1, delay: 0.2 }}
-                  viewport={{ once: true }}
-                >
-                  {description}
-                </motion.p>
-                <motion.div
-                  initial={{ opacity: 0, y: -20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1, delay: 0.3 }}
-                  viewport={{ once: true }}
-                >
+                </h2>
+                <p className="text-xl font-light leading-8">{description}</p>
+                <div>
                   {icons?.map((icon, i) => (
                     <span className="ml-2 inline-block" key={i}>
                       <div className="inline-block" data-tip={icon.props.title}>
@@ -159,21 +133,11 @@ export default function Projects() {
                       <ReactTooltip place="top" type="dark" effect="solid" />
                     </span>
                   ))}
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0, y: -20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1, delay: 0.4 }}
-                  viewport={{ once: true }}
-                >
-                  <motion.a
-                    className="mute button inline-flex items-center gap-1 p-3 text-xl no-underline"
-                    href={githubUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+                </div>
+                <div>
+                  <a className="mute button inline-flex items-center gap-1 p-3 text-xl no-underline">
                     <SiGithub size="1.4rem" className="mute" /> Github
-                  </motion.a>
+                  </a>
                   <a
                     className="mute button ml-4 inline-flex items-center gap-1 p-3 text-xl no-underline"
                     href={siteUrl}
@@ -182,7 +146,7 @@ export default function Projects() {
                   >
                     <BiLink size="1.4rem" className="mute" /> Demo
                   </a>
-                </motion.div>
+                </div>
               </div>
             </article>
           )

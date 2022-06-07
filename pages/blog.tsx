@@ -4,7 +4,6 @@ import { compareDesc } from 'date-fns'
 import { allPosts } from 'contentlayer/generated'
 import Link from 'next/link'
 import MyDate from 'components/MyDate'
-import { motion } from 'framer-motion'
 import { BiSearchAlt } from 'react-icons/bi'
 import { useState } from 'react'
 
@@ -41,12 +40,7 @@ export default function Blog({ posts }) {
         <h1 className="h1-underline mb-14 text-3xl font-semibold md:text-4xl">
           Blog
         </h1>
-        <motion.label
-          className="relative block text-gray-400 focus-within:text-gray-600"
-          initial={{ scale: 0.99, opacity: 0, y: -20 }}
-          animate={{ scale: 1, opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
+        <label className="relative block text-gray-400 focus-within:text-gray-600">
           <BiSearchAlt
             className="pointer-events-none absolute top-1/2 left-3 h-8 w-8 -translate-y-1/2 transform"
             fill="currentColor"
@@ -59,16 +53,10 @@ export default function Blog({ posts }) {
             value={searchValue}
             onChange={(e) => setSearchValue(e.target.value)}
           />
-        </motion.label>
+        </label>
         <ul className="mt-6 list-none space-y-6 pl-0">
           {filteredPosts.map(({ id, date, title, tags }, index) => (
-            <motion.li
-              className="flex flex-col space-y-1 text-2xl"
-              initial={{ scale: 0.99, opacity: 0, y: -20 }}
-              animate={{ scale: 1, opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: index * 0.1 + 0.1 }}
-              key={id}
-            >
+            <li className="flex flex-col space-y-1 text-2xl">
               <Link href={`/blog/${id}`}>
                 <a className="link">{title}</a>
               </Link>
@@ -88,7 +76,7 @@ export default function Blog({ posts }) {
               <p className="mute mt-0 mb-2 text-base">
                 <MyDate dateString={date} />
               </p>
-            </motion.li>
+            </li>
           ))}
         </ul>
         {filteredPosts.length === 0 && <p className="mute">No posts found.</p>}
