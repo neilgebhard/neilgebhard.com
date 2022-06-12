@@ -135,7 +135,12 @@ export default function Projects() {
                   ))}
                 </div>
                 <div>
-                  <a className="mute button inline-flex items-center gap-1 p-3 text-xl no-underline">
+                  <a
+                    className="mute button inline-flex items-center gap-1 p-3 text-xl no-underline"
+                    href={siteUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <SiGithub size="1.4rem" className="mute" /> Github
                   </a>
                   <a
