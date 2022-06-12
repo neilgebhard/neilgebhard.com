@@ -62,8 +62,8 @@ const projects = [
     used: 'React, Express, MongoDB, Node.js, JSON Web Tokens, Tailwind CSS',
     description:
       'A place where you can broadcast messages for people to see. This is a full stack app with authentication, messages, follows, and likes',
-    siteUrl: 'https://chirply.herokuapp.com/',
-    githubUrl: 'https://github.com/neilgebhard/chirply',
+    siteUrl: 'https://chirplr.herokuapp.com/',
+    githubUrl: 'https://github.com/neilgebhard/chirplr',
     imgSrc: '/images/twitter-laptop-frame.webp',
     icons: [
       <SiReact size="2rem" title="React" className="mute" />,
@@ -137,7 +137,7 @@ export default function Projects() {
                 <div>
                   <a
                     className="mute button inline-flex items-center gap-1 p-3 text-xl no-underline"
-                    href={siteUrl}
+                    href={githubUrl}
                     target="_blank"
                     rel="noreferrer"
                   >
