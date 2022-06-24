@@ -8,7 +8,10 @@ export default function Home() {
     <Container>
       <Head>
         <title>Home | Neil Gebhard</title>
-        <meta name="description" content="An about of Neil Gebhard"></meta>
+        <meta
+          name="description"
+          content="A software engineer specializing in web development in Saipan, USA."
+        />
       </Head>
       <section className="relative py-16 md:pt-30 md:pb-40">
         <motion.div
