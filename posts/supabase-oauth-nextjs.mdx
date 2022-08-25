@@ -1,0 +1,182 @@
+---
+title: 'OAuth with Supabase and Next.js'
+date: '2022-08-23'
+tags: ['AUTH', 'SUPABASE', 'NEXT', 'REACT']
+---
+
+There are many ways to incorporate authentication into your applications. OAuth is one of those ways.
+
+> OAuth is a technological standard that allows you to share information between services without exposing your password.
+
+With OAuth, we'll be able to leverage the authorization workflows of major web services (Google, GitHub, Facebook, etc.) to authenticate users. It will supply us with security (no credentials are provided) and robustness (e.g. password management is done by the OAuth provider). Let's start.
+
+**1. Sign up for Supabase and create a project.**
+
+Go to [http://supabase.com](http://supabase.com) and sign up for an account. Create a new project in the dashboard.
+
+**2. Create a user table**
+
+You'll probably need to hold some set of data about your users. Add the columns you'd like to hold about them here. Go to the Table Editor tab and click on Create a new table.
+
+Supabase uses PostgreSQL, so you may need some knowledge about managing relational database systems. I'll be adding 3 columns to mine: id (uuid), email (text), and username (text).
+
+![User table in Supabase](/images/user-table.png)
+
+**3. Configure OAuth in Supabase**
+
+Go to the Authentication page and navigate to the Settings tab. Find the OAuth provider you'd like to use and enable it. I'll enable GitHub.
+
+![Supabase settings](/images/supabase-settings.png)
+
+**4. Configure your application with the OAuth provider.**
+
+You'll need to register your application with your select OAuth provider(s) in order to use it. They'll need certain information like your homepage URL and callback URL. For the homepage URL, use http://localhost:3000 _in development_ and your deployment URL in production. The callback URL should be your **Supabase API URL** with the `/auth/v1/callback` path.
+
+![Supabase API URL](/images/supabase-api-url.png)
+
+Grab the client ID and client secret from the OAuth provider and insert them into your Supabase OAuth settings.
+
+![Supabase GitHub settings](/images/supabase-github-oauth.png)
+
+**5. Create a trigger that adds a user to the user table upon signup**
+
+When a user signs up with OAuth, a user row is added to the `auth.users` table. The columns of this table are not modifiable. Also, this table is not publicly accessible via API. To circumvent this, we can use a trigger that activates on insert to the `auth.users` table. This trigger will add a new user to the `public.user` table.
+
+In Supabase, go to the SQL Editor page and select _New query_.
+
+![Supabase SQL Editor](/images/supabase-sql-editor.png)
+
+Then add this trigger to your SQL query.
+
+```sql
+-- inserts a row into public.users
+create function public.handle_new_user()
+returns trigger
+language plpgsql
+security definer set search_path = public
+as $$
+begin
+  insert into public.user (id, email)
+  values (new.id, new.email);
+  return new;
+end;
+$$;
+```
+
+Make sure to run your SQL trigger statement.
+
+**6. Set up the Supabase client in Next.js**
+
+For this step, let's create a Next.js app with `create-next-app`.
+
+```bash
+npx create-next-app
+```
+
+Inside your project, install the Supabase client library.
+
+```bash
+npm i @supabase/supabase-js
+```
+
+Then, insert a `.env.local` file in the root of your project.
+
+```bash
+touch .env.local
+```
+
+Next, create two environment variables to store information about your Supabase project inside your `.env.local` file. These can be found in the _API_ tab in your _Settings_ page.
+
+```bash:.env.local
+NEXT_PUBLIC_SUPABASE_URL=[SUPABASE_URL]
+NEXT_PUBLIC_SUPABASE_API_KEY=[SUPABASE_API_KEY]
+```
+
+Now, we need a way to a way to access your Supabase data inside your application. We'll set up a singleton Supabase client to do that. This is a common pattern for accessing Supabase.
+
+```jsx:lib/useSupabase.js
+import { useEffect, useState } from 'react'
+import { createClient } from '@supabase/supabase-js'
+
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL,
+  process.env.NEXT_PUBLIC_SUPABASE_API_KEY
+)
+
+const useSupabase = () => {
+  const [user, setUser] = useState(null)
+  const [session, setSession] = useState(supabase.auth.session())
+
+  supabase.auth.onAuthStateChange(async (_event, session) => {
+    setSession(session)
+  })
+
+  useEffect(() => {
+    const getUser = async () => {
+      if (session?.user.id) {
+        const { data: currentUser } = await supabase
+          .from('user')
+          .select('*')
+          .eq('id', session.user.id)
+        setUser(currentUser)
+      }
+    }
+    getUser()
+  }, [session])
+
+  return { user, session, supabase }
+}
+
+export default useSupabase
+```
+
+**7. Set up a login page**
+
+Let's create a login page to log in to our app. I'm using Github as the OAuth provider, but you can just as easily add or use any other OAuth provider to handle your login. You can find more information using OAuth providers in Supabase [here](https://supabase.com/docs/guides/auth).
+
+```jsx:pages/login.jsx
+import useSupabase from '../lib/useSupabase'
+
+const Auth = () => {
+  const { supabase } = useSupabase()
+
+  const handleClick = () => {
+    supabase.auth.signIn({ provider: 'github' })
+  }
+
+  return (
+    <>
+      <h1>Sign up</h1>
+      <button onClick={handleClick}>Sign in with GitHub</button>
+    </>
+  )
+}
+
+export default Auth
+```
+
+Now the rest is up to you. Add your business logic to your application. An example of accessi
+
+```jsx:pages/index.jsx
+import useSupabase from '../lib/useSupabase'
+
+export default function Home() {
+  const { session, user } = useSupabase()
+
+  return (
+    <>
+        {session ? <code>{JSON.stringify(user, null, 2)}</code> : <p>User is not logged in</p>}
+    </>
+  )
+}
+```
+
+Thank you for reading.
+
+## Resources
+
+- [Example Project on Github](https://github.com/neilgebhard/oauth-next-supabase)
+- [Supabase Auth](https://supabase.com/docs/guides/auth)
+- [Supabase Database](https://supabase.com/docs/guides/database)
+- [Supabase Row Level Security](https://supabase.com/docs/guides/auth/row-level-security)
+- [Supabase Managing User Data](https://supabase.com/docs/guides/auth/managing-user-data)

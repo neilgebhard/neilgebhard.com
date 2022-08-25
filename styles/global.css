@@ -56,7 +56,7 @@
 }
 
 .prose img {
-  @apply w-full my-0;
+  @apply w-full;
 }
 
 .prose pre {
