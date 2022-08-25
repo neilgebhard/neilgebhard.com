@@ -8,7 +8,7 @@ There are many ways to incorporate authentication into your applications. OAuth 
 
 > OAuth is a technological standard that allows you to share information between services without exposing your password.
 
-With OAuth, we'll be able to leverage the authorization workflows of major web services (Google, GitHub, Facebook, etc.) to authenticate users. It will supply us with security (no credentials are provided) and robustness (e.g. password management is done by the OAuth provider). Let's start.
+OAuth will allow us to leverage the authorization workflows of major web services. Some of these web services are Google, Facebook, and GitHub. This process supplies us with security and robustness because we don't manage passwords.
 
 **1. Sign up for Supabase and create a project.**
 
@@ -16,9 +16,9 @@ Go to [http://supabase.com](http://supabase.com) and sign up for an account. Cre
 
 **2. Create a user table**
 
-You'll probably need to hold some set of data about your users. Add the columns you'd like to hold about them here. Go to the Table Editor tab and click on Create a new table.
+You'll likely need to hold some set of data about your users. Add the columns you'd like to hold about them here. Go to the Table Editor tab and click on Create a new table.
 
-Supabase uses PostgreSQL, so you may need some knowledge about managing relational database systems. I'll be adding 3 columns to mine: id (uuid), email (text), and username (text).
+Supabase uses PostgreSQL. You may need some knowledge about managing relational database systems. I'll be adding 3 columns to mine: id (uuid), email (text), and username (text).
 
 ![User table in Supabase](/images/user-table.png)
 
@@ -30,7 +30,7 @@ Go to the Authentication page and navigate to the Settings tab. Find the OAuth p
 
 **4. Configure your application with the OAuth provider.**
 
-You'll need to register your application with your select OAuth provider(s) in order to use it. They'll need certain information like your homepage URL and callback URL. For the homepage URL, use http://localhost:3000 _in development_ and your deployment URL in production. The callback URL should be your **Supabase API URL** with the `/auth/v1/callback` path.
+You'll need to register your application with your select OAuth provider(s). They'll need certain information like your homepage URL and callback URL. For the homepage URL, use http://localhost:3000 _in development_. For production, use your deployment URL. The callback URL should be your **Supabase API URL** with the `/auth/v1/callback` path.
 
 ![Supabase API URL](/images/supabase-api-url.png)
 
@@ -40,7 +40,7 @@ Grab the client ID and client secret from the OAuth provider and insert them int
 
 **5. Create a trigger that adds a user to the user table upon signup**
 
-When a user signs up with OAuth, a user row is added to the `auth.users` table. The columns of this table are not modifiable. Also, this table is not publicly accessible via API. To circumvent this, we can use a trigger that activates on insert to the `auth.users` table. This trigger will add a new user to the `public.user` table.
+Signing up a user with OAuth adds a row to the `auth.users` table. The columns of this table are not modifiable. Also, this table is not accessible via API. To circumvent this, we can use a trigger that activates on insert to the `auth.users` table. This trigger will add a new user to the `public.user` table.
 
 In Supabase, go to the SQL Editor page and select _New query_.
 
@@ -85,7 +85,7 @@ Then, insert a `.env.local` file in the root of your project.
 touch .env.local
 ```
 
-Next, create two environment variables to store information about your Supabase project inside your `.env.local` file. These can be found in the _API_ tab in your _Settings_ page.
+Next, create two environment variables inside your `.env.local` file to store information about your Supabase project. Find these in the _API_ tab in your _Settings_ page.
 
 ```bash:.env.local
 NEXT_PUBLIC_SUPABASE_URL=[SUPABASE_URL]
@@ -132,7 +132,7 @@ export default useSupabase
 
 **7. Set up a login page**
 
-Let's create a login page to log in to our app. I'm using Github as the OAuth provider, but you can just as easily add or use any other OAuth provider to handle your login. You can find more information using OAuth providers in Supabase [here](https://supabase.com/docs/guides/auth).
+Let's create a login page to log in to our app. I'm using Github as the OAuth provider. You can add or use any other OAuth provider to handle your login. [Find more information using OAuth providers in Supabase](https://supabase.com/docs/guides/auth).
 
 ```jsx:pages/login.jsx
 import useSupabase from '../lib/useSupabase'
