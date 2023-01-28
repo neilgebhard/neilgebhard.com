@@ -1,0 +1,21 @@
+---
+title: 'JavaScript: Event Propagation'
+date: '2023-01-27'
+tags: ['JS']
+---
+
+**Event propagation** in JavaScript refers to the way events flow through the Document Object Model (DOM) when they are triggered. There are two types of event propagation: event capturing and event bubbling.
+
+**Event capturing** is the process by which an event first propagates through the outermost element and then works its way down to the element that the event was originally targeted at. This is also known as "trickling down" the DOM. Event capturing is less commonly used than event bubbling but can be useful in situations where you want to handle an event on a parent element before it is handled by its child elements.
+
+**Event bubbling**, on the other hand, is the process by which an event propagates from the element that the event was originally targeted at, up through its parent elements, until it reaches the outermost element. This is also known as "bubbling up" the DOM. Event bubbling is the default behavior in JavaScript and is used more frequently. It can be useful in situations where you want to handle an event on a child element before it is handled by its parent elements.
+
+You can define which one you want to use by using the `addEventListener` function and applying the third parameter. If you pass true, it will use capturing and if you pass false it will use bubbling.
+
+It's important to note that the `event.stopPropagation()` method can be used to stop an event from propagating any further, either during capturing or bubbling phase. This can be useful in situations where you only want the event to be handled by a specific element and not its parent or child elements.
+
+Event propagation in JavaScript is an important concept to understand when building web applications. It allows for more control over how events are handled on a page, and can be useful for creating more complex and interactive web pages.
+
+Additionally, it's worth to mention that there's another way of handling events, called event delegation. It's a technique that allows you to handle events at a higher level of the DOM tree, instead of handling them at the individual elements level. This is especially useful when dealing with dynamic content, where elements might be added or removed from the DOM, and we want to avoid having to attach/detach event handlers multiple times.
+
+It's essential to keep in mind the different types of event propagation and how to use them effectively when developing web applications to create a smooth and efficient user experience.
