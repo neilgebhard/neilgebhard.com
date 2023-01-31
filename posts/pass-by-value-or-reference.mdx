@@ -1,0 +1,37 @@
+---
+title: 'JavaScript: Pass variables by value or by reference?'
+date: '2023-1-31'
+tags: ['JS']
+---
+
+One of the key concepts in understanding JavaScript is whether variables are passed by value or passed by reference.
+
+Primitive types (such as numbers, strings, and booleans) are passed by value. This means that when a primitive value is passed to a function, a copy of the value is made and passed to the function. Any changes made to the value inside the function do not affect the original value outside of the function.
+
+On the other hand, objects (including arrays and functions) are passed by reference. This means that when an object is passed to a function, a reference to the object is passed, rather than a copy of the object. Any changes made to the object inside the function are reflected outside of the function.
+
+For example, consider the following code:
+
+```js
+let x = 5
+let y = x
+y = 10
+console.log(x) // output: 5
+console.log(y) // output: 10
+```
+
+In this example, `x` is a primitive value and is passed by value. When we assign `y = x`, a copy of the value of `x` is made and assigned to `y`. When we change the value of `y` to 10, it does not affect the value of `x`.
+
+Now consider the following code:
+
+```js
+let obj = { a: 5 }
+let ref = obj
+ref.a = 10
+console.log(obj.a) // output: 10
+console.log(ref.a) // output: 10
+```
+
+In this example, `obj` is an object and is passed by reference. When we assign `ref = obj`, we are not making a copy of the object, we are just creating a new reference to the same object. When we change the property of the object through `ref`, it also reflects the change in `obj`.
+
+In summary, JavaScript variables are passed by value for primitive types and passed by reference for objects and arrays. This is an important concept that can affect how your code behaves and should be taken into consideration when writing JavaScript.
