@@ -1,0 +1,63 @@
+---
+title: 'JavaScript: this keyword'
+date: '2023-01-29'
+tags: ['JS']
+---
+
+The "this" keyword in JavaScript is a powerful and often misunderstood concept. It refers to the object that the currently executing function is associated with, and its value can change depending on how the function is called.
+
+One of the most common uses of "this" is in object methods. For example, consider the following object:
+
+```js
+let myObject = {
+  name: 'My Object',
+  sayName: function () {
+    console.log(this.name)
+  }
+}
+```
+
+In this example, the "this" keyword inside the sayName method refers to the "myObject" object. So when we call the method like this:
+
+```js
+myObject.sayName()
+```
+
+The output will be "My Object".
+
+It's also important to note that the value of "this" can change depending on how the function is called. For example, if we assign the sayName method to a variable and then call it, the "this" keyword will no longer refer to the "myObject" object:
+
+```js
+let sayName = myObject.sayName
+sayName() // Output: undefined
+```
+
+This is because when the sayName function is called this way, it is no longer a method of the "myObject" object. Instead, it is a standalone function, and the "this" keyword inside the function will refer to the global object (window in a browser).
+
+Another way to handle this is by using bind, call, or apply methods. The bind method creates a new function with the this keyword set to the specified value. The call and apply methods call the function with the this keyword set to the specified value.
+
+```js
+let sayName = myObject.sayName.bind(myObject)
+sayName() // Output: My Object
+
+let sayName = myObject.sayName.call(myObject)
+sayName() // Output: My Object
+
+let sayName = myObject.sayName.apply(myObject)
+sayName() // Output: My Object
+```
+
+It's also important to note that in arrow functions, the "this" keyword is inherited from the surrounding scope, unlike regular functions.
+
+```js
+let myObject = {
+  name: 'My Object',
+  sayName: () => {
+    console.log(this.name)
+  }
+}
+```
+
+In this example, the "this" keyword inside the arrow function will refer to the this of the surrounding scope, which is the global object (window in a browser).
+
+In conclusion, the "this" keyword in JavaScript is a powerful and flexible concept that can be used in a variety of ways. Understanding how it works and how it can be used is crucial for writing efficient and maintainable JavaScript code.
