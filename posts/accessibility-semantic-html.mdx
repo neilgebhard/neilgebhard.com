@@ -1,14 +1,14 @@
 ---
-title: "Accessibility: Semantic HTML"
-date: "2022-02-27"
-tags: ["HTML", "Accessibility"]
+title: 'Accessibility: Semantic HTML'
+date: '2022-02-27'
+tags: ['HTML', 'Accessibility']
 ---
 
 **Semantic HTML is about using the right HTML element for a particular piece of content.** Using the most specific element for the job is key; the more specific, the better. For example, a `<div>` can be used for a section, by it’s much more correct to just use `<section>`.
 
 **Why should we use HTML that’s semantic?** Well, content becomes more comprehensible and serviceable to browsers, screen readers, and other similar technologies by describing and defining its purpose. It gives meaning to content rather than merely define its appearance. As a by-product, it also makes it easier to read and maintain for developers as it self-documents code.
 
-**The most important aspect of semantic HTML is that it helps search engines, screen readers, and other devices read the page.** It does this by helping them find relevant information faster and structure that information in a way that’s useful. It assists those technologies by activating their accessibility features to accommodate different hardware and users with disabilities
+**The most important aspect of semantic HTML is that it helps search engines, screen readers, and other devices read the page.** It does this but helping them find relevant information faster and structure that information in a way that’s useful. It assists those technologies by activating their accessibility features to accommodate different hardware and users with disabilities
 
 Some of the most commonly used HTML tags are `<main>`, `<header>`, `<nav>`, `<aside>`, `<footer>`, `<article>`, `<section>`, `<figure>`, and `<figcaption>`. Each of these tags serve a specific purpose in their usage in a web document.
 
@@ -29,5 +29,3 @@ You should avoid using a `<div>` or `<span>` as they don’t convey meaning or p
 There's almost no reason to omit alternative text for `<img>`. It represents the “why” of the image in relation to the content of the page. Keep in mind that it is read aloud by screen readers and is indexed by search engines. Also, if the image fails to load, the text will be displayed.
 
 Lastly, know that HTML elements have roles associated with them. There is something called WAI-ARIA or the Web Accessibility Initiative - Accessible Rich Internet Applications. It's a web standard to make content more accessible to people with disabilities. There are three main features defined in the spec: roles, properties, and states. HTML elements have an additional set of attributes associated with them to provide supplementary information for improving semantics and accessibility. Check this **[WAR-ARIA basics](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/WAI-ARIA_basics)** page for more info.
-
-Thank you for coming to my TED talk.

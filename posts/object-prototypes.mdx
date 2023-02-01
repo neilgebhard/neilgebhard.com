@@ -1,0 +1,44 @@
+---
+title: 'JavaScript: Object Prototypes'
+date: '2023-02-01'
+tags: ['JS']
+---
+
+JavaScript is an object-oriented programming language, and one of the key concepts in understanding objects in JavaScript is the concept of prototypes.
+
+In JavaScript, all objects have a prototype, which is an object from which they inherit properties and methods. When an object is created, it is linked to its prototype, and if a property or method is not found on the object itself, the JavaScript engine will look for it on the object's prototype.
+
+For example, consider the following code:
+
+```js
+let obj = { a: 5 }
+console.log(obj.b) // output: undefined
+```
+
+In this example, obj is an object with a single property, "a". When we try to access the property "b" on `obj`, it is not found and the output is "undefined".
+
+Now consider the following code:
+
+```js
+let obj = { a: 5 }
+obj.proto.b = 10
+console.log(obj.b) // output: 10
+```
+
+In this example, we are adding the property "b" to the prototype of `obj`. Now when we try to access the property "b" on `obj`, it is found on the prototype and the output is "10".
+
+JavaScript also provides a built-in `Object.create()` method that can be used to create an object with a specified prototype.
+
+```js
+let proto = { b: 10 }
+let obj = Object.create(proto)
+console.log(obj.b) // output: 10
+```
+
+In this example, we are creating an object `obj` with a prototype of proto. The `obj` object inherits the property "b" from the prototype.
+
+It's important to understand that prototypes are a fundamental concept in JavaScript and are used throughout the language to provide inheritance and reuse of properties and methods. Understanding how prototypes work can help you write more efficient and maintainable code.
+
+It's also important to note that all objects in javascript are linked to a prototype called `Object.prototype` which is the ultimate parent of all the objects in javascript, this prototype has some useful methods such as `toString()`, `valueOf()` and others, you can use these methods in any object.
+
+In summary, JavaScript object prototypes are a key concept in understanding how objects work in JavaScript. Prototypes provide a mechanism for objects to inherit properties and methods, and can be used to create more efficient and maintainable code. Understanding how prototypes work is an essential part of becoming proficient in JavaScript.
