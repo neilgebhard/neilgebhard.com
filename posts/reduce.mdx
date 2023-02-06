@@ -1,0 +1,61 @@
+---
+title: 'JavaScript: .reduce()'
+date: '2023-02-06'
+tags: ['javascript']
+---
+
+When you need to convert an array into a single value, you know you need the `.reduce()` method. It's a higher-order function that takes two arguments: a callback function and an initial value. The callback function is called on each element of the array and receives two arguments: the accumulator and the current element.
+
+Here are some common use cases for .reduce():
+
+1. Summing the values of an array
+
+```js
+const numbers = [1, 2, 3, 4]
+const sum = numbers.reduce((acc, curr) => acc + curr, 0)
+```
+
+2. Flattening an array of arrays
+
+```js
+const nestedArr = [
+  [1, 2],
+  [3, 4],
+  [5, 6]
+]
+const flattenArr = nestedArr.reduce((acc, curr) => acc.concat(curr), [])
+```
+
+3. Counting the occurrences of elements in an array
+
+```js
+const words = ['foo', 'bar', 'baz', 'foo', 'qux', 'foo']
+const frequency = words.reduce((acc, curr) => {
+  acc[curr] = (acc[curr] || 0) + 1
+  return acc
+}, {})
+```
+
+4. Group elements based on a condition
+
+```js
+const people = [
+  { name: 'John', age: 20 },
+  { name: 'Jane', age: 25 },
+  { name: 'Jim', age: 30 }
+]
+const groupedByAge = people.reduce((acc, curr) => {
+  const key = curr.age < 25 ? 'young' : 'old'
+  acc[key] = acc[key] || []
+  acc[key].push(curr)
+  return acc
+}, {})
+
+// {
+//  young: [{ name: 'John', age: 20 }],
+//   old: [{ name: 'Jane', age: 25 },
+//         { name: 'Jim', age: 30 }]
+// }
+```
+
+In conclusion, .reduce() is a powerful and flexible method that allows you to process arrays and perform complex operations. It can be used to transform an array into a single value and is a useful tool in your JavaScript toolbox.
