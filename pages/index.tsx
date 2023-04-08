@@ -32,7 +32,7 @@ export default function Home() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            A Full Stack Developer
+            Master Web Developer
           </motion.p>
           <motion.p
             className="max-w-3xl text-5xl font-bold uppercase md:text-7xl"

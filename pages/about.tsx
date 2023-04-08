@@ -20,6 +20,7 @@ import {
   SiPrisma,
   SiPython,
   SiReact,
+  SiSupabase,
   SiSwift,
   SiTailwindcss,
   SiTypescript,
@@ -35,11 +36,11 @@ const current = [
   ['Next.js', <SiNextdotjs size="2rem" />],
   ['TypeScript', <SiTypescript size="2rem" />],
   ['Prisma', <SiPrisma size="2rem" />],
+  ['Supabase', <SiSupabase size="2rem" />],
   ['Tailwind', <SiTailwindcss size="2rem" />],
   ['PostreSQL', <SiPostgresql size="2rem" />],
   ['MongoDB', <SiMongodb size="2rem" />],
   ['Node', <SiNodedotjs size="2rem" />],
-  ['Express', <SiExpress size="2rem" />],
   ['Cypress', <SiCypress size="2rem" />],
   ['React Testing Library', <SiJest size="2rem" />],
   ['Git', <SiGithub size="2rem" />],
@@ -98,11 +99,12 @@ export default function About() {
           </header>
           <section className="space-y-8 text-xl">
             <p>
-              I&apos;m a software engineer in Saipan, USA. I&apos;ve been
-              writing code for about 8 years (professionally for 4). My ambition
-              is to create something used by millions. My current focus is the
-              web with Next.js, TypeScript, Tailwind, Prisma, and PostgreSQL /
-              MongoDB.
+              I am a professional software engineer based in Saipan, USA, with
+              over 8 years of coding experience. My ultimate goal is to develop
+              a game-changing application that can positively impact millions of
+              lives. Currently, my primary focus is on mastering React, Next.js,
+              TypeScript, Tailwind, Supabase, and PostgreSQL to create highly
+              functional and robust software solutions.
             </p>
           </section>
           <section className="mt-16 mb-8 space-y-0">
