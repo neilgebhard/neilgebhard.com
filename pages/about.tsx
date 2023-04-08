@@ -99,10 +99,10 @@ export default function About() {
           </header>
           <section className="space-y-8 text-xl">
             <p>
-              I am a professional software engineer based in Saipan, USA, with
-              over 8 years of coding experience. My ultimate goal is to develop
-              a game-changing application that can positively impact millions of
-              lives. Currently, my primary focus is on mastering React, Next.js,
+              I am a web developer based in Saipan, USA, with over 8 years of
+              coding experience. My ultimate goal is to develop a game-changing
+              application that can positively impact millions of lives.
+              Currently, my primary focus is on mastering React, Next.js,
               TypeScript, Tailwind, Supabase, and PostgreSQL to create highly
               functional and robust software solutions.
             </p>

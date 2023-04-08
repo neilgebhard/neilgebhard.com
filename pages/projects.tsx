@@ -26,7 +26,7 @@ const projects = [
   {
     title: 'Reddit Clone',
     description:
-      'My implementation focuses on replicating the essential features of Reddit, such as user authentication, user account management, posts, subreddits, voting, images, and comments.',
+      'My implementation focuses on replicating the essential features and design of Reddit, such as user authentication, user account management, posts, subreddits, voting, images, and comments.',
     siteUrl: 'https://reddit-next-supabase.vercel.app/',
     githubUrl: 'https://github.com/neilgebhard/reddit-next-supabase',
     imgSrc: '/images/reddit-laptop-frame.webp',
