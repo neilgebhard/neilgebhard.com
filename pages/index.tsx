@@ -24,7 +24,7 @@ export default function Home() {
 
         <div className="text-center md:text-left">
           <motion.p
-            className="mb-3 text-3xl font-light md:text-4xl"
+            className="mb-3 text-3xl font-light md:text-4xl uppercase"
             initial={{ opacity: 0.9, x: 10 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
@@ -32,7 +32,7 @@ export default function Home() {
             Skilled Web Developer
           </motion.p>
           <motion.p
-            className="max-w-3xl text-5xl font-bold uppercase md:text-7xl"
+            className="max-w-2xl text-5xl font-bold md:text-7xl"
             initial={{ opacity: 0, x: 10 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
