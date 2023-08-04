@@ -1,17 +1,15 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import React from 'react'
-import { FaGraduationCap } from 'react-icons/fa'
+import { FaGraduationCap, FaJava } from 'react-icons/fa'
 import {
   SiAndroid,
   SiCplusplus,
   SiCss3,
   SiCypress,
-  SiExpress,
   SiGithub,
   SiHtml5,
   SiIos,
-  SiJava,
   SiJest,
   SiMongodb,
   SiNextdotjs,
@@ -48,7 +46,7 @@ const current = [
 ]
 
 const past = [
-  ['Java', <SiJava size="2rem" />],
+  ['Java', <FaJava size="2rem" />],
   ['Python', <SiPython size="2rem" />],
   ['C++', <SiCplusplus size="2rem" />],
   ['Swift', <SiSwift size="2rem" />],
