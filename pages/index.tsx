@@ -32,7 +32,7 @@ export default function Home() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            Master Web Developer
+            Skilled Web Developer
           </motion.p>
           <motion.p
             className="max-w-3xl text-5xl font-bold uppercase md:text-7xl"
@@ -40,7 +40,7 @@ export default function Home() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            Let's build something great together
+            Your Next Tech Wizard Awaits! 🧙‍♂️
           </motion.p>
           <motion.div
             className="mt-10"

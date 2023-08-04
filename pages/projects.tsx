@@ -1,22 +1,17 @@
 import React from 'react'
 import Image from 'next/image'
 import ReactTooltip from 'react-tooltip'
-import { motion } from 'framer-motion'
 import {
   SiTailwindcss,
-  SiExpress,
-  SiMongodb,
-  SiReact,
   SiNodedotjs,
-  SiCypress,
   SiTypescript,
-  SiCss3,
-  SiJest,
   SiGithub,
   SiNextdotjs,
   SiSupabase,
   SiPrisma,
-  SiVercel
+  SiVercel,
+  SiPlanetscale,
+  SiStripe
 } from 'react-icons/si'
 import { BiLink } from 'react-icons/bi'
 import Head from 'next/head'
@@ -26,7 +21,7 @@ const projects = [
   {
     title: 'Reddit Clone',
     description:
-      'My implementation focuses on replicating the essential features and design of Reddit, such as user authentication, user account management, posts, subreddits, voting, images, and comments.',
+      'This implementation focuses on replicating the essential features and design of Reddit, such as user authentication, user account management, posts, subreddits, voting, images, and comments.',
     siteUrl: 'https://reddit-next-supabase.vercel.app/',
     githubUrl: 'https://github.com/neilgebhard/reddit-next-supabase',
     imgSrc: '/images/reddit-laptop-frame.webp',
@@ -37,6 +32,24 @@ const projects = [
       <SiVercel size="2rem" title="Vercel" className="mute" />,
       <SiTailwindcss size="2rem" title="Tailwind CSS" className="mute" />,
       <SiNodedotjs size="2rem" title="Node.js" className="mute" />
+    ]
+  },
+  {
+    title: 'E-commerce Admin & Store',
+    description:
+      'This implementation focuses on replicating the essential features and design of an e-commerce admin dashboard and storefront, including user authentication, product management, image uploading, performance metrics, and cart checkout.',
+    siteUrl: 'https://ecommerce-admin-kappa-indol.vercel.app/',
+    githubUrl: 'https://github.com/neilgebhard/ecommerce-admin',
+    imgSrc: '/images/ecomm-laptop-frame.webp',
+    icons: [
+      <SiNextdotjs size="2rem" title="Next.js" className="mute" />,
+      <SiTypescript size="2rem" title="TypeScript" className="mute" />,
+      <SiPrisma size="2rem" title="Prisma" className="mute" />,
+      <SiPlanetscale size="2rem" title="PlanetScale" className="mute" />,
+      <SiVercel size="2rem" title="Vercel" className="mute" />,
+      <SiTailwindcss size="2rem" title="Tailwind CSS" className="mute" />,
+      <SiNodedotjs size="2rem" title="Node.js" className="mute" />,
+      <SiStripe size="2rem" title="Stripe" className="mute" />
     ]
   }
   // {

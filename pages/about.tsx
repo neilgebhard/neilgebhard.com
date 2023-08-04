@@ -99,16 +99,44 @@ export default function About() {
           </header>
           <section className="space-y-8 text-xl">
             <p>
-              I am a web developer based in Saipan, USA, with over 8 years of
-              coding experience. My ultimate goal is to develop a game-changing
-              application that can positively impact millions of lives.
-              Currently, my primary focus is on mastering React, Next.js,
-              TypeScript, Tailwind, Supabase, and PostgreSQL to create highly
-              functional and robust software solutions.
+              Greetings! I'm a passionate web developer residing in the
+              captivating landscapes of Saipan, USA, and I've spent over 8 years
+              honing my coding craft. My passion for creating transformative
+              software solutions drives me to continually push the boundaries of
+              what's possible.
+            </p>
+            <p>
+              At present, I'm focused on mastering a powerful stack that
+              includes React, Next.js, TypeScript, Tailwind, Supabase, and
+              PostgreSQL. These cutting-edge technologies enable me to craft
+              highly functional and robust applications that deliver exceptional
+              user experiences.
+            </p>
+            <p>
+              Collaboration is at the core of my approach, and I thrive in team
+              environments where creativity and innovation flourish. Beyond
+              writing lines of code, I envision leaving a lasting legacy by
+              empowering users worldwide through innovative digital solutions.
+            </p>
+            <p>
+              I'm eager to contribute my skills and expertise to impactful
+              projects. If you're seeking a motivated and forward-thinking
+              software engineer for your team, I'd love to connect and explore
+              how we can create something extraordinary together.
             </p>
           </section>
+        </div>
+        <div className="flex-1">
+          <section>
+            <h2 className="text-xl font-medium md:text-2xl">Current Stack</h2>
+            <IconGrid icons={current} />
+          </section>
+          <section>
+            <h2 className="text-xl font-medium md:text-2xl">Previously</h2>
+            <IconGrid icons={past} />
+          </section>
           <section className="mt-16 mb-8 space-y-0">
-            <h2 className="text-2xl font-medium md:text-3xl">Degree</h2>
+            <h2 className="text-xl font-medium md:text-2xl">Degree</h2>
             <div className="flex flex-col gap-x-4 sm:flex-row sm:items-center">
               <FaGraduationCap size={40} />
               <div>
@@ -118,20 +146,6 @@ export default function About() {
                 <div className="text-xl">Portland State University • 2014</div>
               </div>
             </div>
-          </section>
-        </div>
-        <div className="flex-1">
-          <section>
-            <h2 className="text-xl font-medium sm:text-xl md:text-2xl">
-              Current Stack
-            </h2>
-            <IconGrid icons={current} />
-          </section>
-          <section>
-            <h2 className="text-xl font-medium sm:text-xl md:text-2xl">
-              Previously
-            </h2>
-            <IconGrid icons={past} />
           </section>
         </div>
       </div>
