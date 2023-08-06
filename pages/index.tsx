@@ -32,7 +32,7 @@ export default function Home() {
             Skilled Web Developer
           </motion.p>
           <motion.p
-            className="max-w-2xl text-5xl font-bold md:text-7xl"
+            className="max-w-2xl text-5xl font-bold md:text-7xl tracking-tight"
             initial={{ opacity: 0, x: 10 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
