@@ -11,9 +11,10 @@ import {
   SiPrisma,
   SiVercel,
   SiPlanetscale,
-  SiStripe
+  SiStripe,
+  SiOpenai
 } from 'react-icons/si'
-import { BiLink } from 'react-icons/bi'
+import { BiLink, BiLogoMeta } from 'react-icons/bi'
 import Head from 'next/head'
 import Container from '../components/Container'
 
@@ -21,7 +22,7 @@ const projects = [
   {
     title: 'Reddit Clone',
     description:
-      'This implementation focuses on replicating the design and essential features of Reddit, including user authentication, user account management, posts, subreddits, voting, images, and comments.',
+      'A platform for online discussions and community engagement where users can post content and interact with other users. This implementation focuses on replicating the design and essential features of Reddit.',
     siteUrl: 'https://reddit-next-supabase.vercel.app/',
     githubUrl: 'https://github.com/neilgebhard/reddit-next-supabase',
     imgSrc: '/images/reddit-laptop-frame.webp',
@@ -37,7 +38,7 @@ const projects = [
   {
     title: 'E-commerce Admin & Store',
     description:
-      'This implementation focuses on replicating the design and essential features of an e-commerce admin dashboard and storefront, including user authentication, product management, image uploading, performance metrics, and cart checkout.',
+      'A full-stack e-commerce application that includes an admin dashboard for managing products, orders, and customers, and a store for customers to browse and purchase products.',
     siteUrl: 'https://ecommerce-admin-kappa-indol.vercel.app/',
     githubUrl: 'https://github.com/neilgebhard/ecommerce-admin',
     imgSrc: '/images/ecomm-laptop-frame.webp',
@@ -53,9 +54,31 @@ const projects = [
     ]
   },
   {
+    title: 'AI Therapist',
+    description:
+      'A personalized mental wellness companion that uses AI to provide convenient and confidential support through conversation.',
+    siteUrl: 'https://ai-thera.vercel.app/',
+    githubUrl: 'https://github.com/neilgebhard/ai-therapist',
+    imgSrc: '/images/ai-therapist-laptop-frame.webp',
+    icons: [
+      <SiNextdotjs size="2rem" title="Next.js" className="mute" />,
+      <SiTypescript size="2rem" title="TypeScript" className="mute" />,
+      <SiPrisma size="2rem" title="Prisma" className="mute" />,
+      <SiPlanetscale size="2rem" title="PlanetScale" className="mute" />,
+      <SiVercel size="2rem" title="Vercel" className="mute" />,
+      <SiTailwindcss size="2rem" title="Tailwind CSS" className="mute" />,
+      <SiNodedotjs size="2rem" title="Node.js" className="mute" />,
+      <BiLogoMeta
+        size="2rem"
+        title="Meta's Llama 2 13b Chat - GPTQ"
+        className="mute"
+      />
+    ]
+  },
+  {
     title: 'Real-time Chat App',
     description:
-      'This real-time chat app is a dynamic and interactive web-based application designed to facilitate seamless communication between users implemented in a modern web stack that includes user authentication.',
+      'A real-time chat application that allows users to create and join chat rooms and send messages to each other.',
     siteUrl: 'https://chat-app-neil.vercel.app/',
     githubUrl: 'https://github.com/neilgebhard/chat-app',
     imgSrc: '/images/chat-laptop-frame.webp',
@@ -69,72 +92,6 @@ const projects = [
       <SiNodedotjs size="2rem" title="Node.js" className="mute" />
     ]
   }
-  // {
-  //   title: 'Open Market',
-  //   description:
-  //     'A place where you can post items to buy and sell. This is a full stack app with Google OAuth, passwordless authentication, image uploading, and favoriting.',
-  //   siteUrl: 'https://open-market.vercel.app/',
-  //   githubUrl: 'https://github.com/neilgebhard/open-market',
-  //   imgSrc: '/images/openmarket-laptop-frame.webp',
-  //   icons: [
-  //     <SiNextdotjs size="2rem" title="Next.js" className="mute" />,
-  //     <SiTypescript size="2rem" title="TypeScript" className="mute" />,
-  //     <SiSupabase size="2rem" title="Supabase" className="mute" />,
-  //     <SiPrisma size="2rem" title="Prisma" className="mute" />,
-  //     <SiVercel size="2rem" title="Vercel" className="mute" />,
-  //     <SiTailwindcss size="2rem" title="Tailwind CSS" className="mute" />,
-  //     <SiNodedotjs size="2rem" title="Node.js" className="mute" />
-  //   ]
-  // },
-  // {
-  //   title: 'Posterly',
-  //   description:
-  //     'A place where you can make posts about anything. This is a full stack app with authentication, posts, comments, replies, and upvoting/downvoting.',
-  //   siteUrl: 'https://posterly.herokuapp.com/',
-  //   githubUrl: 'https://github.com/neilgebhard/posterly',
-  //   imgSrc: '/images/reddit-laptop-frame.webp',
-  //   icons: [
-  //     <SiReact size="2rem" title="React" className="mute" />,
-  //     <SiTypescript size="2rem" title="TypeScript" className="mute" />,
-  //     <SiTailwindcss size="2rem" title="Tailwind CSS" className="mute" />,
-  //     <SiNodedotjs size="2rem" title="Node.js" className="mute" />,
-  //     <SiExpress size="2rem" title="Express.js" className="mute" />,
-  //     <SiMongodb size="2rem" title="MongoDB" className="mute" />,
-  //     <SiCypress size="2rem" title="Cypress" className="mute" />
-  //   ]
-  // },
-  // {
-  //   title: 'Chirplr',
-  //   used: 'React, Express, MongoDB, Node.js, JSON Web Tokens, Tailwind CSS',
-  //   description:
-  //     'A place where you can broadcast messages for people to see. This is a full stack app with authentication, messages, follows, and likes',
-  //   siteUrl: 'https://chirplr.herokuapp.com/',
-  //   githubUrl: 'https://github.com/neilgebhard/chirplr',
-  //   imgSrc: '/images/twitter-laptop-frame.webp',
-  //   icons: [
-  //     <SiReact size="2rem" title="React" className="mute" />,
-  //     <SiTypescript size="2rem" title="TypeScript" className="mute" />,
-  //     <SiTailwindcss size="2rem" title="Tailwind CSS" className="mute" />,
-  //     <SiNodedotjs size="2rem" title="Node.js" className="mute" />,
-  //     <SiExpress size="2rem" title="Express.js" className="mute" />,
-  //     <SiMongodb size="2rem" title="MongoDB" className="mute" />,
-  //     <SiJest size="2rem" title="Jest" className="mute" />
-  //   ]
-  // }
-  // {
-  //   title: 'Movie app',
-  //   description:
-  //     'A web app for discovering and exploring movies using the tMDB API.',
-  //   siteUrl: 'https://neilsmovieapp.netlify.app/',
-  //   githubUrl: 'https://github.com/neilgebhard/movie-app-react',
-  //   imgSrc: '/images/movie-laptop-frame.webp',
-  //   icons: [
-  //     <SiReact size="2rem" title="React" className="mute" />,
-  //     <SiTypescript size="2rem" title="TypeScript" className="mute" />,
-  //     <SiCss3 size="2rem" title="CSS Modules" className="mute" />,
-  //     <SiJest size="2rem" title="Jest" className="mute" />
-  //   ]
-  // }
 ]
 
 export default function Projects() {
