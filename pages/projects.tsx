@@ -39,7 +39,7 @@ const projects = [
     title: 'E-commerce Admin & Store',
     description:
       'A full-stack e-commerce application that includes an admin dashboard for managing products, orders, and customers, and a store for customers to browse and purchase products.',
-    siteUrl: 'https://ecommerce-admin-kappa-indol.vercel.app/',
+    siteUrl: 'https://ecommerce-store-nine-eosin.vercel.app/',
     githubUrl: 'https://github.com/neilgebhard/ecommerce-admin',
     imgSrc: '/images/ecomm-laptop-frame.webp',
     icons: [
