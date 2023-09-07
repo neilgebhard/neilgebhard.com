@@ -74,24 +74,24 @@ const projects = [
         className="mute"
       />
     ]
-  },
-  {
-    title: 'Real-time Chat App',
-    description:
-      'A real-time chat application that allows users to create and join chat rooms and send messages to each other.',
-    siteUrl: 'https://chat-app-neil.vercel.app/',
-    githubUrl: 'https://github.com/neilgebhard/chat-app',
-    imgSrc: '/images/chat-laptop-frame.webp',
-    icons: [
-      <SiNextdotjs size="2rem" title="Next.js" className="mute" />,
-      <SiTypescript size="2rem" title="TypeScript" className="mute" />,
-      <SiPrisma size="2rem" title="Prisma" className="mute" />,
-      <SiSupabase size="2rem" title="Supabase" className="mute" />,
-      <SiVercel size="2rem" title="Vercel" className="mute" />,
-      <SiTailwindcss size="2rem" title="Tailwind CSS" className="mute" />,
-      <SiNodedotjs size="2rem" title="Node.js" className="mute" />
-    ]
   }
+  // {
+  //   title: 'Real-time Chat App',
+  //   description:
+  //     'A real-time chat application that allows users to create and join chat rooms and send messages to each other.',
+  //   siteUrl: 'https://chat-app-neil.vercel.app/',
+  //   githubUrl: 'https://github.com/neilgebhard/chat-app',
+  //   imgSrc: '/images/chat-laptop-frame.webp',
+  //   icons: [
+  //     <SiNextdotjs size="2rem" title="Next.js" className="mute" />,
+  //     <SiTypescript size="2rem" title="TypeScript" className="mute" />,
+  //     <SiPrisma size="2rem" title="Prisma" className="mute" />,
+  //     <SiSupabase size="2rem" title="Supabase" className="mute" />,
+  //     <SiVercel size="2rem" title="Vercel" className="mute" />,
+  //     <SiTailwindcss size="2rem" title="Tailwind CSS" className="mute" />,
+  //     <SiNodedotjs size="2rem" title="Node.js" className="mute" />
+  //   ]
+  // }
 ]
 
 export default function Projects() {
