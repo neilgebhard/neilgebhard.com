@@ -92,9 +92,9 @@ export default function Contact() {
             say hi? Feel free to message me.
           </p>
           <div className="space-y-4">
-            <Link href="https://www.google.com/maps/place/Saipan/@15.1882262,145.6948117,12z/data=!4m5!3m4!1s0x66d8b12c0d41abdd:0x662f5e089974f80f!8m2!3d15.1850483!4d145.7467259">
+            <Link href="https://www.google.com/maps/place/Salem+or/data=!4m2!3m1!1s0x54bffefcbc4b9c63:0xf93429e08f0357c2?sa=X&ved=2ahUKEwiZ5JbG4duBAxW5IEQIHbnYBr0Q8gF6BAgQEAA&ved=2ahUKEwiZ5JbG4duBAxW5IEQIHbnYBr0Q8gF6BAgSEAE">
               <a className="mute flex gap-x-3 font-semibold hover:underline">
-                <FaMapMarkerAlt size="2rem" /> Saipan, USA
+                <FaMapMarkerAlt size="2rem" /> Salem, OR
               </a>
             </Link>
             <a

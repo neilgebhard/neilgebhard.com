@@ -72,7 +72,7 @@ export default function About() {
     <Container>
       <Head>
         <title>About | Neil Gebhard</title>
-        <meta name="description" content="An about of Neil Gebhard"></meta>
+        <meta name="description" content="About page for Neil Gebhard"></meta>
       </Head>
       <h1 className="h1-underline mb-14 text-3xl font-bold md:text-4xl">
         About
@@ -97,8 +97,8 @@ export default function About() {
           </header>
           <section className="space-y-8 text-xl">
             <p>
-              Greetings! I'm a passionate web developer residing in the
-              captivating landscapes of Saipan, USA, and I've spent over 8 years
+              Greetings! I'm a passionate software developer residing in the
+              captivating landscapes of Salem, OR. I've spent over 8 years
               honing my coding craft. My passion for creating transformative
               software solutions drives me to continually push the boundaries of
               what's possible.
@@ -106,20 +106,19 @@ export default function About() {
             <p>
               At present, I'm focused on mastering a powerful stack that
               includes React, Next.js, TypeScript, Tailwind, Supabase, and
-              PostgreSQL. These cutting-edge technologies enable me to craft
-              highly functional and robust applications that deliver exceptional
-              user experiences.
+              PostgreSQL. My past experience extends across a diverse range of
+              technologies, and I remain enthusiastic about exploring new ones
+              as needed.
             </p>
             <p>
-              Collaboration is at the core of my approach, and I thrive in team
-              environments where creativity and innovation flourish. Beyond
-              writing lines of code, I envision leaving a lasting legacy by
-              empowering users worldwide through innovative digital solutions.
+              I excel both collaboratively and as part of a team. Beyond writing
+              lines of code, I envision leaving a lasting legacy by empowering
+              users worldwide through innovative digital solutions.
             </p>
             <p>
               I'm eager to contribute my skills and expertise to impactful
               projects. If you're seeking a motivated and forward-thinking
-              software engineer for your team, I'd love to connect and explore
+              software developer for your team, I'd love to connect and explore
               how we can create something extraordinary together.
             </p>
           </section>
