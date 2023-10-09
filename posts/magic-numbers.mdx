@@ -1,0 +1,49 @@
+---
+title: 'Magic Numbers'
+date: '2023-10-09'
+tags: ['design patterns']
+---
+
+When delving into the world of programming, you'll often encounter the term "magic numbers." Despite their enchanting name, magic numbers aren't related to sorcery or mysticism. Instead, they are an essential concept in the realm of software development that can help improve code readability, maintainability, and overall quality.
+
+### What Are Magic Numbers?
+
+Magic numbers are those random digits scattered throughout your code. They do stuff, but they don't tell you why. For instance:
+
+```javascript
+const calculateArea = (radius) => {
+  return 3.1415 * radius * radius
+}
+```
+
+In this snippet, 3.1415 is a magic number. It's supposed to be the value of π (pi) for calculating the area of a circle. But without context, it's like trying to decipher a secret code.
+
+### Why Magic Numbers Are a No-No
+
+Using magic numbers can lead to some sticky situations:
+
+1. **Confusion**: They leave everyone wondering why that specific number was chosen. It's like reading someone else's mind.
+
+2. **Maintenance Mess**: When you need to change the value, you'll have to hunt down every instance of the magic number. That's like finding a needle in a haystack.
+
+3. **Bugs**: Typos or errors when messing with magic numbers can unleash bugs that hide in the shadows.
+
+4. **Bad Code Etiquette**: They don't follow coding standards and best practices. It's like showing up at a fancy dinner party in sweatpants.
+
+### How to Tame Magic Numbers
+
+Here's how you can break the spell of magic numbers and make your code more readable:
+
+```javascript
+const PI = 3.1415
+
+function calculateArea(radius) {
+  return PI * radius * radius
+}
+```
+
+By giving the magic number a name like `PI`, you make your code friendlier. It's like having a signpost that says, "Hey, this is the value of π, and it's used for circle calculations."
+
+### Wrapping Up
+
+Magic numbers might sound enchanting, but they're a source of unnecessary trouble. Replace them with named constants or variables to make your code easy to read, maintain, and share. So, don't let magic numbers cast a spell on your code – give them a friendly name instead!
