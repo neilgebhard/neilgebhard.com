@@ -97,29 +97,20 @@ export default function About() {
           </header>
           <section className="space-y-8 text-xl">
             <p>
-              Greetings! I'm a passionate software developer residing in the
-              captivating landscapes of Salem, OR. I've spent over 8 years
-              honing my coding craft. My passion for creating transformative
-              software solutions drives me to continually push the boundaries of
-              what's possible.
+              Hello there! I'm a software developer residing in Salem, OR. I've
+              spent almost a decade coding and studying the craft. I want to
+              make the world a better place through technology.
             </p>
             <p>
-              At present, I'm focused on mastering a powerful stack that
-              includes React, Next.js, TypeScript, Tailwind, Supabase, and
-              PostgreSQL. My past experience extends across a diverse range of
-              technologies, and I remain enthusiastic about exploring new ones
-              as needed.
+              At present, my personal stack includes Next.js, TypeScript,
+              Tailwind, and Prisma, but I'm always open to better ways of doing
+              things. I have past experience in several programming languages,
+              libraries, and frameworks for both front-end and back-end.
             </p>
             <p>
-              I excel both collaboratively and as part of a team. Beyond writing
-              lines of code, I envision leaving a lasting legacy by empowering
-              users worldwide through innovative digital solutions.
-            </p>
-            <p>
-              I'm eager to contribute my skills and expertise to impactful
-              projects. If you're seeking a motivated and forward-thinking
-              software developer for your team, I'd love to connect and explore
-              how we can create something extraordinary together.
+              I'm eager to use my skills and expertise to make a positive impact
+              on the world. If you're seeking a team-oriented and adaptable
+              software dev, let's connect!
             </p>
           </section>
         </div>
