@@ -1,0 +1,67 @@
+---
+title: 'The AHA principle'
+date: '2023-10-12'
+tags: ['Design Patterns']
+---
+
+We all want to write code that's clean, easy to maintain, and adaptable. That's where the AHA Principle comes into play. AHA stands for "Avoid Hasty Abstractions," and it's like your friendly reminder to not overengineer with abstracting stuff in your code.
+
+### How does it help?
+
+**Keeps It Manageable:** It keeps your code simple and easy to understand, which is a great when you need to make changes down the road.
+
+**Readability:** Simple code is code anyone can read. If your abstractions make your code harder to understand, you're doing the opposite of what’s intended.
+
+**Flexibility:** Proper abstractions should make your code more flexible, not less. Rushed abstractions might box you into a corner with a design that doesn't fit the situation.
+
+### How to AHA It Right
+
+**Start Simple:** Don't get trigger-happy with abstractions. Wait until you see a clear need.
+
+**Wait For Patterns:** If you notice recurring patterns in your code, that's a sign you might need an abstraction.
+
+### Example
+
+Suppose you have an array of numbers and want to perform various operations on them.
+
+```js
+// Hasty Abstraction Example (Avoid This):
+
+function processArray(arr, operation) {
+  if (operation === 'sum') {
+    return arr.reduce((acc, curr) => acc + curr, 0)
+  } else if (operation === 'average') {
+    const sum = arr.reduce((acc, curr) => acc + curr, 0)
+    return sum / arr.length
+  }
+}
+
+const numbers = [1, 2, 3, 4, 5]
+const sum = processArray(numbers, 'sum')
+const average = processArray(numbers, 'average')
+
+// Using the AHA Principle:
+
+function sumArray(arr) {
+  return arr.reduce((acc, curr) => acc + curr, 0)
+}
+
+function calculateAverage(arr) {
+  const sum = sumArray(arr)
+  return sum / arr.length
+}
+
+const numbers = [1, 2, 3, 4, 5]
+const sum = sumArray(numbers)
+const average = calculateAverage(numbers)
+```
+
+In the "Hasty Abstraction" example, we have a single function `processArray` that handles different operations.
+
+In the "Using the AHA Principle" example, we start with separate functions for each operation.
+
+With the second approach, you can see that we maintain simplicity and clarity, and we're able to reuse a function for added benefit.
+
+### Conclusion
+
+By avoiding hasty abstractions and keeping things simple, you can write code that's easy to maintain, efficient, and adaptable. There’s a time and place for abstractions, but don't rush it. Wait until the pattern proves itself.
