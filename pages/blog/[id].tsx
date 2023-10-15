@@ -9,6 +9,13 @@ import { allPosts } from 'contentlayer/generated'
 import type { Post } from 'contentlayer/generated'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 import clsx from 'clsx'
+import {
+  useTransform,
+  useViewportScroll,
+  motion,
+  useScroll,
+  useSpring
+} from 'framer-motion'
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = allPosts.map((post) => `/blog/${post.id}`)
@@ -47,6 +54,13 @@ const TextInput = ({ className, ...rest }) => {
 export default function Post({ post }: { post: Post }) {
   const MDXContent = useMDXComponent(post.body.code)
 
+  const { scrollYProgress } = useScroll()
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  })
+
   return (
     <Container>
       <Head>
@@ -54,6 +68,10 @@ export default function Post({ post }: { post: Post }) {
         <meta name="description" content={post.title}></meta>
       </Head>
       <section className="mx-auto max-w-2xl">
+        <motion.div
+          className="fixed top-0 left-0 right-0 h-2 bg-gray-500"
+          style={{ scaleX, transformOrigin: '0%' }}
+        />
         <header>
           <h1 className="mb-2 mt-0 text-3xl sm:text-5xl font-bold">
             {post.title}
