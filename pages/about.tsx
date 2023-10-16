@@ -97,9 +97,10 @@ export default function About() {
           </header>
           <section className="space-y-8 text-xl">
             <p>
-              Hello there! I'm a software developer residing in Salem, OR. I've
-              spent almost a decade coding and studying the craft. I want to
-              make the world a better place through technology.
+              Hello there! I'm a software developer currently specializing in
+              web development. I've spent almost a decade coding and studying
+              the craft. I want to make the world a better place through
+              technology.
             </p>
             <p>
               At present, my personal stack includes Next.js, TypeScript,
