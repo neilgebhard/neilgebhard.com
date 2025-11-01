@@ -22,7 +22,7 @@ const projects = [
   {
     title: 'Reddit Clone',
     description:
-      'A platform for online discussions and community engagement where users can post content and interact with other users. This implementation focuses on replicating the design and essential features of Reddit.',
+      'A full-stack replica of Reddit’s core features like posts, votes, discussions, and auth flow. Built to showcase scalable UI and real-time interaction.',
     siteUrl: 'https://reddit-next-supabase.vercel.app/',
     githubUrl: 'https://github.com/neilgebhard/reddit-next-supabase',
     imgSrc: '/images/reddit-laptop-frame.webp',
@@ -36,9 +36,9 @@ const projects = [
     ]
   },
   {
-    title: 'E-commerce Admin & Store',
+    title: 'E-commerce Store and Admin',
     description:
-      'A full-stack e-commerce application that includes an admin dashboard for managing products, orders, and customers, and a store for customers to browse and purchase products.',
+      'A full-stack e-commerce platform with dual interfaces: a customer-facing store and an admin dashboard for managing products, orders, and users. Built for modularity and real-world scale.',
     siteUrl: 'https://ecommerce-store-nine-eosin.vercel.app/',
     githubUrl: 'https://github.com/neilgebhard/ecommerce-admin',
     imgSrc: '/images/ecomm-laptop-frame.webp',
@@ -56,7 +56,7 @@ const projects = [
   {
     title: 'AI Therapist',
     description:
-      'A personalized mental wellness companion that uses AI to provide convenient and confidential support through conversation.',
+      'An AI-powered mental wellness chatbot offering confidential, conversational support. Built with user-centric design and responsive dialogue to simulate empathetic interaction.',
     siteUrl: 'https://ai-thera.vercel.app/',
     githubUrl: 'https://github.com/neilgebhard/ai-therapist',
     imgSrc: '/images/ai-therapist-laptop-frame.webp',

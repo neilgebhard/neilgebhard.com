@@ -29,7 +29,7 @@ export default function Home() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            Skilled Web Developer
+            Full-Stack Problem Solver
           </motion.p>
           <motion.p
             className="max-w-2xl text-5xl font-bold md:text-7xl tracking-tight"
@@ -37,7 +37,7 @@ export default function Home() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            Your Next Tech Wizard Awaits! 🧙‍♂️
+            Building Smart With Systems Thinking.
           </motion.p>
           <motion.div
             className="mt-10"

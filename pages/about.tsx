@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import React from 'react'
-import { FaGraduationCap, FaJava } from 'react-icons/fa'
+import { FaGraduationCap, FaJava, FaCertificate } from 'react-icons/fa'
 import {
   SiAndroid,
   SiCplusplus,
@@ -97,31 +97,28 @@ export default function About() {
           </header>
           <section className="space-y-8 text-xl">
             <p>
-              Hello there! I'm a software developer currently specializing in
-              web development. I've spent almost a decade coding and studying
-              the craft. I want to make the world a better place through
-              technology.
+              Nearly 10 years of hands-on experience building scalable
+              applications across web, mobile, and academia. Driven to build
+              resilient, user-centered systems that improve lives.
             </p>
             <p>
-              At present, my personal stack includes Next.js, TypeScript,
-              Tailwind, and Prisma, but I'm always open to better ways of doing
-              things. I have past experience in several programming languages,
-              libraries, and frameworks for both front-end and back-end.
+              My most recent stack includes Next.js, TypeScript, Tailwind, and
+              Prisma, but I'm always open to better ways of doing things. Also
+              have past experience with: Java, Python, C++, Swift, iOS, Android.
             </p>
             <p>
-              I'm eager to use my skills and expertise to make a positive impact
-              on the world. If you're seeking a team-oriented and adaptable
-              software dev, let's connect!
+              Whether you're building for scale or seeking modular solutions,
+              I’m ready to collaborate.
             </p>
           </section>
         </div>
         <div className="flex-1">
           <section>
-            <h2 className="text-xl font-medium md:text-2xl">Current Stack</h2>
+            <h2 className="text-xl font-medium md:text-2xl">Current Tools</h2>
             <IconGrid icons={current} />
           </section>
           <section>
-            <h2 className="text-xl font-medium md:text-2xl">Previously</h2>
+            <h2 className="text-xl font-medium md:text-2xl">Past Experience</h2>
             <IconGrid icons={past} />
           </section>
           <section className="mt-16 mb-8 space-y-0">
@@ -133,6 +130,17 @@ export default function About() {
                   Bachelor of Science: Computer Science
                 </div>
                 <div className="text-xl">Portland State University • 2014</div>
+              </div>
+            </div>
+          </section>
+          <section className="mt-16 mb-8 space-y-0">
+            <h2 className="text-xl font-medium md:text-2xl">Certs</h2>
+            <div className="flex flex-col gap-x-4 sm:flex-row sm:items-center">
+              <FaCertificate size={40} />
+              <div>
+                <div className="text-xl">AWS Cloud Solutions Architect</div>
+                <div className="text-xl">Security+</div>
+                <div className="text-xl">Network+</div>
               </div>
             </div>
           </section>
