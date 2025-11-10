@@ -134,11 +134,13 @@ export default function About() {
             </div>
           </section>
           <section className="mt-16 mb-8 space-y-0">
-            <h2 className="text-xl font-medium md:text-2xl">Certs</h2>
+            <h2 className="text-xl font-medium md:text-2xl">Certificates</h2>
             <div className="flex flex-col gap-x-4 sm:flex-row sm:items-center">
               <FaCertificate size={40} />
               <div>
-                <div className="text-xl">AWS Cloud Solutions Architect</div>
+                <div className="text-xl">
+                  AWS Cloud Solutions Architect - Associate
+                </div>
                 <div className="text-xl">Security+</div>
                 <div className="text-xl">Network+</div>
               </div>
