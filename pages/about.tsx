@@ -97,14 +97,15 @@ export default function About() {
           </header>
           <section className="space-y-8 text-xl">
             <p>
-              Nearly 10 years of hands-on experience building scalable
-              applications across web, mobile, and academia. Driven to build
-              resilient, user-centered systems that improve lives.
+              Nearly a decade of hands-on experience building scalable
+              applications across web, mobile, and in school. Driven to build
+              resilient, user-centered systems that helps people.
             </p>
             <p>
-              My most recent stack includes Next.js, TypeScript, Tailwind, and
-              Prisma, but I'm always open to better ways of doing things. Also
-              have past experience with: Java, Python, C++, Swift, iOS, Android.
+              Some of the tech I've used recently include Next.js, TypeScript,
+              Tailwind, and Prisma, but I'm always open to better ways of doing
+              things. Also have past experience with: Java, Python, C++, Swift,
+              iOS, Android.
             </p>
             <p>
               Whether you're building for scale or seeking modular solutions,
