@@ -31,20 +31,6 @@ export default function Footer() {
             </div>
             <div>
               <a
-                href="https://twitter.com/neil_gebhard"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Link to My Twitter"
-              >
-                <SiTwitter
-                  size="1.5rem"
-                  title="Twitter"
-                  className="mute hover:text-twitter"
-                />
-              </a>
-            </div>
-            <div>
-              <a
                 href="https://www.linkedin.com/in/neilgebhard/"
                 target="_blank"
                 rel="noreferrer"

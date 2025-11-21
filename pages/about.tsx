@@ -97,7 +97,7 @@ export default function About() {
           </header>
           <section className="space-y-8 text-xl">
             <p>
-              Nearly a decade of hands-on experience building scalable
+              Nearly a decade of coding experience building scalable
               applications across web, mobile, and in school. Driven to build
               resilient, user-centered systems that helps people.
             </p>
@@ -105,7 +105,7 @@ export default function About() {
               Some of the tech I've used recently include Next.js, TypeScript,
               Tailwind, and Prisma, but I'm always open to better ways of doing
               things. Also have past experience with: Java, Python, C++, Swift,
-              iOS, Android.
+              iOS, and Android.
             </p>
             <p>
               Whether you're building for scale or seeking modular solutions,

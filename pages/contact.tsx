@@ -88,13 +88,13 @@ export default function Contact() {
             Or get in touch another way...
           </p>
           <p>
-            Need a website? Maybe you have a proposition? Or do you just want to
-            say hi? Feel free to message me.
+            If you’d like to talk about career opportunities, share an idea, or
+            simply connect, feel free to reach out.
           </p>
           <div className="space-y-4">
-            <Link href="https://www.google.com/maps/place/Salem+or/data=!4m2!3m1!1s0x54bffefcbc4b9c63:0xf93429e08f0357c2?sa=X&ved=2ahUKEwiZ5JbG4duBAxW5IEQIHbnYBr0Q8gF6BAgQEAA&ved=2ahUKEwiZ5JbG4duBAxW5IEQIHbnYBr0Q8gF6BAgSEAE">
+            <Link href="https://www.google.com/maps/place/Salt+Lake+City,+UT/@40.7764505,-112.2505734,10z/data=!3m1!4b1!4m6!3m5!1s0x87523d9488d131ed:0x5b53b7a0484d31ca!8m2!3d40.7605601!4d-111.8881397!16zL20vMGYycjY?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3D">
               <a className="mute flex gap-x-3 font-semibold hover:underline">
-                <FaMapMarkerAlt size="2rem" /> Salem, OR
+                <FaMapMarkerAlt size="2rem" /> Salt Lake City, UT
               </a>
             </Link>
             <a
@@ -118,20 +118,6 @@ export default function Contact() {
                   size="2.5rem"
                   title="GitHub"
                   className="mute hover:text-gray-500"
-                />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://twitter.com/neil_gebhard"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Link to My Twitter"
-              >
-                <SiTwitter
-                  size="2.5rem"
-                  title="Twitter"
-                  className="mute hover:text-twitter"
                 />
               </a>
             </li>
