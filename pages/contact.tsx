@@ -1,7 +1,7 @@
 import Container from 'components/Container'
 import Head from 'next/head'
 import { IoMdSend } from 'react-icons/io'
-import { SiGithub, SiLinkedin, SiTwitter } from 'react-icons/si'
+import { SiCredly, SiGithub, SiLinkedin } from 'react-icons/si'
 import { FaMapMarkerAlt } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
 import { useEffect, useRef } from 'react'
@@ -132,6 +132,20 @@ export default function Contact() {
                   size="2.5rem"
                   title="LinkedIn"
                   className="mute hover:text-linked-in"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.credly.com/users/neil-gebhard"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Link to My Credly"
+              >
+                <SiCredly
+                  size="2.5rem"
+                  title="Credly"
+                  className="mute hover:text-credly"
                 />
               </a>
             </li>

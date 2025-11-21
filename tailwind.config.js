@@ -11,7 +11,8 @@ module.exports = {
         gray: colors.neutral,
         twitter: '#1da1f2',
         google: '#ea4335',
-        'linked-in': '#0077b5'
+        'linked-in': '#0077b5',
+        credly: '#FF6A00'
       },
       animation: {
         blob: 'blob 7s infinite'

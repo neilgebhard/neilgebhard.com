@@ -1,4 +1,4 @@
-import { SiGithub, SiLinkedin, SiTwitter } from 'react-icons/si'
+import { SiGithub, SiLinkedin, SiCredly } from 'react-icons/si'
 import { MdEmail } from 'react-icons/md'
 import Spotify from './Spotify'
 import Link from 'next/link'
@@ -52,6 +52,20 @@ export default function Footer() {
                   size="1.75rem"
                   title="E-mail"
                   className="mute hover:text-google"
+                />
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://www.credly.com/users/neil-gebhard"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Link to My Credly"
+              >
+                <SiCredly
+                  size="2rem"
+                  title="Credly"
+                  className="mute hover:text-credly"
                 />
               </a>
             </div>

@@ -85,8 +85,8 @@ export default function About() {
                 className="rounded-full"
                 src="/images/portrait.webp"
                 alt="Portrait of Neil Gebhard"
-                width={100}
-                height={100}
+                width={105}
+                height={91}
                 priority
               />
               <div className="text-3xl font-extralight tracking-tight sm:text-5xl">
