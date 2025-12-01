@@ -121,8 +121,7 @@ export default function About() {
             </p>
             <p>
               What I'm working on: Upskilling in DevOps and cloud engineering
-              while continuing to build full-stack applications. Check out my
-              projects below to see what I've been building.
+              while continuing to build full-stack applications.
             </p>
           </section>
         </div>
