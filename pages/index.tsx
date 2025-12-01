@@ -8,7 +8,10 @@ export default function Home() {
     <Container>
       <Head>
         <title>Home | Neil Gebhard</title>
-        <meta name="description" content="A software developer in Salem, OR." />
+        <meta
+          name="description"
+          content="A software developer in Salt Lake City, UT."
+        />
       </Head>
       <section className="relative py-16 md:pt-30 md:pb-40">
         <motion.div
@@ -19,7 +22,7 @@ export default function Home() {
         >
           <p>Frontend</p>
           <p>Backend</p>
-          <p>UI/UX</p>
+          <p>Cloud</p>
         </motion.div>
 
         <div className="text-center md:text-left">
@@ -29,7 +32,7 @@ export default function Home() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            Full-Stack Problem Solver
+            Full-Stack Developer | AWS Certified
           </motion.p>
           <motion.p
             className="max-w-2xl text-5xl font-bold md:text-7xl tracking-tight"
@@ -37,7 +40,7 @@ export default function Home() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            Building Smart With Systems Thinking.
+            Building web apps with React, Node.js, and TypeScript
           </motion.p>
           <motion.div
             className="mt-10"
