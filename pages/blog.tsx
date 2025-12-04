@@ -27,7 +27,9 @@ export default function Blog({ posts }) {
   const filteredPosts = posts.filter(
     ({ title, tags }) =>
       title.toLowerCase().includes(searchValue.toLowerCase()) ||
-      tags.map((tag) => tag.toUpperCase()).includes(searchValue.toUpperCase())
+      tags
+        .map((tag) => tag.toLowerCase())
+        .some((tag) => tag.includes(searchValue))
   )
 
   return (
@@ -73,9 +75,9 @@ export default function Blog({ posts }) {
                   ))}
                 </div>
               )}
-              <p className="mute mt-0 mb-2 text-base">
+              {/* <p className="mute mt-0 mb-2 text-base">
                 <MyDate dateString={date} />
-              </p>
+              </p> */}
             </li>
           ))}
         </ul>

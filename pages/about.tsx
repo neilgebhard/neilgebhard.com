@@ -97,31 +97,21 @@ export default function About() {
           </header>
           <section className="space-y-8 text-xl">
             <p>
-              I'm a full-stack developer with 5+ years of professional
-              experience building web applications. I've worked on SaaS
-              platforms, internal tools, and modern web apps using JavaScript,
-              React, Node.js, and SQL/NoSQL databases.
+              I'm a full-stack developer in Salt Lake City who builds web
+              applications using React, TypeScript, Node.js, and SQL/NoSQL. I
+              focus on writing clean, maintainable code and creating solutions
+              that actually solve problems. With a CS degree and certifications
+              in AWS, Security+, and Network+, I'm always learning and looking
+              for my next challenge.
             </p>
             <p>
-              At PacAm, I independently built an internal auditing tool from the
-              ground up—designing the database schema, creating the REST API,
-              and implementing the user interface. I've also contributed to
-              legacy systems and an early-stage startup.
+              I believe good developers figure things out independently,
+              communicate clearly with their team, ship code that doesn't break
+              production, learn new tools as needed, and are easy (maybe even
+              fun) to work with. That's the kind of teammate I aim to be.
             </p>
             <p>
-              Recently, I've been deepening my cloud and infrastructure
-              knowledge. I earned my AWS Solutions Architect Associate
-              certification and have been building projects that combine
-              full-stack development with modern deployment practices using
-              Docker, CI/CD pipelines, and infrastructure as code.
-            </p>
-            <p>
-              Current tech stack: React, Next.js, TypeScript, Node.js, Tailwind
-              CSS, PostgreSQL, MongoDB, AWS
-            </p>
-            <p>
-              What I'm working on: Upskilling in DevOps and cloud engineering
-              while continuing to build full-stack applications.
+              What I'm working on: upskilling in DevOps and cloud engineering.
             </p>
           </section>
         </div>

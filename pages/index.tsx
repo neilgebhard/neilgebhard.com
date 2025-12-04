@@ -32,15 +32,15 @@ export default function Home() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            Full-Stack Developer | AWS Certified
+            Full-stack developer | SLC, Utah
           </motion.p>
           <motion.p
-            className="max-w-2xl text-5xl font-bold md:text-7xl tracking-tight"
+            className="max-w-2xl text-4xl font-bold md:text-6xl tracking-tight"
             initial={{ opacity: 0, x: 10 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            Building web apps with React, Node.js, and TypeScript
+            Creating software solutions with modern web technologies
           </motion.p>
           <motion.div
             className="mt-10"

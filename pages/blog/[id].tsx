@@ -87,11 +87,11 @@ export default function Post({ post }: { post: Post }) {
               />{' '}
               Neil Gebhard
             </div>
-            <div> / </div>
+            {/* <div> / </div>
             <div className="mute flex items-center gap-1">
               <BiCalendar />
               <MyDate dateString={post.date} />
-            </div>
+            </div> */}
           </div>
         </header>
         <article className="prose prose-blue prose-a:no-underline hover:prose-a:underline dark:prose-invert">
