@@ -28,7 +28,7 @@ const projects = [
       'A full-stack social media application replicating Instagram\'s core features, built with modern web technologies.',
     siteUrl: 'https://instagram-clone-neil.vercel.app',
     githubUrl: 'https://github.com/neilgebhard/instagram-clone',
-    imgSrc: '/images/insta-clone-screenshot.png',
+    imgSrc: '/images/insta-clone-screenshot.webp',
     icons: [
       <SiNextdotjs size="2rem" title="Next.js" className="mute" />,
       <SiTypescript size="2rem" title="TypeScript" className="mute" />,
