@@ -1,0 +1,41 @@
+---
+title: 'Full-Stack Architecture with AWS'
+date: '2025-12-15'
+tags: ['Architecture']
+---
+
+> Perfect is the enemy of good. (Start simple, optimize later)
+
+Building full-stack apps on AWS? Here are three patterns to use, with commentary about when each makes sense.
+
+## Pattern 1: Go Serverless
+
+This is Lambda + API Gateway + S3, with your frontend on CloudFront and your API as Lambda functions. Database is either RDS Aurora Serverless (SQL) or DynamoDB (NoSQL).
+
+**When it works:** Perfect for MVPs or apps with unpredictable traffic. You literally pay nothing when no one's using it.
+
+**The catch:** Cold starts. First request after idle time can take 1-2 seconds. If that's a dealbreaker, look at Pattern 2.
+
+## Pattern 2: Containers on ECS Fargate
+
+Your app runs in Docker containers without managing servers. It's like having a traditional server, but without handling infrastructure.
+
+**When it works:** You need consistent performance, WebSocket connections, or you're running something that doesn't fit the Lambda model well (such as long-running processes).
+
+**The catch:** Costs more upfront. You're paying $30-50/month minimum even with zero traffic. But performance is solid.
+
+## Pattern 3: Mix and Match
+
+Use serverless for simple stuff, containers for complex operations. This seems like what most production apps end up doing.
+
+For example, in an image-sharing app: Lambda handles authentication and simple CRUD operations, S3 events trigger Lambda for image processing, and WebSocket servers run on ECS for real-time features.
+
+## Things That Actually Matter
+
+**Keep your database private.** RDS should be in private subnets, accessed only by your Lambda functions or ECS tasks in the same VPC. Use RDS Proxy if you're hitting connection limits with Lambda.
+
+**Put CloudFront in front of everything.** Seriously, everything. It'll cut your origin requests by 80% with proper cache headers.
+
+**Start simple.** Pattern 1 costs about $10/month for low traffic and scales to millions of users. You can always evolve later based on actual bottlenecks.
+
+The serverless pattern gets expensive above 10M requests/month, but by then you'll have real revenue (hopefully) and data showing you exactly where to optimize. Cross that bridge when you get there.
