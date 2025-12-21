@@ -4,6 +4,7 @@ import { animate } from 'motion'
 import fetcher from '../lib/fetcher'
 import { SpotifySong } from '../lib/types'
 import { SiSpotify } from 'react-icons/si'
+import { ANIMATION } from '../lib/constants'
 
 function AnimatedBars() {
   useEffect(() => {
@@ -17,8 +18,8 @@ function AnimatedBars() {
         ]
       },
       {
-        duration: 1.0,
-        repeat: Infinity,
+        duration: ANIMATION.DURATION.SLOW,
+        repeat: ANIMATION.INFINITE,
         easing: ['ease-in-out']
       }
     )
@@ -32,9 +33,9 @@ function AnimatedBars() {
         ]
       },
       {
-        delay: 0.2,
-        duration: 1.5,
-        repeat: Infinity,
+        delay: ANIMATION.DELAY.SHORT,
+        duration: ANIMATION.DURATION.VERY_SLOW,
+        repeat: ANIMATION.INFINITE,
         easing: ['ease-in-out']
       }
     )
@@ -48,9 +49,9 @@ function AnimatedBars() {
         ]
       },
       {
-        delay: 0.3,
-        duration: 1.5,
-        repeat: Infinity,
+        delay: ANIMATION.DELAY.MEDIUM,
+        duration: ANIMATION.DURATION.VERY_SLOW,
+        repeat: ANIMATION.INFINITE,
         easing: ['ease-in-out']
       }
     )

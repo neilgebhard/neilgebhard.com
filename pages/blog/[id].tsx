@@ -11,6 +11,7 @@ import {
   useScroll,
   useSpring
 } from 'framer-motion'
+import { ANIMATION } from '../../lib/constants'
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = allPosts.map((post) => `/blog/${post.id}`)
@@ -36,9 +37,9 @@ export default function Post({ post }: { post: Post }) {
 
   const { scrollYProgress } = useScroll()
   const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001
+    stiffness: ANIMATION.SPRING.STIFFNESS,
+    damping: ANIMATION.SPRING.DAMPING,
+    restDelta: ANIMATION.SPRING.REST_DELTA
   })
 
   return (
