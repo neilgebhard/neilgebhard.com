@@ -75,7 +75,15 @@ function AnimatedBars() {
 }
 
 export default function Spotify() {
-  const { data } = useSWR<SpotifySong>('/api/now-playing', fetcher)
+  const { data, error } = useSWR<SpotifySong>('/api/now-playing', fetcher)
+
+  if (error) {
+    return (
+      <div className="mute flex items-center justify-center gap-2 sm:justify-start">
+        <SiSpotify /> Spotify - Unavailable
+      </div>
+    )
+  }
 
   return (
     <>

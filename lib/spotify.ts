@@ -21,27 +21,43 @@ interface SpotifyTokenResponse {
 }
 
 const getAccessToken = async (): Promise<SpotifyTokenResponse> => {
-  const response = await fetch(TOKEN_ENDPOINT, {
-    method: 'POST',
-    headers: {
-      Authorization: `Basic ${basic}`,
-      'Content-Type': 'application/x-www-form-urlencoded'
-    },
-    body: querystring.stringify({
-      grant_type: 'refresh_token',
-      refresh_token
+  try {
+    const response = await fetch(TOKEN_ENDPOINT, {
+      method: 'POST',
+      headers: {
+        Authorization: `Basic ${basic}`,
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: querystring.stringify({
+        grant_type: 'refresh_token',
+        refresh_token
+      })
     })
-  })
 
-  return response.json()
+    if (!response.ok) {
+      throw new Error(`Spotify token request failed: ${response.status}`)
+    }
+
+    return response.json()
+  } catch (error) {
+    console.error('Failed to get Spotify access token:', error)
+    throw error
+  }
 }
 
 export const getNowPlaying = async (): Promise<Response> => {
-  const { access_token } = await getAccessToken()
+  try {
+    const { access_token } = await getAccessToken()
 
-  return fetch(NOW_PLAYING_ENDPOINT, {
-    headers: {
-      Authorization: `Bearer ${access_token}`
-    }
-  })
+    const response = await fetch(NOW_PLAYING_ENDPOINT, {
+      headers: {
+        Authorization: `Bearer ${access_token}`
+      }
+    })
+
+    return response
+  } catch (error) {
+    console.error('Failed to get now playing from Spotify:', error)
+    throw error
+  }
 }
