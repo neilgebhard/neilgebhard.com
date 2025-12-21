@@ -72,7 +72,7 @@ export default function Footer() {
           </div>
           <p>
             <Link href="https://github.com/neilgebhard/neilgebhard.com">
-              <a className="mute hover:underline" target="_blank">
+              <a className="mute hover:underline" target="_blank" rel="noopener noreferrer">
                 Built with Next.js & Tailwind
               </a>
             </Link>

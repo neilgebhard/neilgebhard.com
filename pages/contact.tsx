@@ -42,6 +42,8 @@ export default function Contact() {
                 type="email"
                 name="email"
                 ref={emailInput}
+                required
+                aria-required="true"
               />
               <ValidationError
                 prefix="Email"
@@ -61,6 +63,8 @@ export default function Contact() {
                 id="message"
                 name="message"
                 rows={5}
+                required
+                aria-required="true"
               />
               <ValidationError
                 prefix="Message"

@@ -18,7 +18,13 @@ export default function Custom404() {
           </div>
         </div>
         <div className="max-w-3xl flex-1">
-          <Image src="/images/404.webp" width={2500} height={1778} priority />
+          <Image
+            src="/images/404.webp"
+            width={2500}
+            height={1778}
+            priority
+            alt="404 error illustration"
+          />
         </div>
       </section>
     </Container>

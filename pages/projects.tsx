@@ -107,7 +107,7 @@ export default function Projects() {
                   src={imgSrc}
                   width="650"
                   height="383"
-                  alt="Screenshot of a project"
+                  alt={`Screenshot of ${title}`}
                 />
               </a>
               <div className="space-y-4 sm:w-5/6 md:w-4/6">

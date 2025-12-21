@@ -67,7 +67,7 @@ export default function Blog({ posts }: BlogProps) {
           />
         </label>
         <ul className="mt-6 list-none space-y-6 pl-0">
-          {filteredPosts.map(({ id, date, title, tags }) => (
+          {filteredPosts.map(({ id, title, tags }) => (
             <li className="flex flex-col space-y-1 text-2xl" key={id}>
               <Link href={`/blog/${id}`}>
                 <a className="link">{title}</a>
