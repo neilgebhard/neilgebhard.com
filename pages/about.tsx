@@ -26,7 +26,7 @@ import {
 } from 'react-icons/si'
 import Container from '../components/Container'
 
-const current = [
+const current: Array<[string, JSX.Element]> = [
   ['React', <SiReact size="2rem" />],
   ['JavaScript', <SiHtml5 size="2rem" />],
   ['HTML', <SiHtml5 size="2rem" />],
@@ -45,7 +45,7 @@ const current = [
   ['VSCode', <SiVisualstudiocode size="2rem" />]
 ]
 
-const past = [
+const past: Array<[string, JSX.Element]> = [
   ['Java', <FaJava size="2rem" />],
   ['Python', <SiPython size="2rem" />],
   ['C++', <SiCplusplus size="2rem" />],
@@ -54,7 +54,11 @@ const past = [
   ['Android', <SiAndroid size="2rem" />]
 ]
 
-const IconGrid = ({ icons }) => {
+interface IconGridProps {
+  icons: Array<[string, JSX.Element]>
+}
+
+const IconGrid = ({ icons }: IconGridProps) => {
   return (
     <ul className="grid grid-cols-4 gap-6 space-y-0 pl-0 sm:grid-cols-8 lg:grid-cols-5 xl:grid-cols-8">
       {icons.map(([label, icon], index) => (

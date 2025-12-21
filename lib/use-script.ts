@@ -1,13 +1,23 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, RefObject } from 'react'
 
-const useScript = (params) => {
+interface UseScriptParams {
+  url: string
+  theme: string
+  issueTerm: string
+  repo: string
+  ref: RefObject<HTMLDivElement>
+}
+
+type ScriptStatus = 'idle' | 'loading' | 'ready' | 'error'
+
+const useScript = (params: UseScriptParams): ScriptStatus => {
   const { url, theme, issueTerm, repo, ref } = params
 
-  const [status, setStatus] = useState(url ? 'loading' : 'idle')
+  const [status, setStatus] = useState<ScriptStatus>(url ? 'loading' : 'idle')
 
   // run the useEffect when the url of the script changes
   useEffect(() => {
-    if (!url) {
+    if (!url || !ref.current) {
       setStatus('idle')
       return
     }
@@ -24,7 +34,7 @@ const useScript = (params) => {
     ref.current.appendChild(script)
 
     // store status of the script
-    const setAttributeStatus = (event) => {
+    const setAttributeStatus = (event: Event) => {
       setStatus(event.type === 'load' ? 'ready' : 'error')
     }
 

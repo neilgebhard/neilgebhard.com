@@ -7,6 +7,17 @@ import MyDate from 'components/MyDate'
 import { BiSearchAlt } from 'react-icons/bi'
 import { useState } from 'react'
 
+interface BlogPost {
+  id: string
+  tags: string[]
+  title: string
+  date: string
+}
+
+interface BlogProps {
+  posts: BlogPost[]
+}
+
 export async function getStaticProps() {
   const posts = allPosts
     .map(({ id, tags, title, date }) => ({ id, tags, title, date }))
@@ -21,7 +32,7 @@ export async function getStaticProps() {
   }
 }
 
-export default function Blog({ posts }) {
+export default function Blog({ posts }: BlogProps) {
   const [searchValue, setSearchValue] = useState('')
 
   const filteredPosts = posts.filter(

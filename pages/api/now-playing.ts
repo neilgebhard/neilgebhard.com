@@ -1,6 +1,33 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { getNowPlaying } from '../../lib/spotify'
 
+interface SpotifyArtist {
+  name: string
+}
+
+interface SpotifyImage {
+  url: string
+}
+
+interface SpotifyAlbum {
+  name: string
+  images: SpotifyImage[]
+}
+
+interface SpotifyTrack {
+  name: string
+  artists: SpotifyArtist[]
+  album: SpotifyAlbum
+  external_urls: {
+    spotify: string
+  }
+}
+
+interface SpotifyNowPlayingResponse {
+  is_playing: boolean
+  item: SpotifyTrack | null
+}
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
@@ -11,7 +38,7 @@ export default async function handler(
     return res.status(200).json({ isPlaying: false })
   }
 
-  const song = await response.json()
+  const song: SpotifyNowPlayingResponse = await response.json()
 
   if (song.item === null) {
     return res.status(200).json({ isPlaying: false })

@@ -25,7 +25,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const post = allPosts.find((post) => post.id === params.id)
+  const post = allPosts.find((post) => post.id === params?.id)
 
   return {
     props: {

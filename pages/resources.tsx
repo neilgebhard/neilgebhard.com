@@ -1,4 +1,6 @@
-const react = [
+type ResourceLink = [string, string]
+
+const react: ResourceLink[] = [
   ['React', 'https://reactjs.org/'],
   ['React Router', 'https://reactrouter.com/'],
   ['React Query', 'https://react-query.tanstack.com/reference/useQuery'],
@@ -8,23 +10,23 @@ const react = [
   ['React Spinners', 'https://www.davidhu.io/react-spinners/']
 ]
 
-const testing = [
+const testing: ResourceLink[] = [
   ['jest-dom', 'https://github.com/testing-library/jest-dom'],
   ['RTL queries', 'https://testing-library.com/docs/queries/about/'],
   ['Cypress', 'https://www.cypress.io/']
 ]
 
-const blogs = [
+const blogs: ResourceLink[] = [
   ['Kent C. Dodds', 'https://kentcdodds.com/blog'],
   ['Dan Abramov', 'https://overreacted.io/']
 ]
 
-const learning = [
+const learning: ResourceLink[] = [
   ['MDN', 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'],
   ['JavaScript Info', 'javascript.info']
 ]
 
-const design = [
+const design: ResourceLink[] = [
   ['Section Divider', 'https://www.shapedivider.app/'],
   [
     'CSS Separator Generator',
@@ -36,7 +38,7 @@ const design = [
   ['Flat UI Colors', 'https://flatuicolors.com/']
 ]
 
-const renderLinks = (links) => {
+const renderLinks = (links: ResourceLink[]) => {
   return (
     <ul className="list-none p-0">
       {links.map(([label, href], i) => (

@@ -10,10 +10,10 @@ import { useForm, ValidationError } from '@formspree/react'
 
 export default function Contact() {
   const [state, handleSubmit] = useForm('mvolwyvj')
-  const emailInput = useRef(null)
+  const emailInput = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
-    emailInput.current.focus()
+    emailInput.current?.focus()
   }, [])
 
   return (
