@@ -10,8 +10,6 @@ import type { Post } from 'contentlayer/generated'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 import clsx from 'clsx'
 import {
-  useTransform,
-  useViewportScroll,
   motion,
   useScroll,
   useSpring
@@ -38,14 +36,18 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 const Input = () => <input type="text" />
 
-const TextInput = ({ className, ...rest }) => {
+interface TextInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  className?: string
+}
+
+const TextInput = ({ className, ...rest }: TextInputProps) => {
   return (
     <label className="block">
       <span className="text-gray-500">Label</span>
       <input
         type="text"
         className={clsx('block w-full appearance-none', className)}
-        {...{ ...rest }}
+        {...rest}
       />
     </label>
   )
