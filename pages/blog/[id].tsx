@@ -1,14 +1,11 @@
 import Image from 'next/image'
 import Head from 'next/head'
 import { GetStaticProps, GetStaticPaths } from 'next'
-import { BiCalendar } from 'react-icons/bi'
-import MyDate from '../../components/MyDate'
 import Comments from './../../components/Comments'
 import Container from '../../components/Container'
 import { allPosts } from 'contentlayer/generated'
 import type { Post } from 'contentlayer/generated'
 import { useMDXComponent } from 'next-contentlayer/hooks'
-import clsx from 'clsx'
 import {
   motion,
   useScroll,
@@ -32,25 +29,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       post
     }
   }
-}
-
-const Input = () => <input type="text" />
-
-interface TextInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  className?: string
-}
-
-const TextInput = ({ className, ...rest }: TextInputProps) => {
-  return (
-    <label className="block">
-      <span className="text-gray-500">Label</span>
-      <input
-        type="text"
-        className={clsx('block w-full appearance-none', className)}
-        {...rest}
-      />
-    </label>
-  )
 }
 
 export default function Post({ post }: { post: Post }) {
@@ -89,15 +67,10 @@ export default function Post({ post }: { post: Post }) {
               />{' '}
               Neil Gebhard
             </div>
-            {/* <div> / </div>
-            <div className="mute flex items-center gap-1">
-              <BiCalendar />
-              <MyDate dateString={post.date} />
-            </div> */}
           </div>
         </header>
         <article className="prose prose-blue prose-a:no-underline hover:prose-a:underline dark:prose-invert">
-          <MDXContent components={{ Input, TextInput }} />
+          <MDXContent />
           <Comments />
         </article>
       </section>

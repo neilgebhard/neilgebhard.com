@@ -3,7 +3,6 @@ import Container from '../components/Container'
 import { compareDesc } from 'date-fns'
 import { allPosts } from 'contentlayer/generated'
 import Link from 'next/link'
-import MyDate from 'components/MyDate'
 import { BiSearchAlt } from 'react-icons/bi'
 import { useState } from 'react'
 
@@ -86,9 +85,6 @@ export default function Blog({ posts }: BlogProps) {
                   ))}
                 </div>
               )}
-              {/* <p className="mute mt-0 mb-2 text-base">
-                <MyDate dateString={date} />
-              </p> */}
             </li>
           ))}
         </ul>
