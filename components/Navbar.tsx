@@ -4,7 +4,7 @@ import { CgMoon, CgSun } from 'react-icons/cg'
 import useMount from '../hooks/useMount'
 import ActiveLink from './ActiveLink'
 import { FiMenu } from 'react-icons/fi'
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 const links = [
   ['/', 'Home'],
@@ -17,6 +17,47 @@ export default function Navbar() {
   const { theme, setTheme } = useTheme()
   const { isMounted } = useMount()
   const [showMobileNav, setShowMobileNav] = useState(false)
+  const mobileNavRef = useRef<HTMLUListElement>(null)
+  const menuButtonRef = useRef<HTMLButtonElement>(null)
+
+  // Close mobile nav on Escape key
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && showMobileNav) {
+        setShowMobileNav(false)
+      }
+    }
+
+    document.addEventListener('keydown', handleEscape)
+    return () => document.removeEventListener('keydown', handleEscape)
+  }, [showMobileNav])
+
+  // Close mobile nav when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (
+        mobileNavRef.current &&
+        !mobileNavRef.current.contains(e.target as Node) &&
+        menuButtonRef.current &&
+        !menuButtonRef.current.contains(e.target as Node)
+      ) {
+        setShowMobileNav(false)
+      }
+    }
+
+    if (showMobileNav) {
+      document.addEventListener('mousedown', handleClickOutside)
+      return () => document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [showMobileNav])
+
+  // Focus management - focus first item when menu opens
+  useEffect(() => {
+    if (showMobileNav && mobileNavRef.current) {
+      const firstLink = mobileNavRef.current.querySelector('a')
+      firstLink?.focus()
+    }
+  }, [showMobileNav])
 
   return (
     <nav className="flex items-center justify-between pt-6 pb-32 text-xl sm:text-2xl">
@@ -52,14 +93,22 @@ export default function Navbar() {
       </Link>
       {/* Mobile Nav */}
       <button
+        ref={menuButtonRef}
         className="inline transition md:hidden"
         type="button"
         onClick={() => setShowMobileNav((show) => !show)}
+        aria-label={showMobileNav ? 'Close menu' : 'Open menu'}
+        aria-expanded={showMobileNav}
+        aria-controls="mobile-navigation"
       >
         <FiMenu size={30} />
       </button>
       {showMobileNav && (
-        <ul className="absolute top-20 left-0 z-10 w-full space-y-4 bg-gray-200 px-6 py-4 dark:bg-gray-800 md:hidden">
+        <ul
+          ref={mobileNavRef}
+          id="mobile-navigation"
+          className="absolute top-20 left-0 z-10 w-full space-y-4 bg-gray-200 px-6 py-4 dark:bg-gray-800 md:hidden"
+        >
           {links.map(([href, label], index) => (
             <li key={index}>
               <ActiveLink activeClassName="font-semibold" href={href}>
