@@ -46,7 +46,7 @@ const projects = [
     id: 'reddit-clone',
     title: 'Reddit Clone',
     description:
-      'A full-stack replica of Reddit's core features like posts, votes, discussions, and auth flow. Built to showcase scalable UI and real-time interaction.',
+      'A full-stack replica of Reddit\'s core features like posts, votes, discussions, and auth flow. Built to showcase scalable UI and real-time interaction.',
     siteUrl: 'https://reddit-clone-next-supabase.vercel.app/',
     githubUrl: 'https://github.com/neilgebhard/reddit-next-supabase',
     imgSrc: '/images/reddit-laptop-frame.webp',
