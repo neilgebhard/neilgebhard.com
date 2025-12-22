@@ -23,6 +23,7 @@ import { FaAws } from 'react-icons/fa'
 
 const projects = [
   {
+    id: 'instagram-clone',
     title: 'Instagram Clone',
     description:
       'A full-stack social media application replicating Instagram\'s core features, built with modern web technologies.',
@@ -42,9 +43,10 @@ const projects = [
     ]
   },
   {
+    id: 'reddit-clone',
     title: 'Reddit Clone',
     description:
-      'A full-stack replica of Reddit’s core features like posts, votes, discussions, and auth flow. Built to showcase scalable UI and real-time interaction.',
+      'A full-stack replica of Reddit's core features like posts, votes, discussions, and auth flow. Built to showcase scalable UI and real-time interaction.',
     siteUrl: 'https://reddit-clone-next-supabase.vercel.app/',
     githubUrl: 'https://github.com/neilgebhard/reddit-next-supabase',
     imgSrc: '/images/reddit-laptop-frame.webp',
@@ -57,8 +59,9 @@ const projects = [
       <SiNodedotjs size="2rem" title="Node.js" className="mute" />
     ]
   },
-  
+
   {
+    id: 'ai-therapist',
     title: 'AI Therapist',
     description:
       'An AI-powered mental wellness chatbot offering confidential, conversational support. Built with user-centric design and responsive dialogue to simulate empathetic interaction.',
@@ -94,12 +97,12 @@ export default function Projects() {
           Projects
         </h1>
         {projects.map(
-          ({ siteUrl, imgSrc, title, githubUrl, description, icons }, i) => (
+          ({ id, siteUrl, imgSrc, title, githubUrl, description, icons }, i) => (
             <article
               className={`flex flex-col sm:flex-row ${
                 i % 2 === 1 && 'sm:flex-row-reverse'
               } mb-20 items-center gap-x-4`}
-              key={i}
+              key={id}
             >
               <a href={siteUrl} target="_blank" rel="noreferrer">
                 <Image
@@ -116,8 +119,8 @@ export default function Projects() {
                 </h2>
                 <p className="text-xl font-light leading-8">{description}</p>
                 <div>
-                  {icons?.map((icon, i) => (
-                    <span className="ml-2 inline-block" key={i}>
+                  {icons?.map((icon) => (
+                    <span className="ml-2 inline-block" key={icon.props.title}>
                       <div className="inline-block" data-tip={icon.props.title}>
                         {icon}
                       </div>

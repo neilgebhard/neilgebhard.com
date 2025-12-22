@@ -41,8 +41,8 @@ const design: ResourceLink[] = [
 const renderLinks = (links: ResourceLink[]) => {
   return (
     <ul className="list-none p-0">
-      {links.map(([label, href], i) => (
-        <li key={i}>
+      {links.map(([label, href]) => (
+        <li key={href}>
           <a
             className="text-black"
             href={href}

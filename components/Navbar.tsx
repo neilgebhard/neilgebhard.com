@@ -109,8 +109,8 @@ export default function Navbar() {
           id="mobile-navigation"
           className="absolute top-20 left-0 z-10 w-full space-y-4 bg-gray-200 px-6 py-4 dark:bg-gray-800 md:hidden"
         >
-          {links.map(([href, label], index) => (
-            <li key={index}>
+          {links.map(([href, label]) => (
+            <li key={href}>
               <ActiveLink activeClassName="font-semibold" href={href}>
                 <a>{label}</a>
               </ActiveLink>

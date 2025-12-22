@@ -61,8 +61,8 @@ interface IconGridProps {
 const IconGrid = ({ icons }: IconGridProps) => {
   return (
     <ul className="grid grid-cols-4 gap-6 space-y-0 pl-0 sm:grid-cols-8 lg:grid-cols-5 xl:grid-cols-8">
-      {icons.map(([label, icon], index) => (
-        <li key={index} className="flex flex-1 flex-col items-center">
+      {icons.map(([label, icon]) => (
+        <li key={label} className="flex flex-1 flex-col items-center">
           <div>{icon}</div>
           <div className="text-center">{label}</div>
         </li>
