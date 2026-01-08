@@ -1,0 +1,100 @@
+---
+title: 'Git Workflows in a Team'
+date: '2026-1-8'
+tags: ['git']
+---
+
+> Commit early, commit often. Your future self will thank you when you need to track down where things went wrong.
+
+## Basic PR Workflows
+
+Here's the typical git workflow for creating a pull request when working with a team:
+
+1. Sync with the main branch
+
+```bash
+git checkout main
+git pull origin main
+```
+
+2. Create a new branch
+
+```bash
+git checkout -b feature/your-feature-name
+# or
+git checkout -b fix/bug-description
+```
+
+3. Check what files have changed and what changed in those files
+
+```bash
+git status
+git diff
+```
+
+4. Stage and commit your changes
+
+```bash
+git add .
+
+# or stage specific files
+git add path/to/file.ts
+
+git commit -m 'Add feature description'
+```
+
+5. Push your branch to remote
+
+```bash
+git push origin feature/your-feature-name
+
+# first time pushing a new branch:
+git push -u origin feature/your-feature-name
+```
+
+6. Create the PR. Go to GitHub/GitLab and click "Create Pull Request" or use the link that appears in your terminal after pushing.
+
+## Common Team Workflow Commands
+
+Keep your branch updated with main:
+
+```bash
+# while on your feature branch
+git fetch origin
+git rebase origin/main
+# or
+git merge origin/main
+```
+
+If you need to update your PR:
+
+```bash
+# make more changes
+git add .
+git commit -m 'Address review feedback'
+git push origin feature/your-feature-name
+```
+
+Squash commits before merging (optional):
+
+```bash
+# interactive rebase last 3 commits
+git rebase -i HEAD~3
+```
+
+If your push is rejected (branch diverged):
+
+```bash
+git pull --rebase origin feature/your-feature-name
+git push origin feature/your-feature-name
+```
+
+Clean up after PR is merged:
+
+```bash
+git checkout main
+git pull origin main
+git branch -d feature/your-feature-name  # delete local branch
+```
+
+The patterns are common among most teams. The key is staying in sync with main and keeping your commits clean.
